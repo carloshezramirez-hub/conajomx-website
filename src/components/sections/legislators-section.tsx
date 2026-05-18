@@ -14,28 +14,28 @@ const pillars = [
 
 export function LegislatorsSection() {
   return (
-    <section className="py-24 bg-[#030B18]">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1FE9E1] mb-4">
             Consejo Nacional
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#071D3A] mb-6 leading-tight">
             Legisladores y Alcaldes
           </h2>
-          <p className="text-[#8EA4BD] text-lg leading-relaxed mb-6">
+          <p className="text-[#526173] text-lg leading-relaxed mb-6">
             El país requiere redefinir competencias de los poderes constituidos, fortalecer el
             sistema institucional de equilibrios, modernizar la gestión del Estado y promover
             democracia, gobernabilidad y Estado Abierto en gobiernos locales.
           </p>
           {/* President highlight */}
-          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-[#1FE9E1]/[0.06] border border-[#1FE9E1]/20">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#0A2D52] to-[#173B6D] border border-[#1FE9E1]/30 flex items-center justify-center shrink-0">
+          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-[#D9FFFC] border border-[#1FE9E1]/30">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0">
               <span className="text-[#1FE9E1] font-bold text-xs">JMT</span>
             </div>
             <div className="text-left">
-              <p className="text-[#8EA4BD] text-xs">Presidente del Consejo</p>
-              <p className="text-white font-bold text-sm">Ing. Juan Manuel Téllez Salazar</p>
+              <p className="text-[#526173] text-xs">Presidente del Consejo</p>
+              <p className="text-[#071D3A] font-bold text-sm">Ing. Juan Manuel Téllez Salazar</p>
             </div>
           </div>
         </div>
@@ -48,13 +48,13 @@ export function LegislatorsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.4 }}
-              className="p-5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#1FE9E1]/20 transition-all group"
+              className="p-5 rounded-xl bg-[#F5FAFF] border border-[#DCE8F2] hover:border-[#1FE9E1]/50 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all group"
             >
               <div className="text-2xl mb-3">{p.emoji}</div>
-              <h3 className="text-white font-semibold text-sm mb-1.5 group-hover:text-[#1FE9E1] transition-colors">
+              <h3 className="text-[#071D3A] font-semibold text-sm mb-1.5 group-hover:text-[#0A2D52] transition-colors">
                 {p.title}
               </h3>
-              <p className="text-[#8EA4BD] text-xs leading-relaxed">{p.desc}</p>
+              <p className="text-[#526173] text-xs leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -63,7 +63,7 @@ export function LegislatorsSection() {
           <ButtonLink
             href="/legisladores-y-alcaldes"
             variant="outline"
-            className="border-[#1FE9E1]/30 text-[#1FE9E1] hover:bg-[#1FE9E1]/10 hover:border-[#1FE9E1]/50"
+            className="border-[#DCE8F2] text-[#071D3A] hover:bg-[#F5FAFF] hover:border-[#071D3A]/30 font-semibold"
           >
             Conocer más
           </ButtonLink>

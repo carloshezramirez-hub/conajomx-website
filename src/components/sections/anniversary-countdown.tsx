@@ -40,10 +40,10 @@ export function AnniversaryCountdown() {
   ]
 
   return (
-    <section className="py-24 bg-[#030B18] relative overflow-hidden">
+    <section className="py-24 bg-[#071D3A] relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#1FE9E1]/[0.03] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute inset-0 opacity-[0.015]"
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#1FE9E1]/[0.06] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `radial-gradient(circle, #1FE9E1 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
@@ -90,7 +90,7 @@ export function AnniversaryCountdown() {
 
           <ButtonLink
             href="/afiliacion"
-            className="bg-[#1FE9E1] text-[#030B18] hover:bg-[#33CCDD] font-bold shadow-[0_0_30px_rgba(31,233,225,0.35)] px-8 text-base hover:shadow-[0_0_40px_rgba(31,233,225,0.5)] transition-all"
+            className="bg-[#1FE9E1] text-[#071D3A] hover:bg-[#33CCDD] font-bold shadow-[0_0_30px_rgba(31,233,225,0.35)] px-8 text-base hover:shadow-[0_0_40px_rgba(31,233,225,0.5)] transition-all"
           >
             Sé parte de la historia
           </ButtonLink>

@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/sections/hero-section"
+import { AreasSection } from "@/components/sections/areas-section"
 import { AboutSection } from "@/components/sections/about-section"
 import { GlobeSection } from "@/components/sections/globe-section"
 import { AgendaSection } from "@/components/sections/agenda-section"
@@ -15,6 +16,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <AreasSection />
       <AboutSection />
       <GlobeSection />
       <AgendaSection />

@@ -6,30 +6,30 @@ import { Badge } from "@/components/ui/badge"
 import { ButtonLink } from "@/components/ui/button-link"
 
 const categoryStyle: Record<string, string> = {
-  "Agenda verde": "border-emerald-400/30 text-emerald-400 bg-emerald-400/5",
-  Reconocimiento: "border-yellow-400/30 text-yellow-400 bg-yellow-400/5",
-  Internacional: "border-blue-400/30 text-blue-300 bg-blue-400/5",
-  "México-España": "border-[#1FE9E1]/30 text-[#1FE9E1] bg-[#1FE9E1]/5",
-  Empresarial: "border-violet-400/30 text-violet-300 bg-violet-400/5",
-  Institucional: "border-orange-400/30 text-orange-300 bg-orange-400/5",
-  Asamblea: "border-pink-400/30 text-pink-300 bg-pink-400/5",
-  Sustentabilidad: "border-green-400/30 text-green-400 bg-green-400/5",
+  "Agenda verde": "border-emerald-200 text-emerald-700 bg-emerald-50",
+  Reconocimiento: "border-yellow-200 text-yellow-700 bg-yellow-50",
+  Internacional: "border-blue-200 text-blue-700 bg-blue-50",
+  "México-España": "border-[#1FE9E1]/40 text-[#0A2D52] bg-[#D9FFFC]",
+  Empresarial: "border-violet-200 text-violet-700 bg-violet-50",
+  Institucional: "border-orange-200 text-orange-700 bg-orange-50",
+  Asamblea: "border-pink-200 text-pink-700 bg-pink-50",
+  Sustentabilidad: "border-green-200 text-green-700 bg-green-50",
 }
 
 export function NewsSection() {
   const featured = updates.slice(0, 6)
 
   return (
-    <section className="py-24 bg-[#061833]">
+    <section className="py-24 bg-[#F5FAFF]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1FE9E1] mb-4">
             Novedades
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#071D3A] mb-6 leading-tight">
             Actividad y reconocimientos
           </h2>
-          <p className="text-[#8EA4BD] text-lg leading-relaxed">
+          <p className="text-[#526173] text-lg leading-relaxed">
             CONAJOMX en foros, cumbres, encuentros institucionales y eventos empresariales
             nacionales e internacionales.
           </p>
@@ -43,23 +43,23 @@ export function NewsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.4 }}
-              className="p-5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#1FE9E1]/20 hover:bg-white/[0.04] transition-all group flex flex-col"
+              className="p-5 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all group flex flex-col"
             >
               <Badge
                 variant="outline"
                 className={`text-xs mb-3 w-fit ${
-                  categoryStyle[item.category] ?? "border-white/20 text-white/60"
+                  categoryStyle[item.category] ?? "border-[#DCE8F2] text-[#526173]"
                 }`}
               >
                 {item.category}
               </Badge>
-              <h3 className="text-white font-semibold text-sm mb-2 leading-snug group-hover:text-[#1FE9E1] transition-colors flex-1">
+              <h3 className="text-[#071D3A] font-semibold text-sm mb-2 leading-snug group-hover:text-[#0A2D52] transition-colors flex-1">
                 {item.title}
               </h3>
-              <p className="text-[#8EA4BD] text-xs leading-relaxed mb-3">
+              <p className="text-[#526173] text-xs leading-relaxed mb-3">
                 {item.summary}
               </p>
-              <p className="text-[#8EA4BD]/40 text-xs">Fuente: {item.source}</p>
+              <p className="text-[#526173]/50 text-xs">Fuente: {item.source}</p>
             </motion.div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export function NewsSection() {
           <ButtonLink
             href="/noticias"
             variant="outline"
-            className="border-[#1FE9E1]/30 text-[#1FE9E1] hover:bg-[#1FE9E1]/10 hover:border-[#1FE9E1]/50"
+            className="border-[#DCE8F2] text-[#071D3A] hover:bg-white hover:border-[#071D3A]/30 font-semibold"
           >
             Ver todas las novedades
           </ButtonLink>

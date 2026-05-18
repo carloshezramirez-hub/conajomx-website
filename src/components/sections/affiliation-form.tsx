@@ -51,13 +51,13 @@ function Field({
 }) {
   return (
     <div>
-      <Label className="text-[#8EA4BD] text-sm mb-1.5 block">{label}</Label>
+      <Label className="text-[#526173] text-sm mb-1.5 block">{label}</Label>
       <Input
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="bg-white/[0.04] border-white/10 text-white placeholder:text-[#8EA4BD]/40 focus:border-[#1FE9E1]/40 focus-visible:ring-[#1FE9E1]/20"
+        className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#1FE9E1]/60 focus-visible:ring-[#1FE9E1]/20"
       />
     </div>
   )
@@ -121,17 +121,17 @@ export function AffiliationForm() {
 
   if (sent) {
     return (
-      <section id="afiliacion" className="py-24 bg-[#030B18]">
+      <section id="afiliacion" className="py-24 bg-[#F5FAFF]">
         <div className="container mx-auto px-4 max-w-lg text-center">
           <CheckCircle className="w-16 h-16 text-[#1FE9E1] mx-auto mb-6" />
-          <h3 className="text-2xl font-black text-white mb-4">¡Solicitud preparada!</h3>
-          <p className="text-[#8EA4BD] mb-6">
+          <h3 className="text-2xl font-black text-[#071D3A] mb-4">¡Solicitud preparada!</h3>
+          <p className="text-[#526173] mb-6">
             Se abrió tu cliente de correo con los datos prellenados. Nuestro equipo dará
             seguimiento a tu solicitud en breve.
           </p>
           <Button
             onClick={() => { setSent(false); setStep(0); setData(empty) }}
-            className="bg-[#1FE9E1] text-[#030B18] hover:bg-[#33CCDD] font-bold"
+            className="bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold"
           >
             Nueva solicitud
           </Button>
@@ -141,16 +141,16 @@ export function AffiliationForm() {
   }
 
   return (
-    <section id="afiliacion" className="py-24 bg-[#030B18]">
+    <section id="afiliacion" className="py-24 bg-[#F5FAFF]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1FE9E1] mb-4">
             Afiliación
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#071D3A] mb-4 leading-tight">
             Forma parte de una red de líderes en acción
           </h2>
-          <p className="text-[#8EA4BD] text-lg leading-relaxed">
+          <p className="text-[#526173] text-lg leading-relaxed">
             Cuéntanos tu perfil y el tipo de colaboración que buscas. Nuestro equipo dará
             seguimiento a tu solicitud.
           </p>
@@ -164,10 +164,10 @@ export function AffiliationForm() {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
                     i < step
-                      ? "bg-[#1FE9E1] text-[#030B18]"
+                      ? "bg-[#1FE9E1] text-[#071D3A]"
                       : i === step
-                      ? "bg-[#1FE9E1]/15 border border-[#1FE9E1] text-[#1FE9E1]"
-                      : "bg-white/5 border border-white/10 text-[#8EA4BD]"
+                      ? "bg-[#D9FFFC] border border-[#1FE9E1] text-[#0A2D52]"
+                      : "bg-white border border-[#DCE8F2] text-[#526173]"
                   }`}
                 >
                   {i < step ? <CheckCircle className="w-4 h-4" /> : i + 1}
@@ -175,7 +175,7 @@ export function AffiliationForm() {
                 {i < STEPS.length - 1 && (
                   <div
                     className={`h-px w-6 sm:w-10 transition-all ${
-                      i < step ? "bg-[#1FE9E1]" : "bg-white/10"
+                      i < step ? "bg-[#1FE9E1]" : "bg-[#DCE8F2]"
                     }`}
                   />
                 )}
@@ -184,8 +184,8 @@ export function AffiliationForm() {
           </div>
 
           {/* Form card */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
-            <h3 className="text-white font-bold text-lg mb-6">{STEPS[step]}</h3>
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[#DCE8F2] shadow-[0_4px_24px_rgba(10,45,82,0.06)]">
+            <h3 className="text-[#071D3A] font-bold text-lg mb-6">{STEPS[step]}</h3>
             <AnimatePresence mode="wait">
               <motion.div
                 key={step}
@@ -225,8 +225,8 @@ export function AffiliationForm() {
                         onClick={() => toggleInterest(interest)}
                         className={`p-3 rounded-lg text-left text-sm transition-all border ${
                           data.interes.includes(interest)
-                            ? "border-[#1FE9E1]/50 bg-[#1FE9E1]/10 text-[#1FE9E1]"
-                            : "border-white/10 text-[#8EA4BD] hover:border-white/20 hover:text-white"
+                            ? "border-[#1FE9E1]/60 bg-[#D9FFFC] text-[#0A2D52] font-medium"
+                            : "border-[#DCE8F2] text-[#526173] hover:border-[#1FE9E1]/40 hover:text-[#071D3A]"
                         }`}
                       >
                         {interest}
@@ -238,25 +238,25 @@ export function AffiliationForm() {
                 {step === 3 && (
                   <>
                     <div>
-                      <Label className="text-[#8EA4BD] text-sm mb-1.5 block">
+                      <Label className="text-[#526173] text-sm mb-1.5 block">
                         ¿Qué tipo de colaboración buscas?
                       </Label>
                       <Textarea
                         value={data.mensaje}
                         onChange={(e) => update("mensaje", e.target.value)}
                         placeholder="Describe brevemente qué tipo de colaboración o afiliación buscas..."
-                        className="bg-white/[0.04] border-white/10 text-white placeholder:text-[#8EA4BD]/40 focus:border-[#1FE9E1]/40 min-h-[90px]"
+                        className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#1FE9E1]/60 min-h-[90px]"
                       />
                     </div>
                     <div>
-                      <Label className="text-[#8EA4BD] text-sm mb-1.5 block">
+                      <Label className="text-[#526173] text-sm mb-1.5 block">
                         ¿Qué evento o iniciativa te interesa?
                       </Label>
                       <Textarea
                         value={data.agenda}
                         onChange={(e) => update("agenda", e.target.value)}
                         placeholder="Menciona algún evento, foro o iniciativa de la agenda CONAJOMX..."
-                        className="bg-white/[0.04] border-white/10 text-white placeholder:text-[#8EA4BD]/40 focus:border-[#1FE9E1]/40 min-h-[80px]"
+                        className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#1FE9E1]/60 min-h-[80px]"
                       />
                     </div>
                     <div className="flex items-start gap-3 pt-2">
@@ -269,7 +269,7 @@ export function AffiliationForm() {
                       />
                       <Label
                         htmlFor="privacy"
-                        className="text-[#8EA4BD] text-xs leading-relaxed cursor-pointer"
+                        className="text-[#526173] text-xs leading-relaxed cursor-pointer"
                       >
                         Acepto el aviso de privacidad y autorizo a CONAJOMX a utilizar mis datos
                         para dar seguimiento a esta solicitud de afiliación.
@@ -287,7 +287,7 @@ export function AffiliationForm() {
               variant="ghost"
               onClick={() => setStep((s) => s - 1)}
               disabled={step === 0}
-              className="text-[#8EA4BD] hover:text-white disabled:opacity-30"
+              className="text-[#526173] hover:text-[#071D3A] disabled:opacity-30"
             >
               <ChevronLeft className="w-4 h-4 mr-1" /> Anterior
             </Button>
@@ -295,14 +295,14 @@ export function AffiliationForm() {
               <Button
                 onClick={() => setStep((s) => s + 1)}
                 disabled={step === 0 && !step0Valid}
-                className="bg-[#1FE9E1] text-[#030B18] hover:bg-[#33CCDD] font-bold disabled:opacity-40"
+                className="bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold disabled:opacity-40"
               >
                 Siguiente <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
             ) : (
               <Button
                 onClick={handleSubmit}
-                className="bg-[#1FE9E1] text-[#030B18] hover:bg-[#33CCDD] font-bold shadow-[0_0_20px_rgba(31,233,225,0.3)]"
+                className="bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)]"
               >
                 <Send className="w-4 h-4 mr-2" /> Enviar solicitud
               </Button>

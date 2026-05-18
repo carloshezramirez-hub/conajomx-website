@@ -8,8 +8,8 @@ const CobeGlobe = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="w-full max-w-[500px] mx-auto aspect-square flex items-center justify-center">
-        <div className="w-64 h-64 rounded-full bg-[#061833] border border-[#1FE9E1]/20 animate-pulse" />
+      <div className="w-full max-w-[460px] mx-auto aspect-square flex items-center justify-center">
+        <div className="w-64 h-64 rounded-full bg-[#F5FAFF] border border-[#DCE8F2] animate-pulse" />
       </div>
     ),
   }
@@ -21,67 +21,73 @@ const locations = [
   { city: "Madrid", country: "España", flag: "🇪🇸" },
 ]
 
+const forums = ["OCDE", "G7", "G20", "WEF", "COP31", "Harvard"]
+
 export function GlobeSection() {
   return (
-    <section className="py-24 bg-[#061833] relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0A2D52]/20 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text side */}
+          {/* Globe */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, scale: 0.93 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="order-2 lg:order-1"
+          >
+            <div className="relative">
+              {/* Glow halo behind globe */}
+              <div className="absolute inset-8 rounded-full bg-gradient-radial from-[#D9FFFC] to-transparent opacity-60 blur-2xl" />
+              <CobeGlobe />
+            </div>
+          </motion.div>
+
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="order-1 lg:order-2"
           >
-            <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-4">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1FE9E1] mb-4">
               Presencia Internacional
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#071D3A] mb-6 leading-tight">
               Una red que conecta{" "}
-              <span className="text-[#1FE9E1]">tres continentes</span>
+              <span className="text-[#0A2D52]">tres continentes</span>
             </h2>
-            <p className="text-[#8EA4BD] text-lg leading-relaxed mb-8">
-              Una red que conecta liderazgos, empresas e instituciones en México, España y foros
+            <p className="text-[#526173] text-lg leading-relaxed mb-8">
+              Conectamos liderazgos, empresas e instituciones en México, España y foros
               internacionales — desde Harvard hasta el G20, desde la OCDE hasta la COP31.
             </p>
 
-            {/* Location cards */}
+            {/* Location pills */}
             <div className="grid grid-cols-3 gap-3 mb-8">
               {locations.map((loc) => (
                 <div
                   key={loc.city}
-                  className="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] text-center"
+                  className="p-3 rounded-xl bg-[#F5FAFF] border border-[#DCE8F2] text-center"
                 >
                   <p className="text-2xl mb-1">{loc.flag}</p>
-                  <p className="text-white font-semibold text-sm">{loc.city}</p>
-                  <p className="text-[#8EA4BD] text-xs">{loc.country}</p>
+                  <p className="text-[#071D3A] font-semibold text-sm">{loc.city}</p>
+                  <p className="text-[#526173] text-xs">{loc.country}</p>
                 </div>
               ))}
             </div>
 
-            {/* Foros row */}
+            {/* Forum tags */}
             <div className="flex flex-wrap gap-2">
-              {["OCDE", "G7", "G20", "WEF", "COP31", "Harvard"].map((f) => (
+              {forums.map((f) => (
                 <span
                   key={f}
-                  className="px-3 py-1 rounded-full bg-[#1FE9E1]/[0.06] border border-[#1FE9E1]/15 text-[#1FE9E1] text-xs font-medium"
+                  className="px-3 py-1 rounded-full bg-[#D9FFFC] border border-[#1FE9E1]/30 text-[#0A2D52] text-xs font-semibold"
                 >
                   {f}
                 </span>
               ))}
             </div>
-          </motion.div>
-
-          {/* Globe side */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <CobeGlobe />
           </motion.div>
         </div>
       </div>

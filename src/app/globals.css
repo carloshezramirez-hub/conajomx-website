@@ -46,48 +46,48 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  /* CONAJOMX Brand */
+  /* CONAJOMX Brand tokens */
   --color-brand-cyan: #1FE9E1;
-  --color-brand-cyan-soft: #33CCDD;
-  --color-navy-deep: #061833;
-  --color-navy-inst: #0A2D52;
-  --color-navy-mid: #173B6D;
-  --color-bg-dark: #030B18;
-  --color-gray-blue: #8EA4BD;
+  --color-brand-cyan-soft: #D9FFFC;
+  --color-navy: #071D3A;
+  --color-navy-mid: #0A2D52;
+  --color-text-muted: #526173;
+  --color-border-light: #DCE8F2;
+  --color-surface: #F5FAFF;
 }
 
 :root {
-  --background: #030B18;
-  --foreground: #F8FBFF;
-  --card: #061833;
-  --card-foreground: #F8FBFF;
-  --popover: #061833;
-  --popover-foreground: #F8FBFF;
-  --primary: #1FE9E1;
-  --primary-foreground: #030B18;
-  --secondary: #0A2D52;
-  --secondary-foreground: #F8FBFF;
-  --muted: #0A2D52;
-  --muted-foreground: #8EA4BD;
-  --accent: #173B6D;
-  --accent-foreground: #F8FBFF;
+  --background: #ffffff;
+  --foreground: #071D3A;
+  --card: #ffffff;
+  --card-foreground: #071D3A;
+  --popover: #ffffff;
+  --popover-foreground: #071D3A;
+  --primary: #071D3A;
+  --primary-foreground: #ffffff;
+  --secondary: #F5FAFF;
+  --secondary-foreground: #071D3A;
+  --muted: #F5FAFF;
+  --muted-foreground: #526173;
+  --accent: #D9FFFC;
+  --accent-foreground: #071D3A;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgba(255,255,255,0.08);
-  --input: rgba(255,255,255,0.08);
+  --border: #DCE8F2;
+  --input: #DCE8F2;
   --ring: #1FE9E1;
   --chart-1: #1FE9E1;
-  --chart-2: #33CCDD;
-  --chart-3: #173B6D;
-  --chart-4: #0A2D52;
-  --chart-5: #061833;
+  --chart-2: #0A2D52;
+  --chart-3: #071D3A;
+  --chart-4: #526173;
+  --chart-5: #F5FAFF;
   --radius: 0.75rem;
-  --sidebar: #061833;
-  --sidebar-foreground: #F8FBFF;
-  --sidebar-primary: #1FE9E1;
-  --sidebar-primary-foreground: #030B18;
-  --sidebar-accent: #0A2D52;
-  --sidebar-accent-foreground: #F8FBFF;
-  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #071D3A;
+  --sidebar-primary: #071D3A;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F5FAFF;
+  --sidebar-accent-foreground: #071D3A;
+  --sidebar-border: #DCE8F2;
   --sidebar-ring: #1FE9E1;
 }
 
@@ -99,19 +99,39 @@
   html {
     @apply font-sans;
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     @apply bg-background text-foreground;
-    background-color: #030B18;
-    color: #F8FBFF;
+    background-color: #ffffff;
+    color: #071D3A;
   }
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #030B18; }
-::-webkit-scrollbar-thumb { background: rgba(31,233,225,0.25); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(31,233,225,0.5); }
+::-webkit-scrollbar-track { background: #F5FAFF; }
+::-webkit-scrollbar-thumb { background: rgba(10,45,82,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(31,233,225,0.6); }
+
+/* Blob animations for brand background */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -20px) scale(1.05); }
+  66%  { transform: translate(-15px, 15px) scale(0.97); }
+}
+@keyframes blob-drift-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-25px, 20px) scale(1.04); }
+}
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-blob { animation: blob-drift 9s ease-in-out infinite; }
+.animate-blob-slow { animation: blob-drift-slow 13s ease-in-out infinite; }
+.animate-blob-delay { animation: blob-drift 11s ease-in-out infinite 2s; }
+.animate-float-badge { animation: float-badge 4s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

@@ -53,12 +53,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${geist.variable} dark`}>
-      <body className="antialiased min-h-screen flex flex-col">
+    <html lang="es" className={geist.variable}>
+      <body className="antialiased min-h-screen flex flex-col bg-white text-[#071D3A]">
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
-        <Toaster theme="dark" position="bottom-right" />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   )
