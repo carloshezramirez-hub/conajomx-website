@@ -1,0 +1,142 @@
+export type Leader = {
+  name: string
+  role: string
+  council: string
+  initials: string
+  image?: string
+}
+
+export const presidenciaNacional: Leader[] = [
+  {
+    name: "Ronaldo Elias Aguila",
+    role: "Presidente Fundador / Presidente del Consejo Consultivo",
+    council: "Presidencia Nacional",
+    initials: "REA",
+  },
+  {
+    name: "Raúl Saide González",
+    role: "Presidente del Consejo Consultivo",
+    council: "Presidencia Nacional",
+    initials: "RSG",
+  },
+  {
+    name: "Daniel Olea Montes",
+    role: "Vicepresidente",
+    council: "Presidencia Nacional",
+    initials: "DOM",
+  },
+  {
+    name: "Javier Porras Velázquez",
+    role: "Presidente del Consejo de Empresarios",
+    council: "CNEM",
+    initials: "JPV",
+  },
+  {
+    name: "Vania López González",
+    role: "Presidenta del Consejo de Regidores y Síndicos",
+    council: "Legisladores y Alcaldes",
+    initials: "VLG",
+  },
+  {
+    name: "Juan Manuel Téllez",
+    role: "Presidente del Consejo Legisladores y Alcaldes",
+    council: "Legisladores y Alcaldes",
+    initials: "JMT",
+  },
+  {
+    name: "Miriam Escalante Rejón",
+    role: "Vicepresidenta del Consejo de Empresarios",
+    council: "CNEM",
+    initials: "MER",
+  },
+  {
+    name: "Tonatiuh Zarate",
+    role: "Vicepresidente del Consejo de Regidores y Síndicos",
+    council: "Legisladores y Alcaldes",
+    initials: "TZ",
+  },
+  {
+    name: "Dalejandra Navez Plancarte",
+    role: "Vicepresidenta del Consejo Legisladores y Alcaldes",
+    council: "Legisladores y Alcaldes",
+    initials: "DNP",
+  },
+]
+
+export const mesaDirectivaCNEM2026: Leader[] = [
+  {
+    name: "Javier Porras Velázquez",
+    role: "Presidente",
+    council: "CNEM 2026",
+    initials: "JPV",
+  },
+  {
+    name: "Miriam Escalante Rejón",
+    role: "Vicepresidencia",
+    council: "CNEM 2026",
+    initials: "MER",
+  },
+  {
+    name: "Alejandra Cerecedo Constantino",
+    role: "Directora Nacional de Comunicación",
+    council: "CNEM 2026",
+    initials: "ACC",
+  },
+  {
+    name: "Raúl Vargas Contreras",
+    role: "Secretario de Constructores",
+    council: "CNEM 2026",
+    initials: "RVC",
+  },
+  {
+    name: "Eduardo Solano González",
+    role: "Secretario de Economía",
+    council: "CNEM 2026",
+    initials: "ESG",
+  },
+  {
+    name: "Luis Cavazos Morales",
+    role: "Secretario de Organización Norte",
+    council: "CNEM 2026",
+    initials: "LCM",
+  },
+  {
+    name: "Ricardo Antillón Jiménez",
+    role: "Secretario de Organización Bajío",
+    council: "CNEM 2026",
+    initials: "RAJ",
+  },
+  {
+    name: "Rodrigo Goyri Reta",
+    role: "Secretario de Organización Centro",
+    council: "CNEM 2026",
+    initials: "RGR",
+  },
+  {
+    name: "María Cernas Pulido",
+    role: "Secretaria de Organización Sur",
+    council: "CNEM 2026",
+    initials: "MCP",
+  },
+]
+
+export const conajomxEspana: Leader[] = [
+  {
+    name: "Juan Manuel Riesgo Vialas",
+    role: "Presidente del Principado de Asturias",
+    council: "España",
+    initials: "JMR",
+  },
+  {
+    name: "Marcos Ramírez Amoretti",
+    role: "Presidente Nacional",
+    council: "España",
+    initials: "MRA",
+  },
+  {
+    name: "Adrián Pedraja Barrientos",
+    role: "Presidente de Madrid",
+    council: "España",
+    initials: "APB",
+  },
+]

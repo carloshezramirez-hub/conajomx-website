@@ -1,8 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CONAJOMX Website
 
-## Getting Started
+Sitio web institucional para **CONAJOMX — Consejo de Jóvenes Pro México, A.C.**
 
-First, run the development server:
+## Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS v4 + shadcn/ui
+- **Animaciones**: Framer Motion
+- **Globo 3D**: cobe
+- **Notificaciones**: sonner
+
+## Instalación y desarrollo
 
 ```bash
 npm run dev
