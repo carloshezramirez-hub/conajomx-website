@@ -133,6 +133,18 @@
 .animate-blob-delay { animation: blob-drift 11s ease-in-out infinite 2s; }
 .animate-float-badge { animation: float-badge 4s ease-in-out infinite; }
 
+/* Affiliates infinite ticker */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker { animation: ticker 28s linear infinite; }
+.animate-ticker:hover { animation-play-state: paused; }
+
+/* Hide scrollbars on mobile sliders */
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

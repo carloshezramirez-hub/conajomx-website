@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgG05" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2D52"/>
+      <stop offset="100%" stop-color="#071D3A"/>
+    </linearGradient>
+    <linearGradient id="buildGrad05" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D3560"/>
+      <stop offset="100%" stop-color="#071D3A"/>
+    </linearGradient>
+    <linearGradient id="skyline05" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1FE9E1" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#071D3A" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="textGlow05">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bgG05)"/>
+
+  <!-- Subtle vertical line texture -->
+  <line x1="100" y1="0" x2="100" y2="400" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="200" y1="0" x2="200" y2="400" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="300" y1="0" x2="300" y2="400" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="400" y1="0" x2="400" y2="400" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="500" y1="0" x2="500" y2="400" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+
+  <!-- CNEM watermark text (large, semi-transparent) -->
+  <text x="300" y="265" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="120" fill="#0A2D52" text-anchor="middle" opacity="0.9" filter="url(#textGlow05)">CNEM</text>
+  <text x="300" y="265" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="120" fill="none" stroke="#1FE9E1" stroke-width="0.5" text-anchor="middle" opacity="0.2">CNEM</text>
+
+  <!-- City layers (silhouette) -->
+  <!-- Back layer buildings -->
+  <rect x="0" y="210" width="30" height="190" fill="url(#buildGrad05)" opacity="0.4"/>
+  <rect x="35" y="185" width="35" height="215" fill="url(#buildGrad05)" opacity="0.45"/>
+  <rect x="75" y="200" width="25" height="200" fill="url(#buildGrad05)" opacity="0.4"/>
+  <rect x="105" y="170" width="40" height="230" fill="url(#buildGrad05)" opacity="0.5"/>
+  <rect x="150" y="155" width="28" height="245" fill="url(#buildGrad05)" opacity="0.55"/>
+  <rect x="183" y="175" width="35" height="225" fill="url(#buildGrad05)" opacity="0.48"/>
+  <rect x="222" y="190" width="30" height="210" fill="url(#buildGrad05)" opacity="0.42"/>
+  <!-- Center tower -->
+  <rect x="257" y="130" width="45" height="270" fill="url(#buildGrad05)" opacity="0.65"/>
+  <rect x="268" y="105" width="23" height="28" fill="url(#buildGrad05)" opacity="0.65"/>
+  <rect x="277" y="90" width="5" height="16" fill="#1FE9E1" opacity="0.5"/>
+  <!-- Right buildings -->
+  <rect x="310" y="165" width="38" height="235" fill="url(#buildGrad05)" opacity="0.58"/>
+  <rect x="352" y="180" width="30" height="220" fill="url(#buildGrad05)" opacity="0.5"/>
+  <rect x="386" y="160" width="42" height="240" fill="url(#buildGrad05)" opacity="0.55"/>
+  <rect x="432" y="195" width="28" height="205" fill="url(#buildGrad05)" opacity="0.45"/>
+  <rect x="464" y="175" width="35" height="225" fill="url(#buildGrad05)" opacity="0.5"/>
+  <rect x="503" y="200" width="30" height="200" fill="url(#buildGrad05)" opacity="0.42"/>
+  <rect x="537" y="185" width="38" height="215" fill="url(#buildGrad05)" opacity="0.45"/>
+  <rect x="580" y="210" width="20" height="190" fill="url(#buildGrad05)" opacity="0.38"/>
+
+  <!-- Window dots on buildings -->
+  <rect x="262" y="140" width="5" height="5" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="272" y="140" width="5" height="5" fill="#1FE9E1" opacity="0.35"/>
+  <rect x="285" y="140" width="5" height="5" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="262" y="154" width="5" height="5" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="285" y="154" width="5" height="5" fill="#1FE9E1" opacity="0.35"/>
+  <rect x="117" y="178" width="5" height="5" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="128" y="178" width="5" height="5" fill="#1FE9E1" opacity="0.25"/>
+  <rect x="395" y="168" width="5" height="5" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="406" y="168" width="5" height="5" fill="#1FE9E1" opacity="0.25"/>
+
+  <!-- Horizon glow -->
+  <rect x="0" y="208" width="600" height="3" fill="#1FE9E1" opacity="0.25"/>
+
+  <!-- Cyan accent lines at top/bottom -->
+  <rect x="0" y="0" width="600" height="4" fill="#1FE9E1" opacity="0.5"/>
+  <line x1="0" y1="380" x2="600" y2="380" stroke="#1FE9E1" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Small label bottom -->
+  <text x="26" y="372" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="white" opacity="0.7" letter-spacing="1">CNEM</text>
+  <text x="75" y="372" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="11" fill="#1FE9E1" opacity="0.6" letter-spacing="0.5"> · Consejo Nacional de Empresarios</text>
+</svg>

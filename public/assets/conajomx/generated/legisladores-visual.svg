@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgLEG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5FAFF"/>
+      <stop offset="100%" stop-color="#EEF3FB"/>
+    </linearGradient>
+    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2D52"/>
+      <stop offset="100%" stop-color="#071D3A"/>
+    </linearGradient>
+    <pattern id="gridPatLEG" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <line x1="32" y1="0" x2="0" y2="0" stroke="#071D3A" stroke-width="0.3" opacity="0.06"/>
+      <line x1="0" y1="0" x2="0" y2="32" stroke="#071D3A" stroke-width="0.3" opacity="0.06"/>
+    </pattern>
+    <filter id="domeShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#071D3A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bgLEG)"/>
+  <rect width="600" height="400" fill="url(#gridPatLEG)"/>
+
+  <!-- Corner decoration top left -->
+  <polygon points="0,0 180,0 0,120" fill="#D9FFFC" opacity="0.5"/>
+  <!-- Corner decoration bottom right -->
+  <polygon points="600,280 600,400 420,400" fill="#D9FFFC" opacity="0.4"/>
+
+  <!-- Civic building / Capitol dome silhouette -->
+  <g filter="url(#domeShadow)">
+    <!-- Wide base / podium -->
+    <rect x="100" y="305" width="400" height="18" fill="url(#domeGrad)" rx="2"/>
+    <rect x="85" y="323" width="430" height="10" fill="#0A2D52" rx="1"/>
+    <rect x="70" y="333" width="460" height="7" fill="#071D3A" opacity="0.6" rx="1"/>
+
+    <!-- Main body left wing -->
+    <rect x="100" y="210" width="115" height="95" fill="url(#domeGrad)" rx="2"/>
+    <!-- Main body right wing -->
+    <rect x="385" y="210" width="115" height="95" fill="url(#domeGrad)" rx="2"/>
+    <!-- Center body -->
+    <rect x="185" y="195" width="230" height="110" fill="url(#domeGrad)" rx="3"/>
+
+    <!-- Columns on center -->
+    <rect x="195" y="215" width="9" height="90" fill="#0D3560" rx="2"/>
+    <rect x="216" y="215" width="9" height="90" fill="#0D3560" rx="2"/>
+    <rect x="238" y="215" width="9" height="90" fill="#0D3560" rx="2"/>
+    <rect x="310" y="215" width="9" height="90" fill="#0D3560" rx="2"/>
+    <rect x="332" y="215" width="9" height="90" fill="#0D3560" rx="2"/>
+    <rect x="354" y="215" width="9" height="90" fill="#0D3560" rx="2"/>
+
+    <!-- Entablature center -->
+    <rect x="175" y="195" width="250" height="14" fill="#071D3A" rx="1"/>
+
+    <!-- Rotunda / drum -->
+    <rect x="245" y="138" width="110" height="60" fill="#0A2D52" rx="3"/>
+
+    <!-- Dome -->
+    <ellipse cx="300" cy="138" rx="68" ry="50" fill="url(#domeGrad)"/>
+    <ellipse cx="300" cy="138" rx="55" ry="40" fill="#0A2D52"/>
+    <ellipse cx="300" cy="138" rx="38" ry="28" fill="#0D3560"/>
+
+    <!-- Lantern on dome -->
+    <rect x="290" y="90" width="20" height="22" fill="#0A2D52" rx="2"/>
+    <!-- Flagpole -->
+    <rect x="298" y="65" width="4" height="28" fill="#526173" rx="1"/>
+    <!-- Flag -->
+    <rect x="302" y="67" width="20" height="14" fill="#1FE9E1" opacity="0.6" rx="1"/>
+
+    <!-- Windows on wings -->
+    <rect x="115" y="225" width="14" height="16" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <rect x="135" y="225" width="14" height="16" fill="#1FE9E1" opacity="0.15" rx="1"/>
+    <rect x="155" y="225" width="14" height="16" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <rect x="395" y="225" width="14" height="16" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <rect x="415" y="225" width="14" height="16" fill="#1FE9E1" opacity="0.15" rx="1"/>
+    <rect x="435" y="225" width="14" height="16" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <!-- Windows row 2 -->
+    <rect x="115" y="258" width="14" height="14" fill="#1FE9E1" opacity="0.15" rx="1"/>
+    <rect x="155" y="258" width="14" height="14" fill="#1FE9E1" opacity="0.18" rx="1"/>
+    <rect x="395" y="258" width="14" height="14" fill="#1FE9E1" opacity="0.15" rx="1"/>
+    <rect x="435" y="258" width="14" height="14" fill="#1FE9E1" opacity="0.18" rx="1"/>
+    <!-- Door center -->
+    <rect x="276" y="264" width="48" height="41" fill="#0D3560" rx="2"/>
+    <rect x="282" y="268" width="17" height="22" fill="#071D3A" opacity="0.5"/>
+    <rect x="301" y="268" width="17" height="22" fill="#071D3A" opacity="0.5"/>
+  </g>
+
+  <!-- Flanking small columns (decorative) -->
+  <circle cx="80" cy="195" r="18" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="520" cy="195" r="18" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Text section -->
+  <text x="300" y="368" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="16" fill="#071D3A" text-anchor="middle" letter-spacing="1.5">Estado Abierto · Gobernanza</text>
+  <text x="300" y="386" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="10" fill="#526173" text-anchor="middle" letter-spacing="2">LEGISLADORES · ALCALDES · CONAJOMX</text>
+
+  <!-- Cyan accent line at bottom -->
+  <rect x="0" y="397" width="600" height="3" fill="#1FE9E1" opacity="0.5"/>
+  <rect x="0" y="395" width="200" height="2" fill="#1FE9E1" opacity="0.25"/>
+</svg>

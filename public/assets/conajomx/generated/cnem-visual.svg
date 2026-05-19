@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgCNEM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5FAFF"/>
+      <stop offset="100%" stop-color="#EEF3FB"/>
+    </linearGradient>
+    <linearGradient id="buildingGradCNEM" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="100%" stop-color="#0A2D52"/>
+    </linearGradient>
+    <pattern id="hexPatCNEM" x="0" y="0" width="44" height="38.1" patternUnits="userSpaceOnUse">
+      <polygon points="22,1.5 41,11.6 41,31.8 22,41.9 3,31.8 3,11.6" fill="none" stroke="#071D3A" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <filter id="buildShadowCNEM">
+      <feDropShadow dx="4" dy="8" stdDeviation="12" flood-color="#071D3A" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bgCNEM)"/>
+  <rect width="600" height="400" fill="url(#hexPatCNEM)"/>
+
+  <!-- Cyan accent border at top (8px) -->
+  <rect x="0" y="0" width="600" height="8" fill="#1FE9E1"/>
+  <rect x="0" y="8" width="600" height="2" fill="#1FE9E1" opacity="0.25"/>
+
+  <!-- CNEM watermark text (large, semi-transparent) -->
+  <text x="300" y="290" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="130" fill="#071D3A" text-anchor="middle" opacity="0.05">CNEM</text>
+
+  <!-- Building icon - institutional/enterprise -->
+  <g filter="url(#buildShadowCNEM)">
+    <!-- Main building body -->
+    <rect x="218" y="150" width="164" height="178" fill="url(#buildingGradCNEM)" rx="3"/>
+    <!-- Entablature / top band -->
+    <rect x="205" y="140" width="190" height="18" fill="#071D3A" rx="2"/>
+    <!-- Pediment triangle -->
+    <polygon points="300,108 210,140 390,140" fill="#0A2D52"/>
+    <!-- Columns -->
+    <rect x="225" y="168" width="10" height="160" fill="#0D3560" rx="2"/>
+    <rect x="250" y="168" width="10" height="160" fill="#0D3560" rx="2"/>
+    <rect x="278" y="168" width="10" height="160" fill="#0D3560" rx="2"/>
+    <rect x="306" y="168" width="10" height="160" fill="#0D3560" rx="2"/>
+    <rect x="334" y="168" width="10" height="160" fill="#0D3560" rx="2"/>
+    <rect x="360" y="168" width="10" height="160" fill="#0D3560" rx="2"/>
+    <!-- Base steps -->
+    <rect x="198" y="328" width="204" height="8" fill="#071D3A" rx="1"/>
+    <rect x="188" y="336" width="224" height="7" fill="#0A2D52" rx="1"/>
+    <!-- Door -->
+    <rect x="278" y="275" width="44" height="53" fill="#0D3560" rx="2"/>
+    <rect x="284" y="279" width="15" height="27" fill="#071D3A" opacity="0.6"/>
+    <rect x="301" y="279" width="15" height="27" fill="#071D3A" opacity="0.6"/>
+    <!-- Windows row 1 -->
+    <rect x="228" y="180" width="16" height="18" fill="#1FE9E1" opacity="0.25" rx="1"/>
+    <rect x="258" y="180" width="16" height="18" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <rect x="316" y="180" width="16" height="18" fill="#1FE9E1" opacity="0.25" rx="1"/>
+    <rect x="346" y="180" width="16" height="18" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <!-- Windows row 2 -->
+    <rect x="228" y="220" width="16" height="18" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <rect x="258" y="220" width="16" height="18" fill="#1FE9E1" opacity="0.3" rx="1"/>
+    <rect x="316" y="220" width="16" height="18" fill="#1FE9E1" opacity="0.2" rx="1"/>
+    <rect x="346" y="220" width="16" height="18" fill="#1FE9E1" opacity="0.25" rx="1"/>
+    <!-- Flag pole -->
+    <rect x="298" y="78" width="4" height="30" fill="#526173" rx="1"/>
+    <rect x="302" y="80" width="18" height="12" fill="#1FE9E1" opacity="0.7"/>
+  </g>
+
+  <!-- Decorative geometry left -->
+  <circle cx="85" cy="230" r="32" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="85" cy="230" r="20" fill="none" stroke="#071D3A" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="85" cy="230" r="4" fill="#1FE9E1" opacity="0.3"/>
+  <!-- Right decoration -->
+  <circle cx="515" cy="210" r="26" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="515" cy="210" r="4" fill="#1FE9E1" opacity="0.3"/>
+
+  <!-- Caption -->
+  <text x="300" y="368" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="20" fill="#071D3A" text-anchor="middle" letter-spacing="4" opacity="0.85">CNEM</text>
+  <text x="300" y="387" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="10" fill="#526173" text-anchor="middle" letter-spacing="1">Consejo Nacional de Empresarios de México</text>
+
+  <!-- Bottom right accent -->
+  <rect x="400" y="395" width="200" height="5" fill="#1FE9E1" opacity="0.3"/>
+</svg>

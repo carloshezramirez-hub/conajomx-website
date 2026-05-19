@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" width="160" height="80">
+  <defs>
+    <linearGradient id="a01bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="100%" stop-color="#0A2D52"/>
+    </linearGradient>
+    <pattern id="a01hex" x="0" y="0" width="24" height="20.8" patternUnits="userSpaceOnUse">
+      <polygon points="12,1 22,6.2 22,16.6 12,21.8 2,16.6 2,6.2" fill="none" stroke="#1FE9E1" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="160" height="80" rx="6" fill="url(#a01bg)"/>
+  <rect width="160" height="80" rx="6" fill="url(#a01hex)"/>
+
+  <!-- Hexagon icon (solid) -->
+  <polygon points="22,12 32,17.8 32,29.3 22,35 12,29.3 12,17.8" fill="#1FE9E1" opacity="0.2"/>
+  <polygon points="22,15 29,18.9 29,26.8 22,30.8 15,26.8 15,18.9" fill="none" stroke="#1FE9E1" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="22" cy="23.5" r="3" fill="#1FE9E1" opacity="0.9"/>
+
+  <!-- Wordmark -->
+  <text x="96" y="30" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="14" fill="white" text-anchor="middle" letter-spacing="0.5">Grupo MX</text>
+  <!-- Sub label -->
+  <text x="96" y="47" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="7.5" fill="#1FE9E1" text-anchor="middle" letter-spacing="1.5" opacity="0.8">ALIADOS CONAJOMX</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="73" width="160" height="7" fill="#1FE9E1" opacity="0.12" rx="0"/>
+  <rect x="0" y="76" width="80" height="4" fill="#1FE9E1" opacity="0.5" rx="0"/>
+</svg>

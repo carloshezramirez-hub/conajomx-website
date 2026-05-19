@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <defs>
+    <linearGradient id="bgN01" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="70%" stop-color="#0D3D2A"/>
+      <stop offset="100%" stop-color="#0A2D1A"/>
+    </linearGradient>
+    <linearGradient id="leafGrad01" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1FE9E1"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#071D3A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="leafFilter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="280" fill="url(#bgN01)"/>
+  <circle cx="200" cy="170" r="140" fill="url(#greenGlow)"/>
+
+  <!-- Abstract tree/leaf silhouette -->
+  <!-- Trunk -->
+  <rect x="193" y="195" width="14" height="55" fill="#22C55E" opacity="0.4" rx="3"/>
+  <rect x="196" y="195" width="8" height="55" fill="#1FE9E1" opacity="0.2" rx="2"/>
+
+  <!-- Tree canopy layers -->
+  <!-- Bottom layer -->
+  <ellipse cx="200" cy="190" rx="65" ry="40" fill="url(#leafGrad01)" opacity="0.25"/>
+  <!-- Middle layer -->
+  <ellipse cx="200" cy="160" rx="52" ry="38" fill="url(#leafGrad01)" opacity="0.35"/>
+  <!-- Top layer -->
+  <ellipse cx="200" cy="130" rx="38" ry="32" fill="url(#leafGrad01)" opacity="0.45"/>
+  <!-- Peak -->
+  <ellipse cx="200" cy="105" rx="24" ry="22" fill="url(#leafGrad01)" opacity="0.6" filter="url(#leafFilter)"/>
+
+  <!-- Leaf detail lines -->
+  <path d="M200,225 C200,225 175,195 185,165 C190,150 200,145 200,125" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.3"/>
+  <path d="M200,225 C200,225 225,195 215,165 C210,150 200,145 200,125" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Floating particles -->
+  <circle cx="140" cy="100" r="3" fill="#22C55E" opacity="0.5"/>
+  <circle cx="260" cy="120" r="2.5" fill="#1FE9E1" opacity="0.5"/>
+  <circle cx="150" cy="155" r="2" fill="#22C55E" opacity="0.4"/>
+  <circle cx="252" cy="170" r="2" fill="#1FE9E1" opacity="0.4"/>
+  <circle cx="115" cy="200" r="1.5" fill="#22C55E" opacity="0.3"/>
+  <circle cx="285" cy="90" r="2" fill="#1FE9E1" opacity="0.35"/>
+
+  <!-- Small leaf shapes floating -->
+  <path d="M130,80 Q140,70 145,82 Q135,88 130,80Z" fill="#22C55E" opacity="0.4"/>
+  <path d="M265,75 Q275,65 280,77 Q270,83 265,75Z" fill="#1FE9E1" opacity="0.35"/>
+
+  <!-- Top left accent tag -->
+  <rect x="0" y="0" width="100" height="28" fill="#22C55E" opacity="0.8" rx="0"/>
+  <rect x="100" y="0" width="60" height="28" fill="#1FE9E1" opacity="0.6" rx="0"/>
+  <text x="12" y="18" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="10" fill="white" letter-spacing="1">AGENDA VERDE</text>
+
+  <!-- Bottom text area -->
+  <rect x="0" y="230" width="400" height="50" fill="#071D3A" opacity="0.7"/>
+  <text x="20" y="252" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="16" fill="white" letter-spacing="0.5">Agenda Verde · COP31</text>
+  <text x="20" y="270" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9" fill="#1FE9E1" letter-spacing="2">SUSTENTABILIDAD · CAMBIO CLIMÁTICO</text>
+
+  <!-- Bottom cyan accent bar -->
+  <rect x="0" y="276" width="120" height="4" fill="#1FE9E1" rx="0" opacity="0.8"/>
+  <rect x="120" y="276" width="80" height="4" fill="#22C55E" rx="0" opacity="0.6"/>
+</svg>

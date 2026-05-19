@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="leftBgMS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="100%" stop-color="#0A2D52"/>
+    </linearGradient>
+    <linearGradient id="rightBgMS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEF3FB"/>
+      <stop offset="100%" stop-color="#F5FAFF"/>
+    </linearGradient>
+    <linearGradient id="arcGradMS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1FE9E1"/>
+      <stop offset="50%" stop-color="white"/>
+      <stop offset="100%" stop-color="#1FE9E1"/>
+    </linearGradient>
+    <pattern id="hexDarkMS" x="0" y="0" width="40" height="34.6" patternUnits="userSpaceOnUse">
+      <polygon points="20,1 37,10.3 37,29 20,38.3 3,29 3,10.3" fill="none" stroke="#1FE9E1" stroke-width="0.4" opacity="0.1"/>
+    </pattern>
+    <pattern id="dotLightMS" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="#071D3A" opacity="0.07"/>
+    </pattern>
+    <filter id="glowMS">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="leftClipMS">
+      <polygon points="0,0 340,0 260,400 0,400"/>
+    </clipPath>
+    <clipPath id="rightClipMS">
+      <polygon points="340,0 600,0 600,400 260,400"/>
+    </clipPath>
+  </defs>
+
+  <!-- Split diagonal background -->
+  <polygon points="0,0 340,0 260,400 0,400" fill="url(#leftBgMS)"/>
+  <polygon points="340,0 600,0 600,400 260,400" fill="url(#rightBgMS)"/>
+
+  <!-- Patterns on each side -->
+  <g clip-path="url(#leftClipMS)">
+    <rect width="600" height="400" fill="url(#hexDarkMS)"/>
+  </g>
+  <g clip-path="url(#rightClipMS)">
+    <rect width="600" height="400" fill="url(#dotLightMS)"/>
+  </g>
+
+  <!-- Diagonal divider line glow -->
+  <line x1="340" y1="0" x2="260" y2="400" stroke="#1FE9E1" stroke-width="2" opacity="0.5"/>
+  <line x1="340" y1="0" x2="260" y2="400" stroke="white" stroke-width="6" opacity="0.05"/>
+
+  <!-- Mexico flag icon (left side) -->
+  <rect x="44" y="65" width="10" height="46" fill="#006847" rx="1.5"/>
+  <rect x="54" y="65" width="10" height="46" fill="white" opacity="0.9" rx="0"/>
+  <rect x="64" y="65" width="10" height="46" fill="#CE1126" rx="1.5"/>
+  <!-- Mexico label -->
+  <text x="90" y="93" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="15" fill="white" opacity="0.9" letter-spacing="1">MÉXICO</text>
+
+  <!-- Spain flag icon (right side) -->
+  <rect x="452" y="62" width="11" height="10" fill="#c60b1e" rx="1"/>
+  <rect x="463" y="62" width="11" height="10" fill="#c60b1e" rx="1"/>
+  <rect x="452" y="72" width="11" height="16" fill="#ffc400" rx="0"/>
+  <rect x="463" y="72" width="11" height="16" fill="#ffc400" rx="0"/>
+  <rect x="452" y="88" width="11" height="10" fill="#c60b1e" rx="1"/>
+  <rect x="463" y="88" width="11" height="10" fill="#c60b1e" rx="1"/>
+  <!-- Spain label -->
+  <text x="488" y="82" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="15" fill="#071D3A" opacity="0.9" letter-spacing="1">ESPAÑA</text>
+
+  <!-- Connection arc -->
+  <path d="M110,200 Q300,60 490,200" fill="none" stroke="url(#arcGradMS)" stroke-width="2.5" stroke-dasharray="8,5" opacity="0.8"/>
+
+  <!-- Arc dots -->
+  <circle cx="155" cy="156" r="5" fill="#1FE9E1" opacity="0.9" filter="url(#glowMS)"/>
+  <circle cx="220" cy="108" r="4" fill="#1FE9E1" opacity="0.8"/>
+  <circle cx="300" cy="82" r="7" fill="#1FE9E1" filter="url(#glowMS)"/>
+  <circle cx="300" cy="82" r="14" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.4"/>
+  <circle cx="380" cy="108" r="4" fill="white" opacity="0.8"/>
+  <circle cx="445" cy="156" r="5" fill="#1FE9E1" opacity="0.9" filter="url(#glowMS)"/>
+
+  <!-- Origin nodes -->
+  <circle cx="110" cy="200" r="7" fill="#1FE9E1" filter="url(#glowMS)"/>
+  <circle cx="110" cy="200" r="14" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.4"/>
+  <circle cx="490" cy="200" r="7" fill="#1FE9E1" filter="url(#glowMS)"/>
+  <circle cx="490" cy="200" r="14" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.4"/>
+
+  <!-- Center "MX · ES" text -->
+  <text x="110" y="270" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="22" fill="white" opacity="0.95" letter-spacing="1">México</text>
+  <text x="116" y="292" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="300" font-size="10" fill="#1FE9E1" opacity="0.8" letter-spacing="2">ALIANZA</text>
+
+  <text x="490" y="270" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="22" fill="#071D3A" text-anchor="end" opacity="0.95" letter-spacing="1">España</text>
+  <text x="484" y="292" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="300" font-size="10" fill="#526173" text-anchor="end" opacity="0.8" letter-spacing="2">ESTRATÉGICA</text>
+
+  <!-- Center label -->
+  <text x="300" y="340" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="11" fill="#526173" text-anchor="middle" letter-spacing="3" opacity="0.7">ALIANZA ESTRATÉGICA BILATERAL</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="360" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9" fill="#526173" text-anchor="middle" letter-spacing="2" opacity="0.5">CONAJOMX · COOPERACIÓN INTERNACIONAL</text>
+
+  <!-- Bottom cyan accent -->
+  <rect x="220" y="390" width="160" height="3" fill="#1FE9E1" rx="1" opacity="0.4"/>
+</svg>

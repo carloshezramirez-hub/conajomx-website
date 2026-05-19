@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <defs>
+    <linearGradient id="bgN03b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="100%" stop-color="#0A2D52"/>
+    </linearGradient>
+    <linearGradient id="speakerGrad03" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1FE9E1" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0A2D52" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="podiumGrad03" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D3560"/>
+      <stop offset="100%" stop-color="#071D3A"/>
+    </linearGradient>
+    <radialGradient id="spotGlow03b" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#1FE9E1" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#071D3A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="figGlow03">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="280" fill="url(#bgN03b)"/>
+  <ellipse cx="200" cy="100" rx="160" ry="115" fill="url(#spotGlow03b)"/>
+
+  <!-- Horizontal background lines -->
+  <line x1="0" y1="60" x2="400" y2="60" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="100" x2="400" y2="100" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="140" x2="400" y2="140" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+  <line x1="0" y1="180" x2="400" y2="180" stroke="#1FE9E1" stroke-width="0.3" opacity="0.06"/>
+
+  <!-- Podium platform -->
+  <rect x="140" y="188" width="120" height="12" fill="url(#podiumGrad03)" rx="2"/>
+  <rect x="130" y="200" width="140" height="6" fill="#071D3A" rx="1"/>
+  <!-- Podium face panel -->
+  <rect x="155" y="155" width="90" height="33" fill="url(#podiumGrad03)" rx="3"/>
+  <!-- Podium cyan accent line -->
+  <rect x="155" y="183" width="90" height="3" fill="#1FE9E1" opacity="0.5" rx="1"/>
+  <!-- Microphone -->
+  <rect x="198" y="148" width="4" height="12" fill="#526173" rx="1"/>
+  <circle cx="200" cy="144" r="5" fill="#526173"/>
+  <circle cx="200" cy="144" r="3" fill="#0A2D52"/>
+
+  <!-- Speaker figure silhouette with gradient fill -->
+  <rect x="178" y="100" width="44" height="58" fill="url(#speakerGrad03)" rx="4" filter="url(#figGlow03)"/>
+  <ellipse cx="200" cy="90" rx="18" ry="20" fill="url(#speakerGrad03)" filter="url(#figGlow03)"/>
+  <!-- Raised arm right -->
+  <path d="M222,120 Q238,105 242,115 Q240,125 222,132Z" fill="url(#speakerGrad03)" opacity="0.7"/>
+  <!-- Arm left -->
+  <path d="M178,120 Q168,115 165,125 Q168,132 178,128Z" fill="url(#speakerGrad03)" opacity="0.7"/>
+
+  <!-- Spotlight cone from above -->
+  <polygon points="200,0 130,188 270,188" fill="#1FE9E1" opacity="0.04"/>
+  <polygon points="200,0 160,188 240,188" fill="#1FE9E1" opacity="0.025"/>
+
+  <!-- Platform steps -->
+  <rect x="100" y="220" width="200" height="6" fill="#0A2D52" opacity="0.6" rx="1"/>
+  <rect x="80" y="226" width="240" height="5" fill="#071D3A" opacity="0.4" rx="1"/>
+
+  <!-- Audience silhouette dots -->
+  <circle cx="110" cy="220" r="4" fill="#0D2A45"/>
+  <circle cx="130" cy="215" r="4.5" fill="#0D2A45"/>
+  <circle cx="150" cy="220" r="4" fill="#0D2A45"/>
+  <circle cx="170" cy="218" r="3.5" fill="#0D2A45"/>
+  <circle cx="230" cy="218" r="3.5" fill="#0D2A45"/>
+  <circle cx="250" cy="220" r="4" fill="#0D2A45"/>
+  <circle cx="270" cy="215" r="4.5" fill="#0D2A45"/>
+  <circle cx="290" cy="220" r="4" fill="#0D2A45"/>
+
+  <!-- Bottom text panel -->
+  <text x="20" y="250" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="17" fill="white" opacity="0.95" letter-spacing="0.5">Liderazgo · CONAJOMX</text>
+  <text x="20" y="268" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9" fill="#1FE9E1" opacity="0.7" letter-spacing="2">AGENDA NACIONAL · FORMACIÓN</text>
+
+  <!-- Cyan accent lines at very bottom -->
+  <rect x="0" y="275" width="140" height="3" fill="#1FE9E1" opacity="0.6"/>
+  <rect x="140" y="275" width="60" height="3" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="200" y="275" width="200" height="3" fill="#0A2D52"/>
+</svg>

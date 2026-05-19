@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad03" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF3FB"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="cityGrad03" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2D52"/>
+      <stop offset="100%" stop-color="#071D3A"/>
+    </linearGradient>
+    <linearGradient id="skyGrad03" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EEF3FB"/>
+      <stop offset="70%" stop-color="#D9FFFC" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F5FAFF"/>
+    </linearGradient>
+    <pattern id="hexPat03" x="0" y="0" width="50" height="43.3" patternUnits="userSpaceOnUse">
+      <polygon points="25,2 46,13.7 46,37 25,48.7 4,37 4,13.7" fill="none" stroke="#071D3A" stroke-width="0.5" opacity="0.07"/>
+    </pattern>
+    <filter id="cityBlur">
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad03)"/>
+
+  <!-- Hex network pattern upper area -->
+  <rect x="0" y="0" width="800" height="380" fill="url(#hexPat03)"/>
+
+  <!-- Glowing hex highlights in upper half -->
+  <polygon points="200,50 224,63.9 224,91.7 200,105.6 176,91.7 176,63.9" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.3"/>
+  <polygon points="350,30 374,43.9 374,71.7 350,85.6 326,71.7 326,43.9" fill="none" stroke="#1FE9E1" stroke-width="1.5" opacity="0.4"/>
+  <polygon points="500,60 524,73.9 524,101.7 500,115.6 476,101.7 476,73.9" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.3"/>
+  <polygon points="620,40 644,53.9 644,81.7 620,95.6 596,81.7 596,53.9" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.25"/>
+  <polygon points="130,140 154,153.9 154,181.7 130,195.6 106,181.7 106,153.9" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.2"/>
+  <polygon points="680,130 704,143.9 704,171.7 680,185.6 656,171.7 656,143.9" fill="none" stroke="#1FE9E1" stroke-width="0.8" opacity="0.2"/>
+  <polygon points="400,120 424,133.9 424,161.7 400,175.6 376,161.7 376,133.9" fill="none" stroke="#1FE9E1" stroke-width="1.2" opacity="0.35"/>
+
+  <!-- Network nodes connecting hexagons -->
+  <circle cx="350" cy="58" r="3" fill="#1FE9E1" opacity="0.7"/>
+  <circle cx="500" cy="88" r="2.5" fill="#1FE9E1" opacity="0.6"/>
+  <circle cx="400" cy="148" r="3" fill="#1FE9E1" opacity="0.65"/>
+  <line x1="350" y1="58" x2="400" y2="148" stroke="#1FE9E1" stroke-width="0.6" opacity="0.25"/>
+  <line x1="500" y1="88" x2="400" y2="148" stroke="#1FE9E1" stroke-width="0.6" opacity="0.25"/>
+
+  <!-- Cityscape silhouette -->
+  <!-- Background buildings layer -->
+  <rect x="0" y="390" width="800" height="210" fill="url(#cityGrad03)"/>
+
+  <!-- Building set 1 (left) -->
+  <rect x="20" y="320" width="40" height="280" fill="url(#cityGrad03)" opacity="0.5"/>
+  <rect x="65" y="290" width="55" height="310" fill="url(#cityGrad03)" opacity="0.6"/>
+  <rect x="35" y="270" width="25" height="50" fill="url(#cityGrad03)" opacity="0.5"/>
+  <!-- Windows -->
+  <rect x="72" y="298" width="5" height="5" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="82" y="298" width="5" height="5" fill="#1FE9E1" opacity="0.2"/>
+  <rect x="92" y="298" width="5" height="5" fill="#1FE9E1" opacity="0.35"/>
+  <rect x="72" y="310" width="5" height="5" fill="#1FE9E1" opacity="0.2"/>
+  <rect x="92" y="310" width="5" height="5" fill="#1FE9E1" opacity="0.25"/>
+
+  <!-- Building set 2 (center-left) -->
+  <rect x="130" y="300" width="50" height="300" fill="url(#cityGrad03)" opacity="0.65"/>
+  <rect x="155" y="260" width="20" height="40" fill="url(#cityGrad03)" opacity="0.65"/>
+  <rect x="185" y="330" width="45" height="270" fill="url(#cityGrad03)" opacity="0.55"/>
+  <rect x="235" y="280" width="60" height="320" fill="url(#cityGrad03)" opacity="0.7"/>
+  <!-- Antenna -->
+  <rect x="263" y="250" width="4" height="30" fill="url(#cityGrad03)" opacity="0.7"/>
+  <!-- Windows -->
+  <rect x="140" y="308" width="6" height="6" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="150" y="308" width="6" height="6" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="140" y="322" width="6" height="6" fill="#1FE9E1" opacity="0.25"/>
+  <rect x="244" y="288" width="6" height="6" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="256" y="288" width="6" height="6" fill="#1FE9E1" opacity="0.35"/>
+
+  <!-- Building set 3 (center - tallest) -->
+  <rect x="310" y="220" width="70" height="380" fill="url(#cityGrad03)" opacity="0.8"/>
+  <rect x="325" y="190" width="40" height="30" fill="url(#cityGrad03)" opacity="0.8"/>
+  <rect x="338" y="170" width="14" height="20" fill="url(#cityGrad03)" opacity="0.8"/>
+  <rect x="344" y="155" width="2" height="15" fill="#1FE9E1" opacity="0.6"/>
+  <!-- Windows center -->
+  <rect x="318" y="228" width="7" height="7" fill="#1FE9E1" opacity="0.5"/>
+  <rect x="330" y="228" width="7" height="7" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="342" y="228" width="7" height="7" fill="#1FE9E1" opacity="0.5"/>
+  <rect x="354" y="228" width="7" height="7" fill="#1FE9E1" opacity="0.35"/>
+  <rect x="366" y="228" width="7" height="7" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="318" y="242" width="7" height="7" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="342" y="242" width="7" height="7" fill="#1FE9E1" opacity="0.45"/>
+  <rect x="366" y="242" width="7" height="7" fill="#1FE9E1" opacity="0.3"/>
+
+  <!-- Building set 4 (center-right) -->
+  <rect x="390" y="260" width="55" height="340" fill="url(#cityGrad03)" opacity="0.72"/>
+  <rect x="450" y="240" width="65" height="360" fill="url(#cityGrad03)" opacity="0.68"/>
+  <rect x="460" y="210" width="20" height="30" fill="url(#cityGrad03)" opacity="0.68"/>
+  <rect x="400" y="268" width="7" height="7" fill="#1FE9E1" opacity="0.35"/>
+  <rect x="414" y="268" width="7" height="7" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="458" y="248" width="7" height="7" fill="#1FE9E1" opacity="0.45"/>
+  <rect x="472" y="248" width="7" height="7" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="486" y="248" width="7" height="7" fill="#1FE9E1" opacity="0.4"/>
+
+  <!-- Building set 5 (right) -->
+  <rect x="520" y="300" width="50" height="300" fill="url(#cityGrad03)" opacity="0.62"/>
+  <rect x="575" y="270" width="60" height="330" fill="url(#cityGrad03)" opacity="0.65"/>
+  <rect x="640" y="290" width="50" height="310" fill="url(#cityGrad03)" opacity="0.58"/>
+  <rect x="695" y="310" width="55" height="290" fill="url(#cityGrad03)" opacity="0.55"/>
+  <rect x="750" y="330" width="50" height="270" fill="url(#cityGrad03)" opacity="0.5"/>
+  <!-- Windows right -->
+  <rect x="527" y="308" width="6" height="6" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="539" y="308" width="6" height="6" fill="#1FE9E1" opacity="0.35"/>
+  <rect x="583" y="278" width="6" height="6" fill="#1FE9E1" opacity="0.4"/>
+  <rect x="597" y="278" width="6" height="6" fill="#1FE9E1" opacity="0.3"/>
+  <rect x="647" y="298" width="6" height="6" fill="#1FE9E1" opacity="0.35"/>
+
+  <!-- Horizon glow line -->
+  <line x1="0" y1="390" x2="800" y2="390" stroke="#1FE9E1" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Bottom text area -->
+  <text x="400" y="530" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="30" fill="white" text-anchor="middle" letter-spacing="1.5" opacity="0.95">LIDERAZGO EMPRESARIAL</text>
+  <text x="400" y="555" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="11" fill="#1FE9E1" text-anchor="middle" letter-spacing="4" opacity="0.8">CNEM · EMPRESARIOS · CONAJOMX</text>
+
+  <!-- Cyan bottom accent -->
+  <line x1="120" y1="570" x2="680" y2="570" stroke="#1FE9E1" stroke-width="1" opacity="0.25" stroke-dasharray="4,6"/>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5FAFF"/>
+      <stop offset="100%" stop-color="#D9FFFC"/>
+    </linearGradient>
+    <linearGradient id="arcGrad02" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="50%" stop-color="#1FE9E1"/>
+      <stop offset="100%" stop-color="#0A2D52"/>
+    </linearGradient>
+    <linearGradient id="mxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071D3A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0A2D52" stop-opacity="0.05"/>
+    </linearGradient>
+    <pattern id="gridPat02" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <line x1="40" y1="0" x2="0" y2="0" stroke="#071D3A" stroke-width="0.3" opacity="0.08"/>
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#071D3A" stroke-width="0.3" opacity="0.08"/>
+    </pattern>
+    <filter id="shadow02">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#071D3A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad02)"/>
+  <rect width="800" height="600" fill="url(#gridPat02)"/>
+
+  <!-- Subtle diagonal accent stripe -->
+  <polygon points="0,420 200,600 0,600" fill="#D9FFFC" opacity="0.5"/>
+  <polygon points="800,0 800,180 600,0" fill="#D9FFFC" opacity="0.5"/>
+
+  <!-- Mexico landmass (abstract) -->
+  <path d="M120,280 C140,240 180,220 230,235 C260,242 280,260 290,290 C300,320 285,355 270,370 C250,390 220,395 200,380 C170,360 130,340 120,280Z" fill="#071D3A" opacity="0.85" filter="url(#shadow02)"/>
+  <!-- MX label on shape -->
+  <text x="200" y="318" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="white" text-anchor="middle" letter-spacing="1">MX</text>
+  <!-- Mexico flag stripes (thin) -->
+  <rect x="120" y="412" width="6" height="30" fill="#006847" rx="1"/>
+  <rect x="128" y="412" width="6" height="30" fill="white" rx="1"/>
+  <rect x="136" y="412" width="6" height="30" fill="#CE1126" rx="1"/>
+
+  <!-- Spain landmass (abstract) -->
+  <path d="M530,270 C555,250 600,248 635,262 C665,274 680,300 672,330 C665,355 640,370 610,365 C580,360 550,345 535,320 C522,298 510,285 530,270Z" fill="#0A2D52" opacity="0.85" filter="url(#shadow02)"/>
+  <!-- ES label on shape -->
+  <text x="605" y="315" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="white" text-anchor="middle" letter-spacing="1">ES</text>
+  <!-- Spain flag stripes (thin) -->
+  <rect x="590" y="395" width="6" height="30" fill="#c60b1e" rx="1"/>
+  <rect x="598" y="395" width="6" height="30" fill="#ffc400" rx="1"/>
+  <rect x="606" y="395" width="6" height="30" fill="#c60b1e" rx="1"/>
+
+  <!-- Connecting arc -->
+  <path d="M290,310 Q400,160 530,290" fill="none" stroke="url(#arcGrad02)" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.8"/>
+
+  <!-- Arc dots -->
+  <circle cx="330" cy="248" r="5" fill="#1FE9E1" opacity="0.9"/>
+  <circle cx="370" cy="208" r="4" fill="#1FE9E1" opacity="0.85"/>
+  <circle cx="400" cy="194" r="6" fill="#1FE9E1" opacity="1"/>
+  <circle cx="430" cy="200" r="4" fill="#1FE9E1" opacity="0.85"/>
+  <circle cx="470" cy="225" r="5" fill="#1FE9E1" opacity="0.9"/>
+
+  <!-- Node halos -->
+  <circle cx="400" cy="194" r="12" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="194" r="18" fill="none" stroke="#1FE9E1" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Origin dots on landmasses -->
+  <circle cx="290" cy="310" r="5" fill="#1FE9E1"/>
+  <circle cx="290" cy="310" r="10" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.5"/>
+  <circle cx="530" cy="290" r="5" fill="#1FE9E1"/>
+  <circle cx="530" cy="290" r="10" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.5"/>
+
+  <!-- Main title -->
+  <text x="400" y="490" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#071D3A" text-anchor="middle" letter-spacing="1">México · España</text>
+  <text x="400" y="520" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="14" fill="#526173" text-anchor="middle" letter-spacing="3">ALIANZA ESTRATÉGICA BILATERAL</text>
+
+  <!-- Cyan accent line under title -->
+  <line x1="300" y1="532" x2="500" y2="532" stroke="#1FE9E1" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- CONAJOMX small tag -->
+  <text x="400" y="568" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="9" fill="#526173" text-anchor="middle" letter-spacing="2" opacity="0.6">CONAJOMX</text>
+
+  <!-- Corner decorations -->
+  <rect x="20" y="20" width="40" height="2" fill="#1FE9E1" opacity="0.5" rx="1"/>
+  <rect x="20" y="20" width="2" height="40" fill="#1FE9E1" opacity="0.5" rx="1"/>
+  <rect x="740" y="20" width="40" height="2" fill="#1FE9E1" opacity="0.5" rx="1"/>
+  <rect x="778" y="20" width="2" height="40" fill="#1FE9E1" opacity="0.5" rx="1"/>
+</svg>

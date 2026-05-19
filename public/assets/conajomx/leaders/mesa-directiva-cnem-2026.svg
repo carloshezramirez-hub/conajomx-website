@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071D3A"/>
+      <stop offset="50%" stop-color="#0d2d52"/>
+      <stop offset="100%" stop-color="#0a2240"/>
+    </linearGradient>
+    <linearGradient id="podiumGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e3060"/>
+      <stop offset="100%" stop-color="#071D3A"/>
+    </linearGradient>
+    <radialGradient id="spotlight1" cx="30%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#1FE9E1" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1FE9E1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spotlight2" cx="70%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="#1FE9E1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1FE9E1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tableGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f3060"/>
+      <stop offset="100%" stop-color="#091e3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <rect width="900" height="600" fill="url(#spotlight1)"/>
+  <rect width="900" height="600" fill="url(#spotlight2)"/>
+
+  <!-- Subtle grid pattern -->
+  <line x1="0" y1="100" x2="900" y2="100" stroke="#1FE9E1" stroke-width="0.4" opacity="0.08"/>
+  <line x1="0" y1="200" x2="900" y2="200" stroke="#1FE9E1" stroke-width="0.4" opacity="0.08"/>
+  <line x1="0" y1="300" x2="900" y2="300" stroke="#1FE9E1" stroke-width="0.4" opacity="0.08"/>
+  <line x1="0" y1="400" x2="900" y2="400" stroke="#1FE9E1" stroke-width="0.4" opacity="0.08"/>
+  <line x1="150" y1="0" x2="150" y2="600" stroke="#1FE9E1" stroke-width="0.4" opacity="0.05"/>
+  <line x1="300" y1="0" x2="300" y2="600" stroke="#1FE9E1" stroke-width="0.4" opacity="0.05"/>
+  <line x1="450" y1="0" x2="450" y2="600" stroke="#1FE9E1" stroke-width="0.4" opacity="0.05"/>
+  <line x1="600" y1="0" x2="600" y2="600" stroke="#1FE9E1" stroke-width="0.4" opacity="0.05"/>
+  <line x1="750" y1="0" x2="750" y2="600" stroke="#1FE9E1" stroke-width="0.4" opacity="0.05"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="900" height="5" fill="#1FE9E1" opacity="0.7"/>
+
+  <!-- Backdrop / stage wall -->
+  <rect x="80" y="60" width="740" height="310" rx="4" fill="#0b2448" opacity="0.6"/>
+  <rect x="80" y="60" width="740" height="310" rx="4" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.15"/>
+
+  <!-- CNEM Logo area on backdrop -->
+  <rect x="380" y="90" width="140" height="50" rx="6" fill="#1FE9E1" opacity="0.08"/>
+  <rect x="380" y="90" width="140" height="50" rx="6" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.3"/>
+  <text x="450" y="122" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" font-weight="900" fill="#1FE9E1" text-anchor="middle" letter-spacing="2">CNEM</text>
+
+  <!-- Conference table -->
+  <ellipse cx="450" cy="400" rx="380" ry="55" fill="url(#tableGrad)" opacity="0.95"/>
+  <ellipse cx="450" cy="400" rx="380" ry="55" fill="none" stroke="#1FE9E1" stroke-width="1.5" opacity="0.3"/>
+  <!-- Table reflection line -->
+  <ellipse cx="450" cy="400" rx="360" ry="42" fill="none" stroke="#1FE9E1" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Person silhouettes — seated at table -->
+  <!-- Person 1 (far left) -->
+  <ellipse cx="120" cy="295" rx="24" ry="28" fill="#0e3060"/>
+  <ellipse cx="120" cy="295" rx="24" ry="28" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.2"/>
+  <ellipse cx="120" cy="270" rx="14" ry="16" fill="#0d2a50"/>
+  <rect x="96" y="286" width="48" height="35" rx="8" fill="#0e3060"/>
+
+  <!-- Person 2 -->
+  <ellipse cx="210" cy="295" rx="24" ry="28" fill="#0f3265"/>
+  <ellipse cx="210" cy="270" rx="14" ry="16" fill="#0d2a50"/>
+  <rect x="186" y="286" width="48" height="35" rx="8" fill="#0f3265"/>
+
+  <!-- Person 3 -->
+  <ellipse cx="300" cy="290" rx="24" ry="28" fill="#0e3060"/>
+  <ellipse cx="300" cy="265" rx="14" ry="16" fill="#0d2a50"/>
+  <rect x="276" y="281" width="48" height="35" rx="8" fill="#0e3060"/>
+
+  <!-- Person 4 (center-left) -->
+  <ellipse cx="380" cy="288" rx="26" ry="30" fill="#0f3265"/>
+  <ellipse cx="380" cy="261" rx="15" ry="17" fill="#0d2a50"/>
+  <rect x="354" y="279" width="52" height="38" rx="8" fill="#0f3265"/>
+
+  <!-- Person 5 (center — president, slightly larger) -->
+  <ellipse cx="450" cy="283" rx="30" ry="34" fill="#163a6e"/>
+  <ellipse cx="450" cy="283" rx="30" ry="34" fill="none" stroke="#1FE9E1" stroke-width="1.5" opacity="0.4"/>
+  <ellipse cx="450" cy="253" rx="17" ry="19" fill="#0d2a50"/>
+  <rect x="420" y="274" width="60" height="42" rx="8" fill="#163a6e"/>
+  <!-- President highlight glow -->
+  <ellipse cx="450" cy="283" rx="38" ry="42" fill="none" stroke="#1FE9E1" stroke-width="1" opacity="0.15"/>
+
+  <!-- Person 6 (center-right) -->
+  <ellipse cx="520" cy="288" rx="26" ry="30" fill="#0f3265"/>
+  <ellipse cx="520" cy="261" rx="15" ry="17" fill="#0d2a50"/>
+  <rect x="494" y="279" width="52" height="38" rx="8" fill="#0f3265"/>
+
+  <!-- Person 7 -->
+  <ellipse cx="600" cy="290" rx="24" ry="28" fill="#0e3060"/>
+  <ellipse cx="600" cy="265" rx="14" ry="16" fill="#0d2a50"/>
+  <rect x="576" y="281" width="48" height="35" rx="8" fill="#0e3060"/>
+
+  <!-- Person 8 -->
+  <ellipse cx="688" cy="295" rx="24" ry="28" fill="#0f3265"/>
+  <ellipse cx="688" cy="270" rx="14" ry="16" fill="#0d2a50"/>
+  <rect x="664" y="286" width="48" height="35" rx="8" fill="#0f3265"/>
+
+  <!-- Person 9 (far right) -->
+  <ellipse cx="778" cy="295" rx="24" ry="28" fill="#0e3060"/>
+  <ellipse cx="778" cy="270" rx="14" ry="16" fill="#0d2a50"/>
+  <rect x="754" y="286" width="48" height="35" rx="8" fill="#0e3060"/>
+
+  <!-- Nameplates on table -->
+  <rect x="86"  y="370" width="55" height="12" rx="2" fill="#1FE9E1" opacity="0.12"/>
+  <rect x="176" y="368" width="55" height="12" rx="2" fill="#1FE9E1" opacity="0.12"/>
+  <rect x="266" y="365" width="55" height="12" rx="2" fill="#1FE9E1" opacity="0.12"/>
+  <rect x="346" y="363" width="60" height="12" rx="2" fill="#1FE9E1" opacity="0.15"/>
+  <rect x="418" y="360" width="64" height="14" rx="2" fill="#1FE9E1" opacity="0.25"/><!-- president nameplate -->
+  <rect x="491" y="363" width="60" height="12" rx="2" fill="#1FE9E1" opacity="0.15"/>
+  <rect x="568" y="365" width="55" height="12" rx="2" fill="#1FE9E1" opacity="0.12"/>
+  <rect x="655" y="368" width="55" height="12" rx="2" fill="#1FE9E1" opacity="0.12"/>
+  <rect x="742" y="370" width="55" height="12" rx="2" fill="#1FE9E1" opacity="0.12"/>
+
+  <!-- Microphones (subtle) -->
+  <rect x="447" y="335" width="6" height="25" fill="#1FE9E1" opacity="0.3" rx="3"/>
+  <circle cx="450" cy="333" r="5" fill="#1FE9E1" opacity="0.35"/>
+
+  <!-- Bottom gradient for text -->
+  <defs>
+    <linearGradient id="textBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#071D3A" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="450" width="900" height="150" fill="url(#textBg)"/>
+
+  <!-- Text -->
+  <text x="45" y="510" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="800" fill="white" letter-spacing="0.5">Mesa Directiva CNEM 2026</text>
+  <text x="45" y="538" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.6)" letter-spacing="2">CONSEJO NACIONAL DE EMPRESARIOS DE MÉXICO</text>
+
+  <!-- Flags row -->
+  <text x="45" y="575" font-family="Arial,sans-serif" font-size="18">🇲🇽</text>
+  <text x="72" y="575" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="rgba(255,255,255,0.4)" letter-spacing="1">CONAJOMX  ·  2026</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="592" width="900" height="8" fill="#1FE9E1" opacity="0.7"/>
+</svg>
