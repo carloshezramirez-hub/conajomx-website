@@ -136,26 +136,6 @@ export const mesaDirectivaCNEM2026: Leader[] = [
   },
 ]
 
-export const delegacionONU2024: Leader[] = [
-  {
-    name: "Carlos Hernández Ramírez",
-    role: "Embajador del CNEM en la Unión Europea",
-    council: "Delegación ONU",
-    initials: "CHR",
-  },
-  {
-    name: "Néstor Camarillo Medina",
-    role: "Asesor — Foro ONU de Ciencia, Tecnología e Innovación",
-    council: "Delegación ONU",
-    initials: "NCM",
-  },
-  {
-    name: "Alfredo Ulises Casiano Carrasco",
-    role: "Asesor — Foro ONU de Ciencia, Tecnología e Innovación",
-    council: "Delegación ONU",
-    initials: "AUC",
-  },
-]
 
 export const conajomxEspana: Leader[] = [
   {

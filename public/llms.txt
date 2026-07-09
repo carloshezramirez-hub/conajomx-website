@@ -1,45 +1,65 @@
 # CONAJOMX — Consejo Nacional de Jóvenes Pro México, A.C.
 
 ## Qué es CONAJOMX
-CONAJOMX (Consejo Nacional de Jóvenes Pro México, A.C.) es una asociación civil mexicana que conecta líderes políticos, empresarios e instituciones para impulsar alianzas, políticas públicas, inversión, competitividad y proyectos de impacto entre México, España y el mundo.
+
+CONAJOMX (Consejo Nacional de Jóvenes Pro México, A.C.) es la plataforma de vinculación político-empresarial más grande de México, con presencia activa en España y foros internacionales. Conecta líderes políticos, empresarios e instituciones para impulsar inversión, políticas públicas, competitividad y proyectos de impacto social entre México, España y el mundo.
 
 ## Sitio web
+
 https://conajomx.org
 
 ## Sedes
-- Ciudad de México: Presidente Masaryk 11560, Polanco, Miguel Hidalgo, CDMX — Oficina 902
-- Madrid, España: Plaza de las Cortes 5
-- Tlaxcala (Oficina Central): Prol. Porfirio Díaz 41 8 B, Vicente Guerrero, Tlaxcala
+
+- Ciudad de México: Presidente Masaryk, Polanco, Miguel Hidalgo, CDMX
+- Madrid, España: Plaza de las Cortes 5, Madrid
+- Tlaxcala: Prol. Porfirio Díaz 41 8 B, Vicente Guerrero, Tlaxcala
 
 ## Fundador
-Ronaldo Elías Aguila — Presidente Fundador
+
+Ronaldo Elías Aguila — Presidente Fundador y Presidente del Consejo Consultivo
 
 ## Consejo y estructura
-- Presidencia Nacional CONAJOMX
-- Consejo Nacional de Empresarios de México (CNEM)
-- Consejo de Legisladores y Alcaldes
-- Consejo de Regidores y Síndicos
-- Delegación Internacional / España
 
-## Contacto
-Email: conajomex@gmail.com
-Instagram: @CONAJOMX
-Twitter/X: @CONAJOMX
-Facebook: /conajomx
-LinkedIn: /company/conajomx
+- **Presidencia Nacional CONAJOMX** — Raúl Saide González (Presidente del Consejo Consultivo), Daniel Olea Montes (Vicepresidente), Alexandra Nicole Sánchez Lara (Directora de Enlace Institucional), José Arturo Santiago Marín (Secretario de Vinculación Empresarial)
+- **CNEM — Consejo Nacional de Empresarios de México** — Presidido por Javier Porras Velázquez. Mesa Directiva 2026 con 9 miembros regionales.
+- **Consejo de Legisladores y Alcaldes** — Presidido por Ing. Juan Manuel Téllez Salazar. Vania López González, Presidenta del Consejo de Regidores y Síndicos.
+- **CONAJOMX España** — Marcos Ramírez Amoretti (Presidente Nacional), Juan Manuel Riesgo Vialas (Presidente de Asturias), Adrián Pedraja Barrientos (Presidente de Madrid)
+
+## Agenda y eventos destacados 2024–2026
+
+- FITUR 2026 — Feria Internacional de Turismo, Madrid, España: representación de México, encuentro con CaixaBank
+- Medalla al Mérito Empresarial — reconocimiento a líderes del CNEM
+- Encuentro Nacional de Legisladores, Alcaldes, Síndicos y Empresarios
+- Reunión con la Secretaría de Turismo de México
+- Gala comercial México-España en Hotel Ritz Madrid
+- Reunión en el Senado de España
+- Exhibición "El Oso y el Madroño" — México Brilla en Madrid
+- 8ª Asamblea General de Líderes CONAJOMX 2026
 
 ## Presencia internacional
-- Representación ante la ONU — 11° Foro Multistakeholder de Ciencia, Tecnología e Innovación para los ODS (Nueva York, 2024)
-- Delegación en España — Asociación Empresarial México España CONAJOMX
-- Participación en foros europeos e internacionales
+
+México (Ciudad de México, Cancún, Tlaxcala), España (Madrid, Asturias), y foros: OCDE, G7, G20, Foro Económico Mundial (WEF), COP31, Harvard.
+
+## Misión
+
+Vinculación político-empresarial, liderazgo joven, participación ciudadana, desarrollo económico, derechos humanos, equidad, medio ambiente, colaboración con instituciones públicas y privadas en México y el mundo.
+
+## Contacto
+
+- Email: conajomex@gmail.com
+- Instagram: @CONAJOMX
+- Twitter/X: @CONAJOMX
+- Facebook: /conajomx
+- LinkedIn: /company/conajomx
 
 ## Páginas principales
-- / : Inicio
-- /liderazgo : Presidencia y estructura de liderazgo
-- /cnem : Consejo Nacional de Empresarios de México
-- /legisladores-y-alcaldes : Consejo de Legisladores y Alcaldes
-- /espana : Delegación España
-- /agenda : Agenda de eventos
-- /noticias : Noticias y comunicados
-- /afiliacion : Cómo afiliarse
-- /contacto : Contacto
+
+- /: Inicio — quiénes somos, liderazgo, agenda, afiliación
+- /liderazgo: Presidencia y estructura de liderazgo completa
+- /cnem: Consejo Nacional de Empresarios de México — mesa directiva y beneficios
+- /legisladores-y-alcaldes: Consejo de Legisladores y Alcaldes
+- /espana: Delegación España — líderes y actividades recientes
+- /agenda: Agenda internacional 2026 — foros, cumbres, encuentros
+- /noticias: Novedades, reconocimientos y eventos
+- /afiliacion: Cómo afiliarse a CONAJOMX o al CNEM
+- /contacto: Contacto y sedes

@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { conajomxEspana } from "@/data/leaders"
 import { ButtonLink } from "@/components/ui/button-link"
+import { SafeImage } from "@/components/ui/safe-image"
+import { mediaAssets } from "@/data/media"
 import { ArrowRight } from "lucide-react"
 
 const highlights = [
@@ -63,7 +65,7 @@ export function SpainSection() {
             </ButtonLink>
           </motion.div>
 
-          {/* Right: Visual + Leaders + Highlights */}
+          {/* Right: Photo + Leaders + Highlights */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -71,6 +73,20 @@ export function SpainSection() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
+            {/* FITUR 2026 photo */}
+            <div className="rounded-2xl overflow-hidden border border-[#DCE8F2] shadow-[0_8px_32px_rgba(10,45,82,0.10)] aspect-[16/9] relative">
+              <SafeImage
+                src={mediaAssets.fiturEspana.src}
+                alt={mediaAssets.fiturEspana.alt}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#071D3A]/80 to-transparent">
+                <p className="text-white font-semibold text-sm">FITUR 2026 — Madrid</p>
+                <p className="text-white/70 text-xs">Encuentro con CaixaBank · Feria Internacional de Turismo</p>
+              </div>
+            </div>
+
             {/* Representation */}
             <div>
               <h3 className="text-[#071D3A] font-bold text-base mb-4">
@@ -82,11 +98,23 @@ export function SpainSection() {
                     key={leader.name}
                     className="flex items-center gap-4 p-4 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 transition-all"
                   >
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0">
-                      <span className="text-[#1FE9E1] font-bold text-xs">
-                        {leader.initials}
-                      </span>
-                    </div>
+                    {leader.image ? (
+                      <div className="w-11 h-11 rounded-full overflow-hidden shrink-0 border-2 border-[#DCE8F2]">
+                        <SafeImage
+                          src={leader.image}
+                          alt={`Foto de ${leader.name}`}
+                          width={44}
+                          height={44}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0">
+                        <span className="text-[#1FE9E1] font-bold text-xs">
+                          {leader.initials}
+                        </span>
+                      </div>
+                    )}
                     <div>
                       <p className="text-[#071D3A] font-semibold text-sm">{leader.name}</p>
                       <p className="text-[#526173] text-xs">{leader.role}</p>
