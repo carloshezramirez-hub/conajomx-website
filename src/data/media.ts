@@ -56,4 +56,61 @@ export const mediaAssets = {
     src: "/assets/conajomx/gallery/secretaria-turismo-puebla.webp",
     alt: "CONAJOMX en evento de promoción turística de Puebla — Pueblos Mágicos de México",
   },
+  // ——— Batch 2 · 2026-07-09 ———
+  agendaFoto: {
+    src: "/assets/conajomx/gallery/fitur-2026-05.webp",
+    alt: "CONAJOMX en la apertura del pabellón México en FITUR 2026 — Madrid, España",
+  },
+  fitur2026Extra3: {
+    src: "/assets/conajomx/gallery/fitur-2026-06.webp",
+    alt: "CONAJOMX en FITUR 2026 — delegación en pabellón México, Madrid",
+  },
+  fitur2026Extra4: {
+    src: "/assets/conajomx/gallery/fitur-2026-07.webp",
+    alt: "FITUR 2026 — stand Michoacán El Alma de México con artesanía tradicional",
+  },
+  fitur2026Extra5: {
+    src: "/assets/conajomx/gallery/fitur-2026-08.webp",
+    alt: "CONAJOMX en FITUR 2026 — delegación en pabellón México con penacho ceremonial",
+  },
+  secretariaTurismo4: {
+    src: "/assets/conajomx/gallery/secretaria-turismo-04.webp",
+    alt: "CONAJOMX firma convenio con Secretaría de Turismo de México — Ciudad de México, septiembre 2025",
+  },
+  secretariaTurismo5: {
+    src: "/assets/conajomx/gallery/secretaria-turismo-05.webp",
+    alt: "CONAJOMX en evento con Secretaría de Turismo — México, septiembre 2025",
+  },
+  secretariaTurismo6: {
+    src: "/assets/conajomx/gallery/secretaria-turismo-06.webp",
+    alt: "Ceremonia oficial CONAJOMX con Secretaría de Turismo — corte de listón, septiembre 2025",
+  },
+  encuentroLegisladores3: {
+    src: "/assets/conajomx/gallery/encuentro-nacional-legisladores-03.webp",
+    alt: "8vo Encuentro Nacional — foto grupal con reconocimientos, Senado de la República, noviembre 2025",
+  },
+  encuentroLegisladores4: {
+    src: "/assets/conajomx/gallery/encuentro-nacional-legisladores-04.webp",
+    alt: "8vo Encuentro Nacional — ponencia en Senado de la República, 27 noviembre 2025",
+  },
+  medallaMerito3: {
+    src: "/assets/conajomx/gallery/medalla-merito-empresarial-03.webp",
+    alt: "Medalla al Mérito Empresarial CNEM — gala de reconocimiento empresarial",
+  },
+  medallaMerito4: {
+    src: "/assets/conajomx/gallery/medalla-merito-empresarial-04.webp",
+    alt: "Medalla al Mérito Empresarial CNEM — premiación a líderes empresariales",
+  },
+  medallaMerito5: {
+    src: "/assets/conajomx/gallery/medalla-merito-empresarial-05.webp",
+    alt: "Medalla al Mérito Empresarial CNEM — reconocimiento empresarial CONAJOMX",
+  },
+  medallaMerito6: {
+    src: "/assets/conajomx/gallery/medalla-merito-empresarial-06.webp",
+    alt: "Medalla al Mérito Empresarial CNEM — gala empresarial anual",
+  },
+  tianguisTurismoPuebla: {
+    src: "/assets/conajomx/gallery/tianguis-turismo-puebla.webp",
+    alt: "CONAJOMX en Tianguis Turístico — stand Puebla con artesanía mexicana",
+  },
 }

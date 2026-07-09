@@ -151,12 +151,12 @@ export function HeroSection() {
             {/* Secondary image — right side -->*/}
             <div className="absolute top-1/2 -right-16 -translate-y-1/2 w-28 h-28 rounded-2xl overflow-hidden border border-[#DCE8F2] shadow-[0_8px_24px_rgba(10,45,82,0.10)]">
               <SafeImage
-                src={mediaAssets.mesaDirectivaCNEM.src}
-                alt={mediaAssets.mesaDirectivaCNEM.alt}
+                src={mediaAssets.encuentroLegisladores3.src}
+                alt={mediaAssets.encuentroLegisladores3.alt}
                 fill
                 className="object-cover"
-                fallbackTitle="Mesa Directiva CNEM"
-                fallbackIcon="👥"
+                fallbackTitle="8vo Encuentro Nacional"
+                fallbackIcon="🏛️"
               />
             </div>
           </motion.div>

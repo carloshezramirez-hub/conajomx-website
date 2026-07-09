@@ -89,8 +89,8 @@ export function AgendaSection() {
           >
             <div className="rounded-3xl overflow-hidden border border-[#DCE8F2] shadow-[0_12px_40px_rgba(10,45,82,0.10)] aspect-[16/10] relative">
               <SafeImage
-                src={mediaAssets.agendaInternacional.src}
-                alt={mediaAssets.agendaInternacional.alt}
+                src={mediaAssets.agendaFoto.src}
+                alt={mediaAssets.agendaFoto.alt}
                 fill
                 className="object-cover"
                 fallbackText="Agenda Internacional CONAJOMX 2026 · Pon aquí tu imagen en public/assets/conajomx/agenda/agenda-internacional-2026.jpeg"
