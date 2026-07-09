@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/espana", priority: 0.8 },
     { path: "/legisladores-y-alcaldes", priority: 0.8 },
     { path: "/afiliacion", priority: 0.9 },
+    { path: "/galeria", priority: 0.8 },
     { path: "/noticias", priority: 0.7 },
     { path: "/contacto", priority: 0.7 },
   ]

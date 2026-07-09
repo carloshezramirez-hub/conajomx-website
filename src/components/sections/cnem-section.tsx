@@ -5,12 +5,12 @@ import { mesaDirectivaCNEM2026 } from "@/data/leaders"
 import { ButtonLink } from "@/components/ui/button-link"
 
 const benefits = [
-  { emoji: "🌐", title: "Networking empresarial", desc: "Acceso a una red de empresarios y líderes de alto impacto nacional e internacional." },
-  { emoji: "🏛️", title: "Vinculación institucional", desc: "Conexión directa con instituciones públicas y privadas para proyectos de impacto." },
-  { emoji: "📈", title: "Agenda económica", desc: "Participación en foros económicos nacionales e internacionales de alto nivel." },
-  { emoji: "🌱", title: "Impacto social", desc: "Modelos de negocio con propósito, fortalecimiento comunitario y responsabilidad social." },
-  { emoji: "🇲🇽", title: "Puentes México-España", desc: "Oportunidades de inversión, colaboración y expansión binacional." },
-  { emoji: "👁️", title: "Visibilidad", desc: "Presencia en la agenda pública y reconocimiento en el sector empresarial." },
+  { emoji: "🤝", title: "Desayunos networking", desc: "Espacios de encuentro mensual para conectar empresarios de distintos sectores y regiones." },
+  { emoji: "🎖️", title: "Cenas de gala empresariales", desc: "Eventos de alto perfil donde se celebran logros y se forjan alianzas estratégicas de largo plazo." },
+  { emoji: "🌐", title: "Eventos con actores globales", desc: "Acceso a foros internacionales, cumbres y conferencias con líderes del mundo empresarial y político." },
+  { emoji: "🏛️", title: "Vinculación gubernamental", desc: "Conexión directa con instituciones públicas, secretarías y organismos para proyectos de impacto." },
+  { emoji: "🎓", title: "Becas y profesionalización", desc: "Acceso a becas en licenciaturas, maestrías y doctorados, además de coaching empresarial especializado." },
+  { emoji: "🇲🇽", title: "Reconocimiento E50", desc: "Posibilidad de ser seleccionado entre los 50 Empresarios de México en la iniciativa anual E50 de CONAJOMX." },
 ]
 
 export function CNEMSection() {
@@ -25,11 +25,17 @@ export function CNEMSection() {
           <h2 className="text-3xl sm:text-4xl font-black text-[#071D3A] mb-6 leading-tight">
             Consejo Nacional de Empresarios de México
           </h2>
-          <p className="text-[#526173] text-lg leading-relaxed">
-            Empresas responsables, redes de alto valor e impacto social. El CNEM impulsa modelos
-            de negocio con visión social, colaboración institucional y competitividad para un México
-            más fuerte.
+          <p className="text-[#526173] text-lg leading-relaxed mb-4">
+            Fundado el 12 de abril de 2018 por Ronaldo Elías Águila, el CNEM es un proyecto
+            empresarial con la visión de revolucionar las estrategias de networking. Impulsa
+            modelos de negocio con visión social, colaboración institucional y competitividad
+            para un México más fuerte.
           </p>
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#D9FFFC] border border-[#1FE9E1]/30 text-[#0A2D52] text-sm">
+            <span className="text-[#1FE9E1]">★</span>
+            <span className="font-semibold">E50 — 50 Empresarios de México</span>
+            <span className="text-[#526173]">Iniciativa de reconocimiento anual</span>
+          </div>
         </div>
 
         {/* Benefits */}

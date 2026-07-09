@@ -8,9 +8,11 @@ import { mediaAssets } from "@/data/media"
 import { ArrowRight } from "lucide-react"
 
 const highlights = [
-  "Encuentro con CaixaBank en FITUR 2026",
-  "Gala comercial México-España en Hotel Ritz Madrid",
-  "Reunión en el Senado de España",
+  "Apertura de sede CONAJOMX en Madrid durante FITUR 2026",
+  "Reunión con CaixaBank sobre financiamiento para empresas mexicanas",
+  "Foro Empresarial México-España con IE University",
+  "Presentación de revista Quiubole en Hotel Ritz Mandarin Oriental Madrid",
+  "Agenda empresarial en el Principado de Asturias",
   "Exhibición «El Oso y el Madroño» — México Brilla en Madrid",
 ]
 
@@ -51,9 +53,10 @@ export function SpainSection() {
               regionales y globales de impacto.
             </p>
             <p className="text-[#526173] text-base leading-relaxed mb-8">
-              Impulsamos puentes estratégicos para abrir oportunidades entre empresarios,
-              instituciones y proyectos de ambos países, con presencia activa en Madrid, FITUR,
-              el Senado de España y la Feria de Asturias.
+              En enero de 2026, CONAJOMX inauguró su sede en Madrid durante FITUR 2026 —
+              la feria de turismo más importante del mundo —, consolidando la plataforma de
+              vinculación más activa entre México y España con presencia en Madrid, Asturias
+              y las principales instituciones financieras y empresariales europeas.
             </p>
             <ButtonLink
               href="/espana"
