@@ -10,7 +10,7 @@ export const mediaAssets = {
     alt: "Agenda Internacional CONAJOMX 2026",
   },
   mesaDirectivaCNEM: {
-    src: "/assets/conajomx/leaders/mesa-directiva-cnem-2026.svg",
-    alt: "Mesa Directiva CNEM 2026",
+    src: "/assets/conajomx/people/foto-grupal-conajomx.webp",
+    alt: "Foto grupal CONAJOMX — líderes políticos y empresarios",
   },
 }

@@ -14,12 +14,32 @@ const councilColor: Record<string, string> = {
   "Delegación ONU": "bg-[#FFF8E1] text-[#7B5900]",
 }
 
+function LeaderAvatar({ leader, size = 10 }: { leader: Leader; size?: number }) {
+  const dim = size === 10 ? "w-10 h-10" : "w-11 h-11"
+  if (leader.image) {
+    return (
+      <div className={`${dim} rounded-full overflow-hidden shrink-0 border-2 border-[#DCE8F2]`}>
+        <SafeImage
+          src={leader.image}
+          alt={`Foto de ${leader.name}`}
+          width={44}
+          height={44}
+          className="object-cover w-full h-full"
+        />
+      </div>
+    )
+  }
+  return (
+    <div className={`${dim} rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0`}>
+      <span className="text-[#1FE9E1] font-bold text-xs">{leader.initials}</span>
+    </div>
+  )
+}
+
 function LeaderChip({ leader }: { leader: Leader }) {
   return (
     <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 transition-all group">
-      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0">
-        <span className="text-[#1FE9E1] font-bold text-xs">{leader.initials}</span>
-      </div>
+      <LeaderAvatar leader={leader} size={10} />
       <div className="min-w-0">
         <p className="text-[#071D3A] font-semibold text-xs truncate group-hover:text-[#0A2D52]">
           {leader.name}
@@ -103,9 +123,7 @@ export function LeadershipSection() {
                 transition={{ delay: i * 0.06 }}
                 className="flex items-start gap-4 p-5 rounded-2xl bg-[#F5FAFF] border border-[#DCE8F2] hover:border-[#1FE9E1]/40 hover:shadow-[0_4px_20px_rgba(10,45,82,0.08)] transition-all group"
               >
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0">
-                  <span className="text-[#1FE9E1] font-bold text-xs">{leader.initials}</span>
-                </div>
+                <LeaderAvatar leader={leader} size={11} />
                 <div>
                   <p className="text-[#071D3A] font-semibold text-sm group-hover:text-[#0A2D52] transition-colors">
                     {leader.name}

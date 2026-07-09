@@ -12,18 +12,21 @@ export const presidenciaNacional: Leader[] = [
     role: "Presidente Fundador / Presidente del Consejo Consultivo",
     council: "Presidencia Nacional",
     initials: "REA",
+    image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
   },
   {
     name: "Raúl Saide González",
     role: "Presidente del Consejo Consultivo",
     council: "Presidencia Nacional",
     initials: "RSG",
+    image: "/assets/conajomx/people/raul-saide-gonzalez.webp",
   },
   {
     name: "Daniel Olea Montes",
     role: "Vicepresidente",
     council: "Presidencia Nacional",
     initials: "DOM",
+    image: "/assets/conajomx/people/daniel-olea-montes.webp",
   },
   {
     name: "Alexandra Nicole Sánchez Lara",
@@ -42,6 +45,7 @@ export const presidenciaNacional: Leader[] = [
     role: "Presidente del Consejo de Empresarios",
     council: "CNEM",
     initials: "JPV",
+    image: "/assets/conajomx/people/javier-porras-velazquez.webp",
   },
   {
     name: "Vania López González",
@@ -165,6 +169,7 @@ export const conajomxEspana: Leader[] = [
     role: "Presidente Nacional",
     council: "España",
     initials: "MRA",
+    image: "/assets/conajomx/people/marcos-ramirez-amoretti.webp",
   },
   {
     name: "Adrián Pedraja Barrientos",
