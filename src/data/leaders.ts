@@ -26,6 +26,18 @@ export const presidenciaNacional: Leader[] = [
     initials: "DOM",
   },
   {
+    name: "Alexandra Nicole Sánchez Lara",
+    role: "Directora de Enlace Institucional",
+    council: "Presidencia Nacional",
+    initials: "ANS",
+  },
+  {
+    name: "José Arturo Santiago Marín",
+    role: "Secretario de Vinculación Empresarial",
+    council: "Presidencia Nacional",
+    initials: "JAS",
+  },
+  {
     name: "Javier Porras Velázquez",
     role: "Presidente del Consejo de Empresarios",
     council: "CNEM",
@@ -117,6 +129,27 @@ export const mesaDirectivaCNEM2026: Leader[] = [
     role: "Secretaria de Organización Sur",
     council: "CNEM 2026",
     initials: "MCP",
+  },
+]
+
+export const delegacionONU2024: Leader[] = [
+  {
+    name: "Carlos Hernández Ramírez",
+    role: "Embajador del CNEM en la Unión Europea",
+    council: "Delegación ONU",
+    initials: "CHR",
+  },
+  {
+    name: "Néstor Camarillo Medina",
+    role: "Asesor — Foro ONU de Ciencia, Tecnología e Innovación",
+    council: "Delegación ONU",
+    initials: "NCM",
+  },
+  {
+    name: "Alfredo Ulises Casiano Carrasco",
+    role: "Asesor — Foro ONU de Ciencia, Tecnología e Innovación",
+    council: "Delegación ONU",
+    initials: "AUC",
   },
 ]
 

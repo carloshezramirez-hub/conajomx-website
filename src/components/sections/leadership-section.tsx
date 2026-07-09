@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { presidenciaNacional, mesaDirectivaCNEM2026 } from "@/data/leaders"
+import { presidenciaNacional, mesaDirectivaCNEM2026, delegacionONU2024 } from "@/data/leaders"
 import type { Leader } from "@/data/leaders"
 import { ButtonLink } from "@/components/ui/button-link"
 import { SafeImage } from "@/components/ui/safe-image"
@@ -11,6 +11,7 @@ const councilColor: Record<string, string> = {
   "Presidencia Nacional": "bg-[#D9FFFC] text-[#0A2D52]",
   CNEM: "bg-[#EEF3FB] text-[#071D3A]",
   "Legisladores y Alcaldes": "bg-[#F5FAFF] text-[#526173]",
+  "Delegación ONU": "bg-[#FFF8E1] text-[#7B5900]",
 }
 
 function LeaderChip({ leader }: { leader: Leader }) {
@@ -111,6 +112,43 @@ export function LeadershipSection() {
                   </p>
                   <p className="text-[#526173] text-xs leading-snug mt-0.5">{leader.role}</p>
                   <span className={`inline-block mt-1.5 px-2 py-0.5 rounded-full text-xs font-medium ${councilColor[leader.council] ?? "bg-[#F5FAFF] text-[#526173]"}`}>
+                    {leader.council}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Delegación ONU */}
+        <div className="max-w-5xl mx-auto mt-12">
+          <div className="flex items-center gap-3 mb-6">
+            <h3 className="text-[#071D3A] font-bold text-base">
+              Delegación ante la ONU
+            </h3>
+            <span className="text-xs bg-[#FFF8E1] text-[#7B5900] px-2 py-0.5 rounded-full font-medium">
+              11° Foro ONU · Nueva York 2024
+            </span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {delegacionONU2024.map((leader, i) => (
+              <motion.div
+                key={leader.name}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+                className="flex items-start gap-4 p-5 rounded-2xl bg-[#FFFDF0] border border-[#F0E4B0] hover:border-[#C9A227]/50 hover:shadow-[0_4px_20px_rgba(10,45,82,0.06)] transition-all group"
+              >
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#7B5900] to-[#C9A227] flex items-center justify-center shrink-0">
+                  <span className="text-white font-bold text-xs">{leader.initials}</span>
+                </div>
+                <div>
+                  <p className="text-[#071D3A] font-semibold text-sm group-hover:text-[#0A2D52] transition-colors">
+                    {leader.name}
+                  </p>
+                  <p className="text-[#526173] text-xs leading-snug mt-0.5">{leader.role}</p>
+                  <span className="inline-block mt-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-[#FFF8E1] text-[#7B5900]">
                     {leader.council}
                   </span>
                 </div>
