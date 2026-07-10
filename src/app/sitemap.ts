@@ -1,25 +1,19 @@
 import type { MetadataRoute } from "next"
-import { siteConfig } from "@/config/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = siteConfig.url
-  const routes = [
-    { path: "/", priority: 1.0 },
-    { path: "/agenda", priority: 0.9 },
-    { path: "/liderazgo", priority: 0.8 },
-    { path: "/cnem", priority: 0.8 },
-    { path: "/espana", priority: 0.8 },
-    { path: "/legisladores-y-alcaldes", priority: 0.8 },
-    { path: "/afiliacion", priority: 0.9 },
-    { path: "/galeria", priority: 0.8 },
-    { path: "/noticias", priority: 0.7 },
-    { path: "/contacto", priority: 0.7 },
-  ]
+  const base = "https://conajomx.org"
+  const now = new Date()
 
-  return routes.map(({ path, priority }) => ({
-    url: `${base}${path}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority,
-  }))
+  return [
+    { url: base, lastModified: now, changeFrequency: "daily", priority: 1.0 },
+    { url: `${base}/agenda`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
+    { url: `${base}/noticias`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${base}/afiliacion`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/cnem`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/liderazgo`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/espana`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/legisladores-y-alcaldes`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/galeria`, lastModified: now, changeFrequency: "weekly", priority: 0.75 },
+    { url: `${base}/contacto`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+  ]
 }
