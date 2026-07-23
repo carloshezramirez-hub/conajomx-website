@@ -11,6 +11,7 @@ type Speaker = {
   initials: string
   bio: string
   image?: string
+  imagePosition?: "center" | "top"
 }
 
 const panelI: Speaker[] = [
@@ -50,6 +51,7 @@ const panelII: Speaker[] = [
     company: "Corporativo Escalante",
     initials: "MER",
     image: "/assets/conajomx/people/mirian-escalante-rejon.webp",
+    imagePosition: "top",
     bio: "Vicepresidenta del Consejo de Empresarios de CONAJOMX (CNEM), al frente de Corporativo Escalante.",
   },
   {
@@ -78,6 +80,7 @@ const panelII: Speaker[] = [
     company: "Cien Grupo Inmobiliario",
     initials: "JHC",
     image: "/assets/conajomx/people/jorge-handal-canavati.webp",
+    imagePosition: "top",
     bio: "Empresario del sector inmobiliario, con proyectos de desarrollo urbano y vivienda al frente de Cien Grupo Inmobiliario.",
   },
 ]
@@ -98,7 +101,7 @@ function SpeakerCard({ speaker, index }: { speaker: Speaker; index: number }) {
             alt={`Foto de ${speaker.name}`}
             width={96}
             height={96}
-            className="object-cover w-full h-full"
+            className={`object-cover w-full h-full ${speaker.imagePosition === "top" ? "object-top" : "object-center"}`}
           />
         </div>
       ) : (
@@ -128,7 +131,7 @@ function ProfileCard({ speaker, index }: { speaker: Speaker; index: number }) {
             alt={`Foto de ${speaker.name}`}
             width={64}
             height={64}
-            className="object-cover w-full h-full"
+            className={`object-cover w-full h-full ${speaker.imagePosition === "top" ? "object-top" : "object-center"}`}
           />
         </div>
       ) : (
