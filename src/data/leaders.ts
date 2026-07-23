@@ -60,10 +60,11 @@ export const presidenciaNacional: Leader[] = [
     initials: "JMT",
   },
   {
-    name: "Miriam Escalante Rejón",
+    name: "Mirian Escalante Rejón",
     role: "Vicepresidenta del Consejo de Empresarios",
     council: "CNEM",
     initials: "MER",
+    image: "/assets/conajomx/people/mirian-escalante-rejon.webp",
   },
   {
     name: "Tonatiuh Zarate",
@@ -87,10 +88,11 @@ export const mesaDirectivaCNEM2026: Leader[] = [
     initials: "JPV",
   },
   {
-    name: "Miriam Escalante Rejón",
+    name: "Mirian Escalante Rejón",
     role: "Vicepresidencia",
     council: "CNEM 2026",
     initials: "MER",
+    image: "/assets/conajomx/people/mirian-escalante-rejon.webp",
   },
   {
     name: "Alejandra Cerecedo Constantino",
@@ -99,16 +101,18 @@ export const mesaDirectivaCNEM2026: Leader[] = [
     initials: "ACC",
   },
   {
-    name: "Raúl Vargas Contreras",
+    name: "Raúl Vargas Barrera",
     role: "Secretario de Constructores",
     council: "CNEM 2026",
-    initials: "RVC",
+    initials: "RVB",
+    image: "/assets/conajomx/people/raul-vargas-barrera.webp",
   },
   {
     name: "Eduardo Solano González",
     role: "Secretario de Economía",
     council: "CNEM 2026",
     initials: "ESG",
+    image: "/assets/conajomx/people/eduardo-solano-gonzalez.webp",
   },
   {
     name: "Luis Cavazos Morales",
