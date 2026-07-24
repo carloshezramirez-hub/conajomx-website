@@ -38,6 +38,13 @@ const apertura: Speaker[] = [
   },
 ]
 
+const bookPresentation: Speaker = {
+  name: "Dr. Jorge Reyes Negrete",
+  company: "Derecho, derechos humanos y cultura",
+  initials: "JRN",
+  bio: "Doctor en Derecho por la Benemérita Universidad Autónoma de Puebla, con especialización en Derecho Constitucional por la Universidad de Bolonia (Italia) y estudios avanzados en Filosofía de la Liberación por la Universidad Nacional de Jujuy (Argentina). Investigador Nivel I del Sistema Nacional de Investigadoras e Investigadores (SNII) y profesor invitado en universidades e institutos de investigación de México, Ecuador y Argentina. Autor de numerosos artículos científicos indexados y de libros sobre Derecho Administrativo, Derechos Humanos, Epistemología Jurídica y Filosofía del Derecho, con ponencias presentadas en Panamá, Ecuador, Colombia, Argentina, España, Perú, Francia e Italia, entre otros países. Su trayectoria en el servicio público incluye la Dirección General para los Derechos Humanos de la Secretaría de Gobernación del Estado de Puebla y la Coordinación General de los Centros de Asistencia Social del Sistema DIF Estatal de Puebla.",
+}
+
 const clausura: Speaker[] = [
   {
     name: "Carlos Hernández Ramírez",
@@ -306,6 +313,34 @@ export function ExecutiveForumSection() {
           </div>
         </div>
 
+        {/* Presentación de Libro */}
+        <div className="max-w-3xl mx-auto mb-20">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
+              Presentación de Libro
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
+              Derecho, derechos humanos y cultura
+            </h2>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-xl bg-white border border-[#DCE8F2] shadow-[0_4px_20px_rgba(10,45,82,0.08)]"
+          >
+            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+              <span className="text-[#1FE9E1] font-bold text-lg">{bookPresentation.initials}</span>
+            </div>
+            <div className="min-w-0 text-center sm:text-left">
+              <p className="text-[#071D3A] font-bold text-base leading-snug">{bookPresentation.name}</p>
+              <p className="text-[#A51C30] text-xs font-semibold mt-0.5 mb-3">{bookPresentation.company}</p>
+              <p className="text-[#526173] text-xs leading-relaxed">{bookPresentation.bio}</p>
+            </div>
+          </motion.div>
+        </div>
+
         {/* Perfiles / Anuario */}
         <div className="max-w-5xl mx-auto pt-4 border-t border-[#DCE8F2]">
           <div className="text-center mb-10 pt-16">
@@ -346,8 +381,7 @@ export function ExecutiveForumSection() {
             href="/executive-forum/registro"
             className="bg-[#A51C30] text-white hover:bg-[#8a1728] font-semibold shadow-[0_4px_20px_rgba(165,28,48,0.25)] px-8"
           >
-            Soy estudiante, quiero registrarme{" "}
-            <ArrowRight className="ml-2 w-4 h-4" />
+            Registrarme <ArrowRight className="ml-2 w-4 h-4" />
           </ButtonLink>
           <ButtonLink
             href="/contacto"

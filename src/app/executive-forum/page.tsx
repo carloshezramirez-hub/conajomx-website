@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { ExecutiveForumSection } from "@/components/sections/executive-forum-section"
 import { ContactSection } from "@/components/sections/contact-section"
+import { ButtonLink } from "@/components/ui/button-link"
+import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "CONAJOMX Executive Forum — Cambridge & Boston Leadership Experience",
@@ -32,7 +34,7 @@ export default function ExecutiveForumPage() {
             y liderazgo con visión global.
           </p>
 
-          <div className="flex items-center justify-center gap-3 flex-wrap">
+          <div className="flex items-center justify-center gap-3 flex-wrap mb-10">
             <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
               Cambridge, Massachusetts
             </span>
@@ -40,6 +42,13 @@ export default function ExecutiveForumPage() {
               Septiembre 2026
             </span>
           </div>
+
+          <ButtonLink
+            href="/executive-forum/registro"
+            className="bg-[#A51C30] text-white hover:bg-[#8a1728] font-semibold shadow-[0_4px_20px_rgba(165,28,48,0.25)] px-8"
+          >
+            Registrarme <ArrowRight className="ml-2 w-4 h-4" />
+          </ButtonLink>
         </div>
       </div>
 
