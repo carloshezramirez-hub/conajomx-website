@@ -12,7 +12,41 @@ type Speaker = {
   bio: string
   image?: string
   imagePosition?: "center" | "top"
+  tbd?: boolean
 }
+
+const aperturaBanner = {
+  src: "/assets/conajomx/people/ronaldo-elias-aguila-forum.webp",
+  alt: "Ronaldo Elías Águila en representación de CONAJOMX",
+}
+
+const apertura: Speaker[] = [
+  {
+    name: "Ronaldo Elías Águila",
+    company: "Presidente Fundador de CONAJOMX",
+    initials: "REA",
+    image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
+    imagePosition: "top",
+    bio: "Presidente Fundador del Consejo Nacional de Jóvenes Pro México, A.C. y del Consejo Consultivo, encabezando la delegación de CONAJOMX.",
+  },
+  {
+    name: "Invitado Especial",
+    company: "Por confirmar",
+    initials: "?",
+    tbd: true,
+    bio: "Anunciaremos próximamente al invitado especial que acompañará la fase inaugural del Executive Forum.",
+  },
+]
+
+const clausura: Speaker[] = [
+  {
+    name: "Carlos Hernández Ramírez",
+    company: "Embajador del CNEM ante la Unión Europea",
+    initials: "CHR",
+    image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
+    bio: "Embajador del Consejo Nacional de Empresarios de México (CNEM) ante la Unión Europea, nombramiento otorgado por el Consejo para fortalecer la vinculación institucional y empresarial entre México y Europa.",
+  },
+]
 
 const panelI: Speaker[] = [
   {
@@ -115,6 +149,49 @@ function SpeakerCard({ speaker, index }: { speaker: Speaker; index: number }) {
   )
 }
 
+function HostCard({ speaker, index }: { speaker: Speaker; index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.08, duration: 0.4 }}
+      className={`flex gap-5 p-6 rounded-xl bg-white items-center ${
+        speaker.tbd
+          ? "border-2 border-dashed border-[#DCE8F2]"
+          : "border border-[#DCE8F2] hover:border-[#A51C30]/30 hover:shadow-[0_4px_20px_rgba(10,45,82,0.08)] transition-all"
+      }`}
+    >
+      {speaker.image ? (
+        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#DCE8F2] shrink-0">
+          <SafeImage
+            src={speaker.image}
+            alt={`Foto de ${speaker.name}`}
+            width={80}
+            height={80}
+            className={`object-cover w-full h-full ${speaker.imagePosition === "top" ? "object-top" : "object-center"}`}
+          />
+        </div>
+      ) : (
+        <div
+          className={`w-20 h-20 rounded-full flex items-center justify-center shrink-0 ${
+            speaker.tbd ? "bg-[#F5F1EA] border-2 border-dashed border-[#DCE8F2]" : "bg-gradient-to-br from-[#071D3A] to-[#0A2D52]"
+          }`}
+        >
+          <span className={`font-bold text-lg ${speaker.tbd ? "text-[#8EA4BD]" : "text-[#1FE9E1]"}`}>
+            {speaker.initials}
+          </span>
+        </div>
+      )}
+      <div className="min-w-0">
+        <p className="text-[#071D3A] font-bold text-base leading-snug">{speaker.name}</p>
+        <p className="text-[#A51C30] text-xs font-semibold mt-0.5 mb-2">{speaker.company}</p>
+        <p className="text-[#526173] text-xs leading-relaxed">{speaker.bio}</p>
+      </div>
+    </motion.div>
+  )
+}
+
 function ProfileCard({ speaker, index }: { speaker: Speaker; index: number }) {
   return (
     <motion.div
@@ -154,6 +231,35 @@ export function ExecutiveForumSection() {
   return (
     <section className="py-24 bg-[#F5F1EA] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
+        {/* Fase Inaugural */}
+        <div className="max-w-5xl mx-auto mb-20">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
+              Fase Inaugural
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
+              Apertura del Foro
+            </h2>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-[#DCE8F2] shadow-[0_8px_32px_rgba(10,45,82,0.10)] aspect-[16/9] relative mb-6">
+            <SafeImage
+              src={aperturaBanner.src}
+              alt={aperturaBanner.alt}
+              fill
+              className="object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#071D3A]/85 to-transparent">
+              <p className="text-white font-semibold text-sm">Ronaldo Elías Águila</p>
+              <p className="text-white/70 text-xs">Presidente Fundador de CONAJOMX</p>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {apertura.map((speaker, i) => (
+              <HostCard key={speaker.name} speaker={speaker} index={i} />
+            ))}
+          </div>
+        </div>
+
         {/* Panel I */}
         <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-20">
           <motion.div
@@ -213,6 +319,23 @@ export function ExecutiveForumSection() {
           <div className="grid sm:grid-cols-2 gap-4">
             {allSpeakers.map((speaker, i) => (
               <ProfileCard key={speaker.name} speaker={speaker} index={i} />
+            ))}
+          </div>
+        </div>
+
+        {/* Clausura Oficial */}
+        <div className="max-w-5xl mx-auto pt-16">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
+              Clausura Oficial
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
+              Clausura del Foro
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-1 max-w-2xl mx-auto">
+            {clausura.map((speaker, i) => (
+              <HostCard key={speaker.name} speaker={speaker} index={i} />
             ))}
           </div>
         </div>
