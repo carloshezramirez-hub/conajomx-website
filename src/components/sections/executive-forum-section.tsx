@@ -341,13 +341,20 @@ export function ExecutiveForumSection() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-20 flex flex-wrap items-center justify-center gap-4">
+          <ButtonLink
+            href="/executive-forum/registro"
+            className="bg-[#A51C30] text-white hover:bg-[#8a1728] font-semibold shadow-[0_4px_20px_rgba(165,28,48,0.25)] px-8"
+          >
+            Soy estudiante, quiero registrarme{" "}
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </ButtonLink>
           <ButtonLink
             href="/contacto"
-            className="bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)] px-8"
+            variant="outline"
+            className="border-[#DCE8F2] text-[#071D3A] hover:bg-white hover:border-[#071D3A]/30 font-semibold px-8"
           >
-            Quiero más información{" "}
-            <ArrowRight className="ml-2 w-4 h-4" />
+            Quiero más información
           </ButtonLink>
         </div>
       </div>
