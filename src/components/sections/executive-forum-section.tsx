@@ -42,7 +42,7 @@ const bookPresentation: Speaker = {
   name: "Dr. Jorge Reyes Negrete",
   company: "Derecho, derechos humanos y cultura",
   initials: "JRN",
-  bio: "Doctor en Derecho por la Benemérita Universidad Autónoma de Puebla, con especialización en Derecho Constitucional por la Universidad de Bolonia (Italia) y estudios avanzados en Filosofía de la Liberación por la Universidad Nacional de Jujuy (Argentina). Investigador Nivel I del Sistema Nacional de Investigadoras e Investigadores (SNII) y profesor invitado en universidades e institutos de investigación de México, Ecuador y Argentina. Autor de numerosos artículos científicos indexados y de libros sobre Derecho Administrativo, Derechos Humanos, Epistemología Jurídica y Filosofía del Derecho, con ponencias presentadas en Panamá, Ecuador, Colombia, Argentina, España, Perú, Francia e Italia, entre otros países. Su trayectoria en el servicio público incluye la Dirección General para los Derechos Humanos de la Secretaría de Gobernación del Estado de Puebla y la Coordinación General de los Centros de Asistencia Social del Sistema DIF Estatal de Puebla.",
+  bio: "Doctor en Derecho, investigador SNII y autor especializado en derechos humanos y filosofía del derecho.",
 }
 
 const clausura: Speaker[] = [
@@ -328,15 +328,17 @@ export function ExecutiveForumSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-xl bg-white border border-[#DCE8F2] shadow-[0_4px_20px_rgba(10,45,82,0.08)]"
+            className="flex flex-row items-center gap-5 p-5 sm:p-6 rounded-xl bg-white border border-[#DCE8F2] shadow-[0_4px_20px_rgba(10,45,82,0.08)]"
           >
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-              <span className="text-[#1FE9E1] font-bold text-lg">{bookPresentation.initials}</span>
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center shrink-0">
+              <span className="text-[#1FE9E1] font-bold text-sm sm:text-base">{bookPresentation.initials}</span>
             </div>
-            <div className="min-w-0 text-center sm:text-left">
-              <p className="text-[#071D3A] font-bold text-base leading-snug">{bookPresentation.name}</p>
-              <p className="text-[#A51C30] text-xs font-semibold mt-0.5 mb-3">{bookPresentation.company}</p>
-              <p className="text-[#526173] text-xs leading-relaxed">{bookPresentation.bio}</p>
+            <div className="min-w-0 text-left">
+              <p className="text-[#071D3A] font-bold text-sm sm:text-base leading-snug">
+                {bookPresentation.name}
+                <span className="text-[#A51C30] font-semibold"> — {bookPresentation.company}</span>
+              </p>
+              <p className="text-[#526173] text-xs leading-relaxed mt-1">{bookPresentation.bio}</p>
             </div>
           </motion.div>
         </div>
