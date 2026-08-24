@@ -31,27 +31,15 @@ export function ExecutiveForumPageContent({ locale }: { locale: Locale }) {
           <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-4">
             {t.heroEyebrow}
           </p>
-          <h1 className="text-4xl sm:text-6xl font-black text-white mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-black text-white mb-6 leading-tight">
             {t.heroTitle}
           </h1>
-          <p className="text-[#8EA4BD] text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-            {t.heroSubtitle}
-          </p>
 
-          <div className="h-px w-24 bg-[#A51C30] mx-auto mb-10" />
+          <div className="h-px w-24 bg-[#A51C30] mx-auto mb-8" />
 
-          <p className="text-[#8EA4BD] text-base max-w-xl mx-auto leading-relaxed mb-8">
+          <p className="text-white text-xl sm:text-2xl font-semibold max-w-2xl mx-auto leading-snug mb-10">
             {t.heroIntro}
           </p>
-
-          <div className="flex items-center justify-center gap-3 flex-wrap mb-10">
-            <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
-              {t.venueBadge}
-            </span>
-            <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
-              {t.dateBadge}
-            </span>
-          </div>
 
           <ButtonLink
             href={localePath(locale, "/executive-forum/registro")}

@@ -317,11 +317,7 @@ const ui = {
   es: {
     heroEyebrow: "CONAJOMX",
     heroTitle: "Executive Forum",
-    heroSubtitle: "Cambridge & Boston Leadership Experience",
-    heroIntro:
-      "Un encuentro ejecutivo en el corazón académico de Cambridge, Massachusetts, donde líderes empresariales de México dialogan sobre inversión, estrategia y liderazgo con visión global.",
-    venueBadge: "Longfellow Hall, Harvard University",
-    dateBadge: "4 de septiembre, 2026 · 8:00 AM – 2:00 PM",
+    heroIntro: "Liderazgo mexicano con visión global, en el corazón de Harvard.",
     ctaRegister: "Registrarme",
     ctaMoreInfo: "Quiero más información",
     sedeEyebrow: "Sede",
@@ -339,11 +335,7 @@ const ui = {
   en: {
     heroEyebrow: "CONAJOMX",
     heroTitle: "Executive Forum",
-    heroSubtitle: "Cambridge & Boston Leadership Experience",
-    heroIntro:
-      "An executive gathering in the academic heart of Cambridge, Massachusetts, where Mexican business leaders discuss investment, strategy, and leadership with a global vision.",
-    venueBadge: "Longfellow Hall, Harvard University",
-    dateBadge: "September 4, 2026 · 8:00 AM – 2:00 PM",
+    heroIntro: "Mexican leadership with a global vision, at the heart of Harvard.",
     ctaRegister: "Register",
     ctaMoreInfo: "I want more information",
     sedeEyebrow: "Venue",
