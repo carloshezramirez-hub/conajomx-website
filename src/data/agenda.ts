@@ -69,7 +69,7 @@ export const agenda2026: AgendaEvent[] = [
     dateLabel: "4 de septiembre",
     month: "Septiembre",
     monthNum: 9,
-    title: "CONAJOMX Executive Forum — Cambridge & Boston Leadership Experience (Longfellow Hall, Harvard University)",
+    title: "CONAJOMX Executive Forum — Cambridge & Boston Leadership Experience (Eliot Lyman Room, Longfellow Hall, Harvard Graduate School of Education)",
     type: "Foro ejecutivo",
   },
   {

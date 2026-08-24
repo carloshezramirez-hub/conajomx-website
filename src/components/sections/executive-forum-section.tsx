@@ -142,6 +142,7 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
               <h2 className="text-xl sm:text-2xl font-black text-[#071D3A] leading-tight mb-1">
                 {t.sedeTitle}
               </h2>
+              <p className="text-[#A51C30] text-sm font-semibold mb-1">{t.sedeSubtitle}</p>
               <p className="text-[#526173] text-sm">{t.sedeDate}</p>
             </div>
           </div>
