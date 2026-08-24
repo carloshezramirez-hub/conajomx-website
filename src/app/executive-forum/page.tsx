@@ -36,10 +36,10 @@ export default function ExecutiveForumPage() {
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-10">
             <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
-              Cambridge, Massachusetts
+              Longfellow Hall, Harvard University
             </span>
             <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
-              Septiembre 2026
+              4 de septiembre, 2026 · 8:00 AM
             </span>
           </div>
 

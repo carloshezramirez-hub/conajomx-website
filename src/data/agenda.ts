@@ -66,10 +66,10 @@ export const agenda2026: AgendaEvent[] = [
   {
     country: "Estados Unidos",
     countryCode: "US",
-    dateLabel: "Septiembre 2026",
+    dateLabel: "4 de septiembre",
     month: "Septiembre",
     monthNum: 9,
-    title: "CONAJOMX Executive Forum — Cambridge & Boston Leadership Experience",
+    title: "CONAJOMX Executive Forum — Cambridge & Boston Leadership Experience (Longfellow Hall, Harvard University)",
     type: "Foro ejecutivo",
   },
   {

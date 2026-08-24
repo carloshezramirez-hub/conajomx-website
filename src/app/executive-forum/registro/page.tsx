@@ -21,15 +21,15 @@ export default function RegistroEstudiantesPage() {
           </h1>
           <p className="text-[#8EA4BD] text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             ¿Eres estudiante y te interesa participar en el Executive Forum? Cambridge &amp;
-            Boston Leadership Experience, Septiembre 2026. Déjanos tus datos y te contactaremos
-            con los siguientes pasos.
+            Boston Leadership Experience, en Longfellow Hall, Harvard University, el 4 de
+            septiembre de 2026. Déjanos tus datos y te contactaremos con los siguientes pasos.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
-              Cambridge, Massachusetts
+              Longfellow Hall, Harvard University
             </span>
             <span className="px-4 py-2 rounded-full border border-[#A51C30]/50 text-white/90 text-sm">
-              Septiembre 2026
+              4 de septiembre, 2026 · 8:00 AM
             </span>
           </div>
         </div>

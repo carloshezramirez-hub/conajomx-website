@@ -20,109 +20,148 @@ const aperturaBanner = {
   alt: "Ronaldo Elías Águila en representación de CONAJOMX",
 }
 
-const apertura: Speaker[] = [
-  {
-    name: "Ronaldo Elías Águila",
-    company: "Presidente Fundador de CONAJOMX",
-    initials: "REA",
-    image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
-    imagePosition: "top",
-    bio: "Presidente Fundador del Consejo Nacional de Jóvenes Pro México, A.C. y del Consejo Consultivo, encabezando la delegación de CONAJOMX.",
-  },
-  {
-    name: "Invitado Especial",
-    company: "Por confirmar",
-    initials: "?",
-    tbd: true,
-    bio: "Anunciaremos próximamente al invitado especial que acompañará la fase inaugural del Executive Forum.",
-  },
-]
+const apertura: Speaker = {
+  name: "Ronaldo Elías Águila",
+  company: "Presidente Fundador de CONAJOMX",
+  initials: "REA",
+  image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
+  imagePosition: "top",
+  bio: "Bienvenida al CONAJOMX Executive Forum y marco de la jornada: diálogo entre el liderazgo mexicano y las instituciones de Cambridge y Boston.",
+}
 
 const bookPresentation: Speaker = {
   name: "Dr. Jorge Reyes Negrete",
-  company: "Derecho, derechos humanos y cultura",
+  company: "Derecho, Derechos Humanos y Cultura",
   initials: "JRN",
   bio: "Doctor en Derecho, investigador SNII y autor especializado en derechos humanos y filosofía del derecho.",
 }
 
-const clausura: Speaker[] = [
-  {
-    name: "Carlos Hernández Ramírez",
-    company: "Embajador del CNEM ante la Unión Europea",
-    initials: "CHR",
-    image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
-    bio: "Embajador del Consejo Nacional de Empresarios de México (CNEM) ante la Unión Europea, nombramiento otorgado por el Consejo para fortalecer la vinculación institucional y empresarial entre México y Europa.",
-  },
-]
+const clausura: Speaker = {
+  name: "Carlos Hernández Ramírez",
+  company: "Asesor Legislativo y Asuntos Internacionales, Senado de México",
+  initials: "CHR",
+  image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
+  bio: "Asesor legislativo y enlace internacional en el Senado de México, trabajando en vínculos institucionales y empresariales entre México y sus socios en el extranjero.",
+}
 
-const panelI: Speaker[] = [
-  {
-    name: "Francisco Javier Porras Velázquez",
-    company: "Grupo CYSE",
-    initials: "FPV",
-    image: "/assets/conajomx/people/javier-porras-velazquez.webp",
-    bio: "Presidente del Consejo de Empresarios de CONAJOMX (CNEM), impulsando alianzas estratégicas entre el sector empresarial y las instituciones públicas de México.",
-  },
-  {
-    name: "Fernando Arista Reyes",
-    company: "AR Seguridad",
-    initials: "FAR",
-    image: "/assets/conajomx/people/fernando-arista-reyes.webp",
-    bio: "Empresario especializado en soluciones de seguridad corporativa y patrimonial para organizaciones e instituciones en México.",
-  },
-  {
-    name: "Daniel Olea Montes",
-    company: "Mayorazgo Wealth Management",
-    initials: "DOM",
-    image: "/assets/conajomx/people/daniel-olea-montes.webp",
-    bio: "Vicepresidente de CONAJOMX y especialista en gestión patrimonial y planeación financiera para familias empresarias.",
-  },
-  {
-    name: "Diego García del Río",
-    company: "Urbion Capital ETP",
-    initials: "DGR",
-    image: "/assets/conajomx/people/diego-garcia-del-rio.webp",
-    bio: "Especialista en estructuración de capital e inversión, con enfoque en proyectos de alto rendimiento en mercados internacionales.",
-  },
-]
+type Panel = {
+  eyebrow: string
+  title: string
+  dialogue?: boolean
+  speakers: Speaker[]
+}
 
-const panelII: Speaker[] = [
+const panels: Panel[] = [
   {
-    name: "Mirian Escalante Rejón",
-    company: "Corporativo Escalante",
-    initials: "MER",
-    image: "/assets/conajomx/people/mirian-escalante-rejon.webp",
-    imagePosition: "top",
-    bio: "Vicepresidenta del Consejo de Empresarios de CONAJOMX (CNEM), al frente de Corporativo Escalante.",
+    eyebrow: "Panel I · Diálogo de Dos",
+    title: "Migración desde el Sector Público: México y Estados Unidos",
+    dialogue: true,
+    speakers: [
+      {
+        name: "Carlos Hernández Ramírez",
+        company: "Asesor Legislativo y Asuntos Internacionales, Senado de México",
+        initials: "CHR",
+        image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
+        bio: "Asesor legislativo y enlace internacional en el Senado de México, trabajando en vínculos institucionales y empresariales entre México y sus socios en el extranjero.",
+      },
+      {
+        name: "Mateo Rull Garza",
+        company: "Oficina de la Congresista Ayanna Pressley",
+        initials: "MRG",
+        bio: "Asesor y Gerente de Defensoría Ciudadana para el Distrito 7 de Massachusetts, enfocado en migración, acceso a alimentos, agricultura urbana, educación y justicia climática.",
+      },
+    ],
   },
   {
-    name: "Raúl Vargas Barrera",
-    company: "Varcla Constructores",
-    initials: "RVB",
-    image: "/assets/conajomx/people/raul-vargas-barrera.webp",
-    bio: "Empresario del sector de la construcción, impulsando proyectos de infraestructura y desarrollo regional al frente de Varcla Constructores.",
+    eyebrow: "Panel II",
+    title: "Economía Circular y Transición Energética",
+    speakers: [
+      {
+        name: "Miguel Alejandro Vargas Cabrera",
+        company: "SUNSUN Energy",
+        initials: "MVC",
+        image: "/assets/conajomx/people/miguel-alejandro-vargas-cabrera.webp",
+        bio: "Empresario del sector energético, enfocado en soluciones de energía solar y sostenibilidad para el desarrollo regional.",
+      },
+      {
+        name: "Eduardo Solano González",
+        company: "NSM Ecosistemas Circulares",
+        initials: "ESG",
+        image: "/assets/conajomx/people/eduardo-solano-gonzalez.webp",
+        bio: "Secretario de Economía de CNEM 2026, impulsor de la agenda de sostenibilidad y economía circular en foros como Latam Green.",
+      },
+    ],
   },
   {
-    name: "Miguel Alejandro Vargas Cabrera",
-    company: "SUNSUN Energy",
-    initials: "MVC",
-    image: "/assets/conajomx/people/miguel-alejandro-vargas-cabrera.webp",
-    bio: "Empresario del sector energético, enfocado en soluciones de energía solar y sostenibilidad para el desarrollo regional.",
+    eyebrow: "Panel III",
+    title: "Capital, Inversión y Gestión Patrimonial",
+    speakers: [
+      {
+        name: "Daniel Olea Montes",
+        company: "Mayorazgo Wealth Management",
+        initials: "DOM",
+        image: "/assets/conajomx/people/daniel-olea-montes.webp",
+        bio: "Vicepresidente de CONAJOMX y especialista en gestión patrimonial y planeación financiera para familias empresarias.",
+      },
+      {
+        name: "Diego García del Río",
+        company: "Urbion Capital ETP",
+        initials: "DGR",
+        image: "/assets/conajomx/people/diego-garcia-del-rio.webp",
+        bio: "Especialista en estructuración de capital e inversión, con enfoque en proyectos de alto rendimiento en mercados internacionales.",
+      },
+      {
+        name: "Francisco Javier Porras Velázquez",
+        company: "Grupo CYSE",
+        initials: "FPV",
+        image: "/assets/conajomx/people/javier-porras-velazquez.webp",
+        bio: "Presidente del Consejo de Empresarios de CONAJOMX (CNEM), impulsando alianzas estratégicas entre el sector empresarial y las instituciones públicas de México.",
+      },
+    ],
   },
   {
-    name: "Eduardo Solano González",
-    company: "NSM Ecosistemas Circulares",
-    initials: "ESG",
-    image: "/assets/conajomx/people/eduardo-solano-gonzalez.webp",
-    bio: "Secretario de Economía de CNEM 2026, impulsor de la agenda de sostenibilidad y economía circular en foros como Latam Green.",
+    eyebrow: "Panel IV · Diálogo de Dos",
+    title: "Infraestructura, Bienes Raíces y Desarrollo Urbano",
+    dialogue: true,
+    speakers: [
+      {
+        name: "Raúl Vargas Barrera",
+        company: "Varcla Constructores",
+        initials: "RVB",
+        image: "/assets/conajomx/people/raul-vargas-barrera.webp",
+        bio: "Empresario del sector de la construcción, impulsando proyectos de infraestructura y desarrollo regional al frente de Varcla Constructores.",
+      },
+      {
+        name: "Jorge Handal Canavati",
+        company: "Cien Grupo Inmobiliario",
+        initials: "JHC",
+        image: "/assets/conajomx/people/jorge-handal-canavati.webp",
+        imagePosition: "top",
+        bio: "Empresario del sector inmobiliario, con proyectos de desarrollo urbano y vivienda al frente de Cien Grupo Inmobiliario.",
+      },
+    ],
   },
   {
-    name: "Jorge Handal Canavati",
-    company: "Cien Grupo Inmobiliario",
-    initials: "JHC",
-    image: "/assets/conajomx/people/jorge-handal-canavati.webp",
-    imagePosition: "top",
-    bio: "Empresario del sector inmobiliario, con proyectos de desarrollo urbano y vivienda al frente de Cien Grupo Inmobiliario.",
+    eyebrow: "Panel V · Diálogo de Dos",
+    title: "Emprendimiento y Empresa Familiar",
+    dialogue: true,
+    speakers: [
+      {
+        name: "Fernando Arista Reyes",
+        company: "AR Seguridad",
+        initials: "FAR",
+        image: "/assets/conajomx/people/fernando-arista-reyes.webp",
+        bio: "Empresario especializado en soluciones de seguridad corporativa y patrimonial para organizaciones e instituciones en México.",
+      },
+      {
+        name: "Mirian Escalante Rejón",
+        company: "Corporativo Escalante",
+        initials: "MER",
+        image: "/assets/conajomx/people/mirian-escalante-rejon.webp",
+        imagePosition: "top",
+        bio: "Vicepresidenta del Consejo de Empresarios de CONAJOMX (CNEM), al frente de Corporativo Escalante.",
+      },
+    ],
   },
 ]
 
@@ -232,12 +271,58 @@ function ProfileCard({ speaker, index }: { speaker: Speaker; index: number }) {
   )
 }
 
+function PanelBlock({ panel }: { panel: Panel }) {
+  const gridCols =
+    panel.speakers.length === 2
+      ? "grid-cols-2"
+      : panel.speakers.length === 3
+        ? "grid-cols-2 sm:grid-cols-3"
+        : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+
+  return (
+    <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-20">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
+          {panel.eyebrow}
+        </p>
+        <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
+          {panel.title}
+        </h2>
+        <div className="h-0.5 w-12 bg-[#A51C30] mt-4" />
+      </motion.div>
+      <div className={`grid ${gridCols} gap-8`}>
+        {panel.speakers.map((speaker, i) => (
+          <SpeakerCard key={speaker.name} speaker={speaker} index={i} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function ExecutiveForumSection() {
-  const allSpeakers = [...panelI, ...panelII]
+  const allSpeakers = panels.flatMap((panel) => panel.speakers)
 
   return (
     <section className="py-24 bg-[#F5F1EA] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
+        {/* Venue */}
+        <div className="max-w-3xl mx-auto mb-16 text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
+            Sede
+          </p>
+          <h2 className="text-xl sm:text-2xl font-black text-[#071D3A] leading-tight mb-2">
+            Longfellow Hall, Harvard University
+          </h2>
+          <p className="text-[#526173] text-sm">
+            4 de septiembre, 2026 · 8:00 AM · Cambridge, MA
+          </p>
+        </div>
+
         {/* Fase Inaugural */}
         <div className="max-w-5xl mx-auto mb-20">
           <div className="text-center mb-10">
@@ -245,7 +330,7 @@ export function ExecutiveForumSection() {
               Fase Inaugural
             </p>
             <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
-              Apertura del Foro
+              Palabras de Bienvenida
             </h2>
           </div>
           <div className="rounded-2xl overflow-hidden border border-[#DCE8F2] shadow-[0_8px_32px_rgba(10,45,82,0.10)] aspect-[16/9] relative mb-6">
@@ -260,58 +345,14 @@ export function ExecutiveForumSection() {
               <p className="text-white/70 text-xs">Presidente Fundador de CONAJOMX</p>
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {apertura.map((speaker, i) => (
-              <HostCard key={speaker.name} speaker={speaker} index={i} />
-            ))}
+          <div className="max-w-2xl mx-auto">
+            <HostCard speaker={apertura} index={0} />
           </div>
         </div>
 
-        {/* Panel I */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
-              Panel I
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
-              Inversión, Estrategia e Innovación
-            </h2>
-            <div className="h-0.5 w-12 bg-[#A51C30] mt-4" />
-          </motion.div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-            {panelI.map((speaker, i) => (
-              <SpeakerCard key={speaker.name} speaker={speaker} index={i} />
-            ))}
-          </div>
-        </div>
-
-        {/* Panel II */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
-              Panel II
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
-              Liderazgo y Desarrollo Regional
-            </h2>
-            <div className="h-0.5 w-12 bg-[#A51C30] mt-4" />
-          </motion.div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-            {panelII.map((speaker, i) => (
-              <SpeakerCard key={speaker.name} speaker={speaker} index={i} />
-            ))}
-          </div>
-        </div>
+        {panels.map((panel) => (
+          <PanelBlock key={panel.title} panel={panel} />
+        ))}
 
         {/* Presentación de Libro */}
         <div className="max-w-3xl mx-auto mb-20">
@@ -320,7 +361,7 @@ export function ExecutiveForumSection() {
               Presentación de Libro
             </p>
             <h2 className="text-2xl sm:text-3xl font-black text-[#071D3A] leading-tight">
-              Derecho, derechos humanos y cultura
+              Derecho, Derechos Humanos y Cultura
             </h2>
           </div>
           <motion.div
@@ -370,10 +411,8 @@ export function ExecutiveForumSection() {
               Clausura del Foro
             </h2>
           </div>
-          <div className="grid sm:grid-cols-1 max-w-2xl mx-auto">
-            {clausura.map((speaker, i) => (
-              <HostCard key={speaker.name} speaker={speaker} index={i} />
-            ))}
+          <div className="max-w-2xl mx-auto">
+            <HostCard speaker={clausura} index={0} />
           </div>
         </div>
 
