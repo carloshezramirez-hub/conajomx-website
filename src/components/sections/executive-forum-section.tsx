@@ -88,7 +88,7 @@ function PanelBlock({ panel }: { panel: Panel }) {
         : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
 
   return (
-    <div className="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-20">
+    <div className="grid lg:grid-cols-[280px_1fr] gap-6 sm:gap-10 items-start mb-12 sm:mb-20">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -103,7 +103,7 @@ function PanelBlock({ panel }: { panel: Panel }) {
         </h2>
         <div className="h-0.5 w-12 bg-[#A51C30] mt-4" />
       </motion.div>
-      <div className={`grid ${gridCols} gap-8`}>
+      <div className={`grid ${gridCols} gap-6 sm:gap-8`}>
         {panel.speakers.map((speaker, i) => (
           <SpeakerCard key={speaker.name} speaker={speaker} index={i} />
         ))}
@@ -120,10 +120,10 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
   const panels = getPanels(locale)
 
   return (
-    <section className="py-24 bg-[#F5F1EA] relative overflow-hidden">
+    <section className="py-14 sm:py-24 bg-[#F5F1EA] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Venue */}
-        <div className="max-w-3xl mx-auto mb-16">
+        <div className="max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="flex items-center justify-center gap-5 p-6 sm:p-8 rounded-2xl bg-white border border-[#DCE8F2] shadow-[0_8px_32px_rgba(10,45,82,0.08)]">
             <div className="w-14 h-16 sm:w-16 sm:h-20 shrink-0">
               <SafeImage
@@ -148,8 +148,8 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
         </div>
 
         {/* Fase Inaugural */}
-        <div className="max-w-5xl mx-auto mb-20">
-          <div className="text-center mb-10">
+        <div className="max-w-5xl mx-auto mb-12 sm:mb-20">
+          <div className="text-center mb-6 sm:mb-10">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
               {t.aperturaEyebrow}
             </p>
@@ -167,8 +167,8 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
         ))}
 
         {/* Presentación de Libro */}
-        <div className="max-w-3xl mx-auto mb-20">
-          <div className="text-center mb-10">
+        <div className="max-w-3xl mx-auto mb-12 sm:mb-20">
+          <div className="text-center mb-6 sm:mb-10">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
               {t.bookEyebrow}
             </p>
@@ -209,8 +209,8 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
         </div>
 
         {/* Clausura Oficial */}
-        <div className="max-w-5xl mx-auto pt-16 border-t border-[#DCE8F2]">
-          <div className="text-center mb-10 pt-16">
+        <div className="max-w-5xl mx-auto pt-8 sm:pt-16 border-t border-[#DCE8F2]">
+          <div className="text-center mb-6 sm:mb-10 pt-8 sm:pt-16">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
               {t.clausuraEyebrow}
             </p>
@@ -224,7 +224,7 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-20 flex flex-wrap items-center justify-center gap-4">
+        <div className="text-center mt-12 sm:mt-20 flex flex-wrap items-center justify-center gap-4">
           <ButtonLink
             href={localePath(locale, "/executive-forum/registro")}
             className="bg-[#A51C30] text-white hover:bg-[#8a1728] font-semibold shadow-[0_4px_20px_rgba(165,28,48,0.25)] px-8"

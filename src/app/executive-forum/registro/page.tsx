@@ -16,8 +16,8 @@ export function RegistroPageContent({ locale }: { locale: Locale }) {
     <>
       <div className="pt-16 bg-[#071630] relative overflow-hidden border-b-4 border-[#A51C30]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(165,28,48,0.10),transparent_60%)]" />
-        <div className="container mx-auto px-4 py-16 text-center relative z-10">
-          <div className="flex justify-center mb-6">
+        <div className="container mx-auto px-4 py-10 sm:py-16 text-center relative z-10">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <LanguageSwitcher
               locale={locale}
               esHref="/executive-forum/registro"
@@ -45,7 +45,7 @@ export function RegistroPageContent({ locale }: { locale: Locale }) {
         </div>
       </div>
 
-      <section className="py-16 bg-[#F5F1EA]">
+      <section className="py-10 sm:py-16 bg-[#F5F1EA]">
         <div className="container mx-auto px-4">
           <StudentRegistrationForm locale={locale} />
         </div>

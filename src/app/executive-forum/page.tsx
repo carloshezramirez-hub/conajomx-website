@@ -28,8 +28,8 @@ export function ExecutiveForumPageContent({ locale }: { locale: Locale }) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#071630]/85 via-[#071630]/80 to-[#071630]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(165,28,48,0.18),transparent_60%)]" />
-        <div className="container mx-auto px-4 py-20 text-center relative z-10">
-          <div className="flex justify-center mb-6">
+        <div className="container mx-auto px-4 py-12 sm:py-20 text-center relative z-10">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <LanguageSwitcher
               locale={locale}
               esHref="/executive-forum"
@@ -37,16 +37,16 @@ export function ExecutiveForumPageContent({ locale }: { locale: Locale }) {
             />
           </div>
 
-          <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-[#1FE9E1] text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4">
             {t.heroEyebrow}
           </p>
-          <h1 className="text-4xl sm:text-6xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight">
             {t.heroTitle}
           </h1>
 
-          <div className="h-px w-24 bg-[#A51C30] mx-auto mb-8" />
+          <div className="h-px w-24 bg-[#A51C30] mx-auto mb-6 sm:mb-8" />
 
-          <p className="text-white text-xl sm:text-2xl font-semibold max-w-2xl mx-auto leading-snug mb-10">
+          <p className="text-white text-xl sm:text-2xl font-semibold max-w-2xl mx-auto leading-snug mb-6 sm:mb-10">
             {t.heroIntro}
           </p>
 
@@ -61,7 +61,7 @@ export function ExecutiveForumPageContent({ locale }: { locale: Locale }) {
 
       <ExecutiveForumSection locale={locale} />
 
-      <div className="bg-[#071630] py-14 border-t-4 border-[#A51C30]">
+      <div className="bg-[#071630] py-8 sm:py-14 border-t-4 border-[#A51C30]">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg sm:text-xl tracking-[0.2em] uppercase">
             {t.bannerTitle}
