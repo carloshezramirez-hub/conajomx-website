@@ -12,7 +12,6 @@ export type Speaker = {
 export type Panel = {
   eyebrow: string
   title: string
-  dialogue?: boolean
   speakers: Speaker[]
 }
 
@@ -79,9 +78,8 @@ const clausura: LocalizedSpeaker = {
 const panels: LocalizedPanel[] = [
   {
     es: {
-      eyebrow: "Panel I · Diálogo de Dos",
+      eyebrow: "Panel I",
       title: "Migración desde el Sector Público: México y Estados Unidos",
-      dialogue: true,
       speakers: [
         {
           name: "Carlos Hernández Ramírez",
@@ -100,9 +98,8 @@ const panels: LocalizedPanel[] = [
       ],
     },
     en: {
-      eyebrow: "Panel I · A Dialogue of Two",
+      eyebrow: "Panel I",
       title: "Migration from the Public Sector: Mexico and the United States",
-      dialogue: true,
       speakers: [
         {
           name: "Carlos Hernández Ramírez",
@@ -221,9 +218,8 @@ const panels: LocalizedPanel[] = [
   },
   {
     es: {
-      eyebrow: "Panel IV · Diálogo de Dos",
+      eyebrow: "Panel IV",
       title: "Infraestructura, Bienes Raíces y Desarrollo Urbano",
-      dialogue: true,
       speakers: [
         {
           name: "Raúl Vargas Barrera",
@@ -243,9 +239,8 @@ const panels: LocalizedPanel[] = [
       ],
     },
     en: {
-      eyebrow: "Panel IV · A Dialogue of Two",
+      eyebrow: "Panel IV",
       title: "Infrastructure, Real Estate and Urban Development",
-      dialogue: true,
       speakers: [
         {
           name: "Raúl Vargas Barrera",
@@ -267,9 +262,8 @@ const panels: LocalizedPanel[] = [
   },
   {
     es: {
-      eyebrow: "Panel V · Diálogo de Dos",
+      eyebrow: "Panel V",
       title: "Emprendimiento y Empresa Familiar",
-      dialogue: true,
       speakers: [
         {
           name: "Fernando Arista Reyes",
@@ -289,9 +283,8 @@ const panels: LocalizedPanel[] = [
       ],
     },
     en: {
-      eyebrow: "Panel V · A Dialogue of Two",
+      eyebrow: "Panel V",
       title: "Entrepreneurship and Family Enterprise",
-      dialogue: true,
       speakers: [
         {
           name: "Fernando Arista Reyes",
