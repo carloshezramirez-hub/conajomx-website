@@ -310,7 +310,7 @@ const ui = {
   es: {
     heroEyebrow: "CONAJOMX",
     heroTitle: "Executive Forum",
-    heroIntro: "Liderazgo mexicano con visión global, en el corazón de Harvard.",
+    heroIntro: "Donde el liderazgo mexicano se encuentra con el mundo.",
     ctaRegister: "Registrarme",
     ctaMoreInfo: "Quiero más información",
     sedeEyebrow: "Sede",
@@ -328,7 +328,7 @@ const ui = {
   en: {
     heroEyebrow: "CONAJOMX",
     heroTitle: "Executive Forum",
-    heroIntro: "Mexican leadership with a global vision, at the heart of Harvard.",
+    heroIntro: "Where Mexican leadership meets the world stage.",
     ctaRegister: "Register",
     ctaMoreInfo: "I want more information",
     sedeEyebrow: "Venue",

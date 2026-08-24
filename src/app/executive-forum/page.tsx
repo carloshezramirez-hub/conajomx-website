@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { ExecutiveForumSection } from "@/components/sections/executive-forum-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { ButtonLink } from "@/components/ui/button-link"
@@ -18,7 +19,15 @@ export function ExecutiveForumPageContent({ locale }: { locale: Locale }) {
   return (
     <>
       <div className="pt-16 bg-[#071630] relative overflow-hidden border-b-4 border-[#A51C30]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(165,28,48,0.10),transparent_60%)]" />
+        <Image
+          src="/assets/conajomx/campus/harvard-longfellow-campus.webp"
+          alt="Campus de Harvard, sede del CONAJOMX Executive Forum"
+          fill
+          priority
+          className="object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#071630]/85 via-[#071630]/80 to-[#071630]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(165,28,48,0.18),transparent_60%)]" />
         <div className="container mx-auto px-4 py-20 text-center relative z-10">
           <div className="flex justify-center mb-6">
             <LanguageSwitcher
