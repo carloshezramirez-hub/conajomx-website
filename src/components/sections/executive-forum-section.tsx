@@ -123,14 +123,28 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
     <section className="py-24 bg-[#F5F1EA] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Venue */}
-        <div className="max-w-3xl mx-auto mb-16 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-3">
-            {t.sedeEyebrow}
-          </p>
-          <h2 className="text-xl sm:text-2xl font-black text-[#071D3A] leading-tight mb-2">
-            {t.sedeTitle}
-          </h2>
-          <p className="text-[#526173] text-sm">{t.sedeDate}</p>
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="flex items-center justify-center gap-5 p-6 sm:p-8 rounded-2xl bg-white border border-[#DCE8F2] shadow-[0_8px_32px_rgba(10,45,82,0.08)]">
+            <div className="w-14 h-16 sm:w-16 sm:h-20 shrink-0">
+              <SafeImage
+                src="/assets/conajomx/logos/harvard-hgse-shield.webp"
+                alt="Escudo de Harvard Graduate School of Education"
+                width={64}
+                height={80}
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-left">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A51C30] mb-2">
+                {t.sedeEyebrow}
+              </p>
+              <h2 className="text-xl sm:text-2xl font-black text-[#071D3A] leading-tight mb-1">
+                {t.sedeTitle}
+              </h2>
+              <p className="text-[#526173] text-sm">{t.sedeDate}</p>
+            </div>
+          </div>
         </div>
 
         {/* Fase Inaugural */}
