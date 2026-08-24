@@ -60,14 +60,14 @@ const bookPresentation: LocalizedSpeaker = {
 
 const clausura: LocalizedSpeaker = {
   es: {
-    name: "Carlos Hernández Ramírez",
+    name: "Mtro. Carlos Hernández Ramírez",
     company: "Asesor Legislativo y Asuntos Internacionales, Senado de México",
     initials: "CHR",
     image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
     bio: "Asesor legislativo y enlace internacional en el Senado de México, trabajando en vínculos institucionales y empresariales entre México y sus socios en el extranjero.",
   },
   en: {
-    name: "Carlos Hernández Ramírez",
+    name: "Mtro. Carlos Hernández Ramírez",
     company: "Legislative Advisor and International Affairs, Senate of Mexico",
     initials: "CHR",
     image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
@@ -82,7 +82,7 @@ const panels: LocalizedPanel[] = [
       title: "Migración desde el Sector Público: México y Estados Unidos",
       speakers: [
         {
-          name: "Carlos Hernández Ramírez",
+          name: "Mtro. Carlos Hernández Ramírez",
           company: "Asesor Legislativo y Asuntos Internacionales, Senado de México",
           initials: "CHR",
           image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
@@ -102,7 +102,7 @@ const panels: LocalizedPanel[] = [
       title: "Migration from the Public Sector: Mexico and the United States",
       speakers: [
         {
-          name: "Carlos Hernández Ramírez",
+          name: "Mtro. Carlos Hernández Ramírez",
           company: "Legislative Advisor and International Affairs, Senate of Mexico",
           initials: "CHR",
           image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
