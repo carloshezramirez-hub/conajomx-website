@@ -158,8 +158,10 @@ export function ExecutiveForumSection({ locale }: { locale: Locale }) {
               {t.aperturaTitle}
             </h2>
           </div>
-          <div className="max-w-2xl mx-auto">
-            <HostCard speaker={apertura} index={0} />
+          <div className="max-w-2xl mx-auto space-y-6">
+            {apertura.map((speaker, i) => (
+              <HostCard key={speaker.name} speaker={speaker} index={i} />
+            ))}
           </div>
         </div>
 

@@ -22,24 +22,42 @@ function pick<T>(dict: Record<Locale, T>, locale: Locale): T {
   return dict[locale]
 }
 
-const apertura: LocalizedSpeaker = {
-  es: {
-    name: "Ronaldo Elías Águila",
-    company: "Presidente Fundador de CONAJOMX",
-    initials: "REA",
-    image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
-    imagePosition: "top",
-    bio: "Bienvenida al CONAJOMX Executive Forum y marco de la jornada: diálogo entre el liderazgo mexicano y las instituciones de Cambridge y Boston.",
+const apertura: LocalizedSpeaker[] = [
+  {
+    es: {
+      name: "Ronaldo Elías Águila",
+      company: "Presidente Fundador de CONAJOMX",
+      initials: "REA",
+      image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
+      imagePosition: "top",
+      bio: "Bienvenida al CONAJOMX Executive Forum y marco de la jornada: diálogo entre el liderazgo mexicano y las instituciones de Cambridge y Boston.",
+    },
+    en: {
+      name: "Ronaldo Elías Águila",
+      company: "Founding President of CONAJOMX",
+      initials: "REA",
+      image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
+      imagePosition: "top",
+      bio: "Welcome to the CONAJOMX Executive Forum and framing of the day: dialogue between Mexican leadership and the institutions of Cambridge and Boston.",
+    },
   },
-  en: {
-    name: "Ronaldo Elías Águila",
-    company: "Founding President of CONAJOMX",
-    initials: "REA",
-    image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
-    imagePosition: "top",
-    bio: "Welcome to the CONAJOMX Executive Forum and framing of the day: dialogue between Mexican leadership and the institutions of Cambridge and Boston.",
+  {
+    es: {
+      name: "Mtro. Carlos Hernández Ramírez",
+      company: "Asesor Legislativo y Asuntos Internacionales, Senado de México",
+      initials: "CHR",
+      image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
+      bio: "Asesor legislativo y enlace internacional en el Senado de México, acompañando la apertura del CONAJOMX Executive Forum.",
+    },
+    en: {
+      name: "Mtro. Carlos Hernández Ramírez",
+      company: "Legislative Advisor and International Affairs, Senate of Mexico",
+      initials: "CHR",
+      image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
+      bio: "Legislative advisor and international liaison at the Senate of Mexico, joining the opening of the CONAJOMX Executive Forum.",
+    },
   },
-}
+]
 
 const bookPresentation: LocalizedSpeaker = {
   es: {
@@ -82,18 +100,23 @@ const panels: LocalizedPanel[] = [
       title: "Migración desde el Sector Público: México y Estados Unidos",
       speakers: [
         {
-          name: "Mtro. Carlos Hernández Ramírez",
-          company: "Asesor Legislativo y Asuntos Internacionales, Senado de México",
-          initials: "CHR",
-          image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
-          bio: "Asesor legislativo y enlace internacional en el Senado de México, trabajando en vínculos institucionales y empresariales entre México y sus socios en el extranjero.",
-        },
-        {
           name: "Mateo Rull Garza",
           company: "Asesor y Gerente de Defensoría Ciudadana, Oficina de la Congresista Ayanna Pressley",
           initials: "MRG",
           image: "/assets/conajomx/people/mateo-rull-garza.webp",
           bio: "Defensor de la ciudadanía del Distrito 7 de Massachusetts, enfocado en migración, acceso a alimentos, agricultura urbana, educación y justicia climática.",
+        },
+        {
+          name: "Raúl Torres Guerrero",
+          company: "Diputado Migrante, Congreso de México",
+          initials: "RTG",
+          bio: "Diputado migrante en el Congreso de México.",
+        },
+        {
+          name: "Eugenio Silva Alvarez",
+          company: "Regidor, Ayuntamiento de Monterrey",
+          initials: "ESA",
+          bio: "Regidor del Ayuntamiento de Monterrey.",
         },
       ],
     },
@@ -102,18 +125,23 @@ const panels: LocalizedPanel[] = [
       title: "Migration from the Public Sector: Mexico and the United States",
       speakers: [
         {
-          name: "Mtro. Carlos Hernández Ramírez",
-          company: "Legislative Advisor and International Affairs, Senate of Mexico",
-          initials: "CHR",
-          image: "/assets/conajomx/people/carlos-hernandez-ramirez.webp",
-          bio: "Legislative advisor and international liaison at the Senate of Mexico, working on institutional and business ties between Mexico and its partners abroad.",
-        },
-        {
           name: "Mateo Rull Garza",
           company: "Advisor & Constituent Advocacy Manager, Office of Congresswoman Ayanna Pressley",
           initials: "MRG",
           image: "/assets/conajomx/people/mateo-rull-garza.webp",
           bio: "Constituent advocate for Massachusetts' 7th congressional district, working on immigration, food access, urban agriculture, education, and climate justice.",
+        },
+        {
+          name: "Raúl Torres Guerrero",
+          company: "Migrant Deputy, Congress of Mexico",
+          initials: "RTG",
+          bio: "Migrant Deputy in the Congress of Mexico.",
+        },
+        {
+          name: "Eugenio Silva Alvarez",
+          company: "City Council Member, Government of Monterrey",
+          initials: "ESA",
+          bio: "City Council Member, Government of Monterrey.",
         },
       ],
     },
@@ -123,13 +151,6 @@ const panels: LocalizedPanel[] = [
       eyebrow: "Panel II",
       title: "Economía Circular y Transición Energética",
       speakers: [
-        {
-          name: "Miguel Alejandro Vargas Cabrera",
-          company: "SUNSUN Energy",
-          initials: "MVC",
-          image: "/assets/conajomx/people/miguel-alejandro-vargas-cabrera.webp",
-          bio: "Empresario del sector energético, enfocado en soluciones de energía solar y sostenibilidad para el desarrollo regional.",
-        },
         {
           name: "Eduardo Solano González",
           company: "NSM Ecosistemas Circulares",
@@ -143,13 +164,6 @@ const panels: LocalizedPanel[] = [
       eyebrow: "Panel II",
       title: "Circular Economy and Energy Transition",
       speakers: [
-        {
-          name: "Miguel Alejandro Vargas Cabrera",
-          company: "SUNSUN Energy",
-          initials: "MVC",
-          image: "/assets/conajomx/people/miguel-alejandro-vargas-cabrera.webp",
-          bio: "Solar energy and sustainability solutions for regional development.",
-        },
         {
           name: "Eduardo Solano González",
           company: "NSM Ecosistemas Circulares",
@@ -179,13 +193,6 @@ const panels: LocalizedPanel[] = [
           image: "/assets/conajomx/people/diego-garcia-del-rio.webp",
           bio: "Especialista en estructuración de capital e inversión, con enfoque en proyectos de alto rendimiento en mercados internacionales.",
         },
-        {
-          name: "Francisco Javier Porras Velázquez",
-          company: "Grupo CYSE",
-          initials: "FPV",
-          image: "/assets/conajomx/people/javier-porras-velazquez.webp",
-          bio: "Presidente del Consejo de Empresarios de CONAJOMX (CNEM), impulsando alianzas estratégicas entre el sector empresarial y las instituciones públicas de México.",
-        },
       ],
     },
     en: {
@@ -205,13 +212,6 @@ const panels: LocalizedPanel[] = [
           initials: "DGR",
           image: "/assets/conajomx/people/diego-garcia-del-rio.webp",
           bio: "Capital structuring and investment, focused on high-yield projects in international markets.",
-        },
-        {
-          name: "Francisco Javier Porras Velázquez",
-          company: "Grupo CYSE",
-          initials: "FPV",
-          image: "/assets/conajomx/people/javier-porras-velazquez.webp",
-          bio: "President of the CONAJOMX Council of Entrepreneurs (CNEM), building alliances between business and public institutions.",
         },
       ],
     },
@@ -236,6 +236,19 @@ const panels: LocalizedPanel[] = [
           imagePosition: "top",
           bio: "Empresario del sector inmobiliario, con proyectos de desarrollo urbano y vivienda al frente de Cien Grupo Inmobiliario.",
         },
+        {
+          name: "Francisco Javier Porras Velázquez",
+          company: "Grupo CYSE",
+          initials: "FPV",
+          image: "/assets/conajomx/people/javier-porras-velazquez.webp",
+          bio: "Presidente del Consejo de Empresarios de CONAJOMX (CNEM), impulsando alianzas estratégicas entre el sector empresarial y las instituciones públicas de México.",
+        },
+        {
+          name: "Raquel Bonilla",
+          company: "Empresaria",
+          initials: "RB",
+          bio: "Empresaria.",
+        },
       ],
     },
     en: {
@@ -256,6 +269,19 @@ const panels: LocalizedPanel[] = [
           image: "/assets/conajomx/people/jorge-handal-canavati.webp",
           imagePosition: "top",
           bio: "Real estate entrepreneur with urban development and housing projects across Mexico.",
+        },
+        {
+          name: "Francisco Javier Porras Velázquez",
+          company: "Grupo CYSE",
+          initials: "FPV",
+          image: "/assets/conajomx/people/javier-porras-velazquez.webp",
+          bio: "President of the CONAJOMX Council of Entrepreneurs (CNEM), building alliances between business and public institutions.",
+        },
+        {
+          name: "Raquel Bonilla",
+          company: "Entrepreneur",
+          initials: "RB",
+          bio: "Entrepreneur.",
         },
       ],
     },
@@ -441,8 +467,8 @@ export function getFormContent(locale: Locale) {
   return form[locale]
 }
 
-export function getApertura(locale: Locale): Speaker {
-  return pick(apertura, locale)
+export function getApertura(locale: Locale): Speaker[] {
+  return apertura.map((speaker) => pick(speaker, locale))
 }
 
 export function getBookPresentation(locale: Locale): Speaker {
