@@ -80,12 +80,12 @@ function HostCard({ speaker, index }: { speaker: Speaker; index: number }) {
 }
 
 function PanelBlock({ panel }: { panel: Panel }) {
-  const gridCols =
+  const cardBasis =
     panel.speakers.length === 2
-      ? "grid-cols-2"
+      ? "basis-[45%]"
       : panel.speakers.length === 3
-        ? "grid-cols-2 sm:grid-cols-3"
-        : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+        ? "basis-[45%] sm:basis-[30%]"
+        : "basis-[45%] sm:basis-[30%] lg:basis-[22%]"
 
   return (
     <div className="grid lg:grid-cols-[280px_1fr] gap-6 sm:gap-10 items-start mb-12 sm:mb-20">
@@ -103,9 +103,11 @@ function PanelBlock({ panel }: { panel: Panel }) {
         </h2>
         <div className="h-0.5 w-12 bg-[#A51C30] mt-4" />
       </motion.div>
-      <div className={`grid ${gridCols} gap-6 sm:gap-8`}>
+      <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
         {panel.speakers.map((speaker, i) => (
-          <SpeakerCard key={speaker.name} speaker={speaker} index={i} />
+          <div key={speaker.name} className={cardBasis}>
+            <SpeakerCard speaker={speaker} index={i} />
+          </div>
         ))}
       </div>
     </div>
