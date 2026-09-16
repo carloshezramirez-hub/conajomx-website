@@ -109,11 +109,6 @@ export function AsambleaHeroSection() {
           </div>
         </motion.div>
       </div>
-
-      {/* Photo credit — required by CC BY-SA 4.0 */}
-      <p className="absolute bottom-2 right-3 z-10 text-white/25 text-[9px] tracking-wide">
-        Foto: Matthiasmullie / Wikimedia Commons (CC BY-SA 4.0)
-      </p>
     </section>
   )
 }
