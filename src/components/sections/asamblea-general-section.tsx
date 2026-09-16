@@ -2,11 +2,21 @@
 
 import { motion } from "framer-motion"
 import { SafeImage } from "@/components/ui/safe-image"
+import { Badge } from "@/components/ui/badge"
 import { ButtonLink } from "@/components/ui/button-link"
 import { AnchorButton } from "@/components/ui/button-link"
 import { ArrowRight, Mail } from "lucide-react"
 import { fraunces } from "@/lib/fonts"
 import { siteConfig } from "@/config/site"
+
+const badgeColors = [
+  "border-emerald-200 text-emerald-700 bg-emerald-50",
+  "border-yellow-200 text-yellow-700 bg-yellow-50",
+  "border-violet-200 text-violet-700 bg-violet-50",
+  "border-blue-200 text-blue-700 bg-blue-50",
+  "border-[#1FE9E1]/40 text-[#0A2D52] bg-[#D9FFFC]",
+  "border-orange-200 text-orange-700 bg-orange-50",
+]
 import {
   asambleaHighlights,
   asambleaPrograma,
@@ -35,7 +45,7 @@ export function AsambleaGeneralSection() {
   return (
     <div className="bg-white relative">
       {/* Highlights */}
-      <section className="py-10 sm:py-16 relative">
+      <section className="py-10 sm:py-16 relative bg-[#F5FAFF]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>En el marco de esta Asamblea</SectionKicker>
@@ -49,13 +59,15 @@ export function AsambleaGeneralSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07, duration: 0.4 }}
-                className="p-6 rounded-2xl bg-[#F5FAFF] border border-[#DCE8F2] hover:border-[#1FE9E1]/50 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all"
+                className="p-5 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all group flex flex-col"
               >
-                <div className="text-3xl mb-3">{item.emoji}</div>
-                <h3 className="text-[#071D3A] font-bold text-base mb-2 leading-snug">
+                <Badge variant="outline" className={`text-xs mb-3 w-fit ${badgeColors[i % badgeColors.length]}`}>
+                  {item.emoji} {item.badge}
+                </Badge>
+                <h3 className="text-[#071D3A] font-semibold text-sm mb-2 leading-snug group-hover:text-[#0A2D52] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-[#526173] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[#526173] text-xs leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -185,12 +197,15 @@ export function AsambleaGeneralSection() {
               {asambleaSponsor.desc}
             </p>
             <div className="grid sm:grid-cols-3 gap-4 mb-8 text-left">
-              {asambleaSponsor.benefits.map((b) => (
+              {asambleaSponsor.benefits.map((b, i) => (
                 <div
-                  key={b}
-                  className="p-5 rounded-xl bg-[#F5FAFF] border border-[#DCE8F2] text-[#526173] text-sm leading-relaxed"
+                  key={b.badge}
+                  className="p-5 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all"
                 >
-                  {b}
+                  <Badge variant="outline" className={`text-xs mb-3 w-fit ${badgeColors[i % badgeColors.length]}`}>
+                    {b.badge}
+                  </Badge>
+                  <p className="text-[#526173] text-sm leading-relaxed">{b.text}</p>
                 </div>
               ))}
             </div>

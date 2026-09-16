@@ -25,21 +25,25 @@ export const asambleaUi = {
 
 export const asambleaHighlights = [
   {
+    badge: "Gobernanza",
     emoji: "🗳️",
     title: "Renovación de Mesas Directivas",
     desc: "Renovación de la Mesa Directiva Nacional y cambio de Comisiones y Directiva de CONAJOMX.",
   },
   {
+    badge: "Nombramientos",
     emoji: "📜",
     title: "Entrega de Nombramientos Oficiales",
     desc: "Reconocimiento formal a los nuevos representantes políticos y empresariales de la organización.",
   },
   {
+    badge: "Reconocimiento",
     emoji: "🏆",
     title: "Entrega de Reconocimientos",
     desc: "Distinciones a los liderazgos que impulsaron proyectos de impacto durante el ciclo anterior.",
   },
   {
+    badge: "Networking",
     emoji: "🤝",
     title: "Networking Estratégico",
     desc: "Espacio de vinculación directa entre el Consejo Político y el Consejo Empresarial de CONAJOMX.",
@@ -125,9 +129,9 @@ export const asambleaSponsor = {
   desc:
     "Posiciona tu marca ante el Consejo Político y Empresarial de CONAJOMX: Legisladores, Alcaldes, Síndicos, Regidores y Empresarios de todo México reunidos en un mismo espacio.",
   benefits: [
-    "Visibilidad de marca ante el máximo órgano de encuentro de CONAJOMX",
-    "Networking directo con tomadores de decisión políticos y empresariales",
-    "Presencia en materiales oficiales del evento nacional",
+    { badge: "Visibilidad", text: "Visibilidad de marca ante el máximo órgano de encuentro de CONAJOMX" },
+    { badge: "Networking", text: "Networking directo con tomadores de decisión políticos y empresariales" },
+    { badge: "Presencia", text: "Presencia en materiales oficiales del evento nacional" },
   ],
   cta: "Quiero ser sponsor",
 }
