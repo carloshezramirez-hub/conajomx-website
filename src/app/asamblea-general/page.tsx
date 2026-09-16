@@ -24,12 +24,12 @@ export default function AsambleaGeneralPage() {
           <p className={`${cormorant.className} italic text-[#9C7A24] text-lg sm:text-xl mt-3`}>
             {asambleaUi.bannerSubtitle}
           </p>
-          <p className="text-white/25 text-[10px] tracking-wide mt-8">
+          <p className="text-[#8EA4BD] text-xs tracking-wide mt-8">
             Foto del Ángel de la Independencia: Matthiasmullie / Wikimedia Commons (CC BY-SA 4.0)
           </p>
         </div>
       </div>
-      <ContactSection />
+      <ContactSection variant="dark" />
     </>
   )
 }
