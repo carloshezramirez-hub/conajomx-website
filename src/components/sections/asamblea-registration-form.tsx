@@ -48,14 +48,14 @@ function Field({
   return (
     <div>
       <Label className="text-[#526173] text-sm mb-1.5 block">
-        {label} {required && <span className="text-[#C9A227]">*</span>}
+        {label} {required && <span className="text-[#1FE9E1]">*</span>}
       </Label>
       <Input
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#C9A227]/60 focus-visible:ring-[#C9A227]/20"
+        className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#1FE9E1]/60 focus-visible:ring-[#1FE9E1]/20"
       />
     </div>
   )
@@ -103,7 +103,7 @@ export function AsambleaRegistrationForm() {
   if (sent) {
     return (
       <div className="max-w-lg mx-auto text-center py-12">
-        <CheckCircle className="w-16 h-16 text-[#C9A227] mx-auto mb-6" />
+        <CheckCircle className="w-16 h-16 text-[#1FE9E1] mx-auto mb-6" />
         <h3 className="text-2xl font-black text-[#071D3A] mb-4">¡Registro recibido!</h3>
         <p className="text-[#526173] mb-6">
           Gracias por registrarte a la IX Asamblea General de CONAJOMX. Nuestro equipo te
@@ -132,12 +132,12 @@ export function AsambleaRegistrationForm() {
         />
         <div>
           <Label className="text-[#526173] text-sm mb-1.5 block">
-            Cargo <span className="text-[#C9A227]">*</span>
+            Cargo <span className="text-[#1FE9E1]">*</span>
           </Label>
           <select
             value={data.cargo}
             onChange={(e) => update("cargo", e.target.value)}
-            className="flex h-9 w-full rounded-md border border-[#DCE8F2] bg-white px-3 py-1 text-sm text-[#071D3A] shadow-xs outline-none focus:border-[#C9A227]/60 focus-visible:ring-2 focus-visible:ring-[#C9A227]/20"
+            className="flex h-9 w-full rounded-md border border-[#DCE8F2] bg-white px-3 py-1 text-sm text-[#071D3A] shadow-xs outline-none focus:border-[#1FE9E1]/60 focus-visible:ring-2 focus-visible:ring-[#1FE9E1]/20"
           >
             <option value="">Selecciona tu cargo</option>
             {cargoOptions.map((c) => (
@@ -179,7 +179,7 @@ export function AsambleaRegistrationForm() {
             value={data.mensaje}
             onChange={(e) => update("mensaje", e.target.value)}
             placeholder="¿Algo que quieras contarnos antes de la Asamblea?"
-            className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#C9A227]/60 min-h-[90px]"
+            className="bg-white border-[#DCE8F2] text-[#071D3A] placeholder:text-[#526173]/50 focus:border-[#1FE9E1]/60 min-h-[90px]"
           />
         </div>
       </div>
@@ -190,7 +190,7 @@ export function AsambleaRegistrationForm() {
           id="privacy-asamblea"
           checked={data.privacidad}
           onChange={(e) => update("privacidad", e.target.checked)}
-          className="mt-0.5 accent-[#C9A227]"
+          className="mt-0.5 accent-[#1FE9E1]"
         />
         <Label
           htmlFor="privacy-asamblea"
@@ -204,7 +204,7 @@ export function AsambleaRegistrationForm() {
       <Button
         onClick={handleSubmit}
         disabled={submitting}
-        className="w-full mt-6 bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-black hover:brightness-110 font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)]"
+        className="w-full mt-6 bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)]"
       >
         {submitting ? (
           <>

@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { AsambleaHeroSection } from "@/components/sections/asamblea-hero-section"
 import { AsambleaGeneralSection } from "@/components/sections/asamblea-general-section"
 import { ContactSection } from "@/components/sections/contact-section"
-import { cormorant } from "@/lib/fonts"
 import { asambleaUi } from "@/data/asamblea-general-content"
 
 export const metadata: Metadata = {
@@ -16,20 +15,17 @@ export default function AsambleaGeneralPage() {
     <>
       <AsambleaHeroSection />
       <AsambleaGeneralSection />
-      <div className="bg-[#000000] py-8 sm:py-12 border-t border-b border-[#C9A227]/40">
+      <div className="bg-[#071D3A] py-8 sm:py-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg sm:text-xl tracking-[0.2em] uppercase">
             {asambleaUi.bannerTitle}
           </p>
-          <p className={`${cormorant.className} italic text-[#9C7A24] text-lg sm:text-xl mt-3`}>
+          <p className="text-[#1FE9E1] italic text-sm sm:text-base mt-3">
             {asambleaUi.bannerSubtitle}
-          </p>
-          <p className="text-[#8EA4BD] text-xs tracking-wide mt-8">
-            Foto del Ángel de la Independencia: Matthiasmullie / Wikimedia Commons (CC BY-SA 4.0)
           </p>
         </div>
       </div>
-      <ContactSection variant="dark" />
+      <ContactSection />
     </>
   )
 }

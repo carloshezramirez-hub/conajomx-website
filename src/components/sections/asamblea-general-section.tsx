@@ -17,7 +17,7 @@ import {
 
 function SectionKicker({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[#C9A227] text-xs font-bold uppercase tracking-[0.3em] mb-3">
+    <p className="text-[#1FE9E1] text-xs font-bold uppercase tracking-[0.3em] mb-3">
       {children}
     </p>
   )
@@ -25,7 +25,7 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className={`${fraunces.className} text-3xl sm:text-5xl font-semibold text-white leading-tight`}>
+    <h2 className={`${fraunces.className} text-3xl sm:text-5xl font-semibold text-[#071D3A] leading-tight`}>
       {children}
     </h2>
   )
@@ -33,10 +33,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 export function AsambleaGeneralSection() {
   return (
-    <div className="bg-black relative">
-      {/* subtle shared background texture */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(201,162,39,0.06),transparent_45%)]" />
-
+    <div className="bg-white relative">
       {/* Highlights */}
       <section className="py-10 sm:py-16 relative">
         <div className="container mx-auto px-4">
@@ -52,13 +49,13 @@ export function AsambleaGeneralSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07, duration: 0.4 }}
-                className="p-6 rounded-2xl bg-white/[0.03] border border-[#C9A227]/20 hover:border-[#C9A227]/50 hover:bg-white/[0.05] transition-all"
+                className="p-6 rounded-2xl bg-[#F5FAFF] border border-[#DCE8F2] hover:border-[#1FE9E1]/50 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all"
               >
                 <div className="text-3xl mb-3">{item.emoji}</div>
-                <h3 className="text-white font-bold text-base mb-2 leading-snug">
+                <h3 className="text-[#071D3A] font-bold text-base mb-2 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-[#8EA4BD] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[#526173] text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -66,7 +63,7 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Programa — floating rows, stacked */}
-      <section className="py-10 sm:py-16 relative border-t border-white/5">
+      <section className="py-10 sm:py-16 relative bg-[#F5F1EA]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Programa</SectionKicker>
@@ -89,16 +86,16 @@ export function AsambleaGeneralSection() {
                     ease: "easeInOut",
                     delay: i * 0.2,
                   }}
-                  className="flex items-center gap-5 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-[#C9A227]/20 hover:border-[#C9A227]/50 hover:bg-white/[0.05] transition-colors shadow-[0_10px_26px_rgba(0,0,0,0.35)]"
+                  className="flex items-center gap-5 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/50 hover:shadow-[0_8px_24px_rgba(10,45,82,0.08)] transition-all"
                 >
-                  <span className="shrink-0 min-w-[76px] sm:min-w-[96px] text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0A0806] bg-gradient-to-r from-[#E6C766] to-[#C9A227] rounded-full px-3 sm:px-4 py-1.5 text-center">
+                  <span className="shrink-0 min-w-[76px] sm:min-w-[96px] text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white bg-[#071D3A] rounded-full px-3 sm:px-4 py-1.5 text-center">
                     {step.time}
                   </span>
                   <div className="min-w-0">
-                    <h3 className={`${fraunces.className} text-white font-semibold text-lg sm:text-xl leading-snug mb-1`}>
+                    <h3 className={`${fraunces.className} text-[#071D3A] font-semibold text-lg sm:text-xl leading-snug mb-1`}>
                       {step.title}
                     </h3>
-                    <p className="text-[#8EA4BD] text-sm leading-relaxed">{step.desc}</p>
+                    <p className="text-[#526173] text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -108,7 +105,7 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Speakers */}
-      <section className="py-10 sm:py-16 relative border-t border-white/5">
+      <section className="py-10 sm:py-16 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Liderazgo CONAJOMX</SectionKicker>
@@ -125,7 +122,7 @@ export function AsambleaGeneralSection() {
                 className="flex flex-col items-center text-center"
               >
                 {speaker.image ? (
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#C9A227]/60 shadow-[0_4px_28px_rgba(201,162,39,0.15)] mb-4">
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#DCE8F2] shadow-[0_4px_20px_rgba(10,45,82,0.10)] mb-4">
                     <SafeImage
                       src={speaker.image}
                       alt={`Foto de ${speaker.name}`}
@@ -135,12 +132,12 @@ export function AsambleaGeneralSection() {
                     />
                   </div>
                 ) : (
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#1a1508] to-black border-2 border-[#C9A227]/60 flex items-center justify-center mb-4">
-                    <span className="text-[#E6C766] font-bold text-lg">{speaker.initials}</span>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center mb-4 shadow-[0_4px_20px_rgba(10,45,82,0.10)]">
+                    <span className="text-[#1FE9E1] font-bold text-lg">{speaker.initials}</span>
                   </div>
                 )}
-                <p className="text-white font-semibold text-sm leading-snug">{speaker.name}</p>
-                <p className="text-[#E6C766] text-xs mt-1 leading-snug">{speaker.role}</p>
+                <p className="text-[#071D3A] font-semibold text-sm leading-snug">{speaker.name}</p>
+                <p className="text-[#0A2D52] text-xs mt-1 leading-snug">{speaker.role}</p>
               </motion.div>
             ))}
           </div>
@@ -148,7 +145,7 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Galería */}
-      <section className="py-10 sm:py-16 relative border-t border-white/5">
+      <section className="py-10 sm:py-16 relative bg-[#F5FAFF]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Antecedentes</SectionKicker>
@@ -162,7 +159,7 @@ export function AsambleaGeneralSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04, duration: 0.35 }}
-                className="aspect-[4/3] rounded-xl overflow-hidden border border-white/10 hover:border-[#C9A227]/50 transition-all relative"
+                className="aspect-[4/3] rounded-xl overflow-hidden border border-[#DCE8F2] hover:border-[#1FE9E1]/50 transition-all relative"
               >
                 <SafeImage
                   src={src}
@@ -177,21 +174,21 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Sponsors */}
-      <section id="sponsors" className="py-10 sm:py-16 relative border-t border-white/5">
+      <section id="sponsors" className="py-10 sm:py-16 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <SectionKicker>{asambleaSponsor.eyebrow}</SectionKicker>
             <div className="mb-5">
               <SectionTitle>{asambleaSponsor.title}</SectionTitle>
             </div>
-            <p className="text-[#8EA4BD] text-lg leading-relaxed mb-6">
+            <p className="text-[#526173] text-lg leading-relaxed mb-6">
               {asambleaSponsor.desc}
             </p>
             <div className="grid sm:grid-cols-3 gap-4 mb-8 text-left">
               {asambleaSponsor.benefits.map((b) => (
                 <div
                   key={b}
-                  className="p-5 rounded-xl bg-white/[0.03] border border-[#C9A227]/20 text-[#C7D2DE] text-sm leading-relaxed"
+                  className="p-5 rounded-xl bg-[#F5FAFF] border border-[#DCE8F2] text-[#526173] text-sm leading-relaxed"
                 >
                   {b}
                 </div>
@@ -200,14 +197,14 @@ export function AsambleaGeneralSection() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <AnchorButton
                 href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Quiero ser sponsor — IX Asamblea General CONAJOMX")}`}
-                className="bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-black hover:brightness-110 font-bold shadow-[0_0_28px_rgba(201,162,39,0.3)] px-8"
+                className="bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)] px-8"
               >
                 <Mail className="mr-2 w-4 h-4" /> {asambleaSponsor.cta}
               </AnchorButton>
               <ButtonLink
                 href="/asamblea-general/registro"
                 variant="outline"
-                className="bg-transparent border-white/20 text-white hover:bg-white/5 hover:border-[#C9A227] font-semibold px-8"
+                className="bg-transparent border-[#DCE8F2] text-[#071D3A] hover:bg-[#F5FAFF] hover:border-[#1FE9E1]/50 font-semibold px-8"
               >
                 Registrarme como asistente <ArrowRight className="ml-2 w-4 h-4" />
               </ButtonLink>
