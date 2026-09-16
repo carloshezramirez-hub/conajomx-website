@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/button-link"
 import { AnchorButton } from "@/components/ui/button-link"
 import { EventCountdown } from "@/components/ui/event-countdown"
 import { ShaderAnimation } from "@/components/ui/shader-lines"
-import { playfair, cormorant } from "@/lib/fonts"
+import { playfair } from "@/lib/fonts"
 import { gold3dStyle } from "@/lib/gold-text"
 import { ArrowRight, MapPin, CalendarDays } from "lucide-react"
 import { asambleaUi } from "@/data/asamblea-general-content"
@@ -54,9 +54,7 @@ export function AsambleaHeroSection() {
           >
             {asambleaUi.title}
           </h1>
-          <p
-            className={`${cormorant.className} italic text-[#9C7A24] text-xl sm:text-3xl font-semibold mb-5 max-w-2xl mx-auto leading-snug`}
-          >
+          <p className="text-[#9C7A24] text-base sm:text-xl font-semibold uppercase tracking-[0.14em] mb-5 max-w-2xl mx-auto leading-snug">
             {asambleaUi.titleAccent}
           </p>
 

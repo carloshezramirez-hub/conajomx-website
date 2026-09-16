@@ -65,40 +65,41 @@ export function AsambleaGeneralSection() {
         </div>
       </section>
 
-      {/* Programa — floating bubbles */}
+      {/* Programa — floating rows, stacked */}
       <section className="py-10 sm:py-16 relative border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Programa</SectionKicker>
             <SectionTitle>Orden del día</SectionTitle>
           </div>
-          <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
+          <div className="flex flex-col gap-4 max-w-4xl mx-auto">
             {asambleaPrograma.map((step, i) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="basis-full sm:basis-[46%] lg:basis-[30%]"
+                transition={{ delay: i * 0.06, duration: 0.5 }}
               >
                 <motion.div
-                  animate={{ y: [0, -10, 0] }}
+                  animate={{ y: [0, -8, 0] }}
                   transition={{
                     duration: 3.2 + (i % 3) * 0.6,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: i * 0.25,
+                    delay: i * 0.2,
                   }}
-                  className="h-full p-6 rounded-[28px] bg-white/[0.03] border border-[#C9A227]/20 hover:border-[#C9A227]/50 hover:bg-white/[0.05] transition-colors shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
+                  className="flex items-center gap-5 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-[#C9A227]/20 hover:border-[#C9A227]/50 hover:bg-white/[0.05] transition-colors shadow-[0_10px_26px_rgba(0,0,0,0.35)]"
                 >
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0A0806] bg-gradient-to-r from-[#E6C766] to-[#C9A227] rounded-full px-3 py-1 mb-3">
+                  <span className="shrink-0 min-w-[76px] sm:min-w-[96px] text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0A0806] bg-gradient-to-r from-[#E6C766] to-[#C9A227] rounded-full px-3 sm:px-4 py-1.5 text-center">
                     {step.time}
                   </span>
-                  <h3 className={`${fraunces.className} text-white font-semibold text-lg leading-snug mb-1.5`}>
-                    {step.title}
-                  </h3>
-                  <p className="text-[#8EA4BD] text-sm leading-relaxed">{step.desc}</p>
+                  <div className="min-w-0">
+                    <h3 className={`${fraunces.className} text-white font-semibold text-lg sm:text-xl leading-snug mb-1`}>
+                      {step.title}
+                    </h3>
+                    <p className="text-[#8EA4BD] text-sm leading-relaxed">{step.desc}</p>
+                  </div>
                 </motion.div>
               </motion.div>
             ))}

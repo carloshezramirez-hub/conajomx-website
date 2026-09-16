@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ButtonLink } from "@/components/ui/button-link"
 import { EventCountdown } from "@/components/ui/event-countdown"
 import { ArrowRight, MapPin, CalendarDays } from "lucide-react"
-import { playfair, cormorant } from "@/lib/fonts"
+import { playfair } from "@/lib/fonts"
 import { gold3dStyle } from "@/lib/gold-text"
 import { asambleaUi } from "@/data/asamblea-general-content"
 
@@ -38,7 +38,7 @@ export function AsambleaBannerSection() {
             >
               {asambleaUi.title}
             </h2>
-            <p className={`${cormorant.className} italic text-[#9C7A24] text-lg sm:text-xl mb-3`}>
+            <p className="text-[#9C7A24] text-sm sm:text-base font-semibold uppercase tracking-[0.14em] mb-3">
               {asambleaUi.titleAccent}
             </p>
             <p className="text-[#C7D2DE] text-base leading-relaxed mb-4 max-w-xl">
