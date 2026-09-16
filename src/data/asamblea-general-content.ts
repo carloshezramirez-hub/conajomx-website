@@ -6,12 +6,13 @@ export type AsambleaSpeaker = {
 }
 
 export const asambleaUi = {
-  eyebrow: "CONAJOMX · Convocatoria Oficial",
+  eyebrow: "Convocatoria Oficial · Acceso Exclusivo de Consejo",
+  kicker: "CONAJOMX presenta",
   title: "IX Asamblea General",
-  titleAccent: "CONAJOMX",
+  titleAccent: "La noche que define el próximo capítulo de CONAJOMX",
   intro:
     "El máximo órgano de encuentro entre el sector político y empresarial de CONAJOMX. Legisladores, Alcaldes, Síndicos, Regidores y Empresarios se reúnen para fortalecer la vinculación y consolidar proyectos.",
-  ctaRegister: "Quiero registrarme",
+  ctaRegister: "Quiero mi lugar",
   ctaSponsor: "Quiero ser sponsor",
   venue: "Ciudad de México",
   dateLabel: "26 de noviembre, 2026",
@@ -58,8 +59,8 @@ export const asambleaPrograma = [
   },
   {
     time: "Fase II",
-    title: "Cambio de Comisiones y Directiva",
-    desc: "Actualización de comisiones de trabajo y directiva para el nuevo periodo.",
+    title: "Renovación de Comisiones",
+    desc: "Actualización de comisiones de trabajo de CONAJOMX para el nuevo periodo.",
   },
   {
     time: "Fase III",

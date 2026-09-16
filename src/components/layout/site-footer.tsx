@@ -51,6 +51,7 @@ function MailIcon() {
 
 const orgLinks = [
   { label: "Presidencia Nacional", href: "/liderazgo" },
+  { label: "IX Asamblea General", href: "/asamblea-general" },
   { label: "CNEM Empresarios", href: "/cnem" },
   { label: "Legisladores y Alcaldes", href: "/legisladores-y-alcaldes" },
   { label: "CONAJOMX España", href: "/espana" },
