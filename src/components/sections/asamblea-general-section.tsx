@@ -39,7 +39,7 @@ export function AsambleaGeneralSection() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>En el marco de esta Asamblea</SectionKicker>
-            <SectionTitle>Cuatro decisiones que marcan el rumbo</SectionTitle>
+            <SectionTitle>De cara al 2027</SectionTitle>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {asambleaHighlights.map((item, i) => (
@@ -109,7 +109,7 @@ export function AsambleaGeneralSection() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Liderazgo CONAJOMX</SectionKicker>
-            <SectionTitle>Ponentes confirmados</SectionTitle>
+            <SectionTitle>Liderazgos presentes</SectionTitle>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {asambleaSpeakers.map((speaker, i) => (
