@@ -8,7 +8,15 @@ declare global {
   }
 }
 
-export function ShaderAnimation({ className = "" }: { className?: string }) {
+type RGB = [number, number, number]
+
+export function ShaderAnimation({
+  className = "",
+  color = [0.12, 0.91, 0.88], // #1FE9E1
+}: {
+  className?: string
+  color?: RGB
+}) {
   const containerRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<{
     camera: any
@@ -45,6 +53,7 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
       }
       document.head.removeChild(script)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const initThreeJS = () => {
@@ -70,6 +79,7 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
     const uniforms = {
       time: { type: "f", value: 1.0 },
       resolution: { type: "v2", value: new THREE.Vector2() },
+      uColor: { type: "v3", value: new THREE.Vector3(color[0], color[1], color[2]) },
     }
 
     // Vertex shader
@@ -79,7 +89,8 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
       }
     `
 
-    // Fragment shader — golden mosaic light-trails
+    // Fragment shader — mosaic light-trails, alpha-composited onto the page
+    // (transparent where there's no trail, so it reads on any background)
     const fragmentShader = `
       #define TWO_PI 6.2831853072
       #define PI 3.14159265359
@@ -87,6 +98,7 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
       precision highp float;
       uniform vec2 resolution;
       uniform float time;
+      uniform vec3 uColor;
 
       float random (in float x) {
           return fract(sin(x)*1e4);
@@ -110,17 +122,16 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
         float t = time*0.06+random(uv.x)*0.4;
         float lineWidth = 0.0008;
 
-        vec3 color = vec3(0.0);
+        vec3 raw = vec3(0.0);
         for(int j = 0; j < 3; j++){
           for(int i=0; i < 5; i++){
-            color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*1.0 - length(uv));
+            raw[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*1.0 - length(uv));
           }
         }
 
-        // Remap to a gold/amber palette instead of the raw RGB channels
-        float intensity = (color[0] + color[1] + color[2]) / 3.0;
-        vec3 gold = vec3(0.85, 0.66, 0.24) * intensity * 2.6;
-        gl_FragColor = vec4(gold, 1.0);
+        float intensity = (raw[0] + raw[1] + raw[2]) / 3.0;
+        float a = clamp(intensity * 2.2, 0.0, 0.55);
+        gl_FragColor = vec4(uColor, a);
       }
     `
 
@@ -129,6 +140,7 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
       uniforms: uniforms,
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
+      transparent: true,
     })
 
     // Create mesh and add to scene
@@ -137,6 +149,7 @@ export function ShaderAnimation({ className = "" }: { className?: string }) {
 
     // Initialize renderer
     const renderer = new THREE.WebGLRenderer({ alpha: true })
+    renderer.setClearColor(0x000000, 0)
     renderer.setPixelRatio(window.devicePixelRatio)
     container.appendChild(renderer.domElement)
 
