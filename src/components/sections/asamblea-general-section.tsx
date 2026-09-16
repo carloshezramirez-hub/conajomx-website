@@ -5,7 +5,7 @@ import { SafeImage } from "@/components/ui/safe-image"
 import { ButtonLink } from "@/components/ui/button-link"
 import { AnchorButton } from "@/components/ui/button-link"
 import { ArrowRight, Mail } from "lucide-react"
-import { playfair } from "@/lib/fonts"
+import { fraunces } from "@/lib/fonts"
 import { siteConfig } from "@/config/site"
 import {
   asambleaHighlights,
@@ -17,26 +17,32 @@ import {
 
 function SectionKicker({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[#C9A227] text-xs font-bold uppercase tracking-[0.3em] mb-4">
+    <p className="text-[#C9A227] text-xs font-bold uppercase tracking-[0.3em] mb-3">
       {children}
     </p>
   )
 }
 
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className={`${fraunces.className} text-3xl sm:text-5xl font-semibold text-white leading-tight`}>
+      {children}
+    </h2>
+  )
+}
+
 export function AsambleaGeneralSection() {
   return (
-    <div className="bg-[#000000] relative">
+    <div className="bg-black relative">
       {/* subtle shared background texture */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(201,162,39,0.06),transparent_45%)]" />
 
       {/* Highlights */}
-      <section className="py-16 sm:py-28 relative">
+      <section className="py-10 sm:py-16 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>En el marco de esta Asamblea</SectionKicker>
-            <h2 className={`${playfair.className} text-3xl sm:text-5xl font-black text-white leading-tight`}>
-              Cuatro decisiones que marcan el rumbo
-            </h2>
+            <SectionTitle>Cuatro decisiones que marcan el rumbo</SectionTitle>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {asambleaHighlights.map((item, i) => (
@@ -48,7 +54,7 @@ export function AsambleaGeneralSection() {
                 transition={{ delay: i * 0.07, duration: 0.4 }}
                 className="p-6 rounded-2xl bg-white/[0.03] border border-[#C9A227]/20 hover:border-[#C9A227]/50 hover:bg-white/[0.05] transition-all"
               >
-                <div className="text-3xl mb-4">{item.emoji}</div>
+                <div className="text-3xl mb-3">{item.emoji}</div>
                 <h3 className="text-white font-bold text-base mb-2 leading-snug">
                   {item.title}
                 </h3>
@@ -59,55 +65,53 @@ export function AsambleaGeneralSection() {
         </div>
       </section>
 
-      {/* Programa */}
-      <section className="py-16 sm:py-28 relative border-t border-white/5">
+      {/* Programa — floating bubbles */}
+      <section className="py-10 sm:py-16 relative border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Programa</SectionKicker>
-            <h2 className={`${playfair.className} text-3xl sm:text-5xl font-black text-white leading-tight`}>
-              Orden del día
-            </h2>
+            <SectionTitle>Orden del día</SectionTitle>
           </div>
-          <div className="max-w-3xl mx-auto relative">
-            <div className="absolute left-[92px] sm:left-[108px] top-2 bottom-2 w-px bg-gradient-to-b from-[#C9A227]/60 via-[#A51C30]/30 to-transparent hidden sm:block" />
-            <div className="space-y-4">
-              {asambleaPrograma.map((step, i) => (
+          <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
+            {asambleaPrograma.map((step, i) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+                className="basis-full sm:basis-[46%] lg:basis-[30%]"
+              >
                 <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.06, duration: 0.4 }}
-                  className="flex gap-5 p-5 sm:p-6 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#C9A227]/40 transition-all relative"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 3.2 + (i % 3) * 0.6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.25,
+                  }}
+                  className="h-full p-6 rounded-[28px] bg-white/[0.03] border border-[#C9A227]/20 hover:border-[#C9A227]/50 hover:bg-white/[0.05] transition-colors shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
                 >
-                  <div className="shrink-0 w-20 sm:w-24 text-right">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#E6C766]">
-                      <span className="w-1 h-1 rounded-full bg-[#A51C30]" />
-                      {step.time}
-                    </span>
-                  </div>
-                  <div className="w-px bg-[#C9A227]/20 shrink-0" />
-                  <div className="min-w-0">
-                    <h3 className={`${playfair.className} text-white font-bold text-lg sm:text-xl leading-snug mb-1`}>
-                      {step.title}
-                    </h3>
-                    <p className="text-[#8EA4BD] text-sm leading-relaxed">{step.desc}</p>
-                  </div>
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#0A0806] bg-gradient-to-r from-[#E6C766] to-[#C9A227] rounded-full px-3 py-1 mb-3">
+                    {step.time}
+                  </span>
+                  <h3 className={`${fraunces.className} text-white font-semibold text-lg leading-snug mb-1.5`}>
+                    {step.title}
+                  </h3>
+                  <p className="text-[#8EA4BD] text-sm leading-relaxed">{step.desc}</p>
                 </motion.div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Speakers */}
-      <section className="py-16 sm:py-28 relative border-t border-white/5">
+      <section className="py-10 sm:py-16 relative border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Liderazgo CONAJOMX</SectionKicker>
-            <h2 className={`${playfair.className} text-3xl sm:text-5xl font-black text-white leading-tight`}>
-              Ponentes confirmados
-            </h2>
+            <SectionTitle>Ponentes confirmados</SectionTitle>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {asambleaSpeakers.map((speaker, i) => (
@@ -130,7 +134,7 @@ export function AsambleaGeneralSection() {
                     />
                   </div>
                 ) : (
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#2A0A12] to-[#000000] border-2 border-[#C9A227]/60 flex items-center justify-center mb-4">
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#1a1508] to-black border-2 border-[#C9A227]/60 flex items-center justify-center mb-4">
                     <span className="text-[#E6C766] font-bold text-lg">{speaker.initials}</span>
                   </div>
                 )}
@@ -143,13 +147,11 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Galería */}
-      <section className="py-16 sm:py-28 relative border-t border-white/5">
+      <section className="py-10 sm:py-16 relative border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Antecedentes</SectionKicker>
-            <h2 className={`${playfair.className} text-3xl sm:text-5xl font-black text-white leading-tight`}>
-              Encuentros anteriores de CONAJOMX
-            </h2>
+            <SectionTitle>Encuentros anteriores de CONAJOMX</SectionTitle>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-6xl mx-auto">
             {asambleaGallery.map((src, i) => (
@@ -174,17 +176,17 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Sponsors */}
-      <section id="sponsors" className="py-16 sm:py-28 relative border-t border-white/5">
+      <section id="sponsors" className="py-10 sm:py-16 relative border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <SectionKicker>{asambleaSponsor.eyebrow}</SectionKicker>
-            <h2 className={`${playfair.className} text-3xl sm:text-5xl font-black text-white leading-tight mb-6`}>
-              {asambleaSponsor.title}
-            </h2>
-            <p className="text-[#8EA4BD] text-lg leading-relaxed mb-8">
+            <div className="mb-5">
+              <SectionTitle>{asambleaSponsor.title}</SectionTitle>
+            </div>
+            <p className="text-[#8EA4BD] text-lg leading-relaxed mb-6">
               {asambleaSponsor.desc}
             </p>
-            <div className="grid sm:grid-cols-3 gap-4 mb-10 text-left">
+            <div className="grid sm:grid-cols-3 gap-4 mb-8 text-left">
               {asambleaSponsor.benefits.map((b) => (
                 <div
                   key={b}
@@ -197,14 +199,14 @@ export function AsambleaGeneralSection() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <AnchorButton
                 href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Quiero ser sponsor — IX Asamblea General CONAJOMX")}`}
-                className="bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-[#000000] hover:brightness-110 font-bold shadow-[0_0_28px_rgba(201,162,39,0.3)] px-8"
+                className="bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-black hover:brightness-110 font-bold shadow-[0_0_28px_rgba(201,162,39,0.3)] px-8"
               >
                 <Mail className="mr-2 w-4 h-4" /> {asambleaSponsor.cta}
               </AnchorButton>
               <ButtonLink
                 href="/asamblea-general/registro"
                 variant="outline"
-                className="bg-transparent border-[#A51C30]/40 text-white hover:bg-[#A51C30]/10 hover:border-[#A51C30] font-semibold px-8"
+                className="bg-transparent border-white/20 text-white hover:bg-white/5 hover:border-[#C9A227] font-semibold px-8"
               >
                 Registrarme como asistente <ArrowRight className="ml-2 w-4 h-4" />
               </ButtonLink>

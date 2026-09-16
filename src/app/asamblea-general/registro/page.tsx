@@ -22,7 +22,7 @@ export default function AsambleaRegistroPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(201,162,39,0.14),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_90%,rgba(165,28,48,0.14),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_90%,rgba(201,162,39,0.08),transparent_50%)]" />
         <div className="container mx-auto px-4 py-10 sm:py-16 text-center relative z-10">
           <p className="text-[#C9A227] text-xs font-bold uppercase tracking-[0.3em] mb-4">
             {asambleaUi.eyebrow}
