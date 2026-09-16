@@ -204,7 +204,7 @@ export function AsambleaRegistrationForm() {
       <Button
         onClick={handleSubmit}
         disabled={submitting}
-        className="w-full mt-6 bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-[#050B16] hover:brightness-110 font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)]"
+        className="w-full mt-6 bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-black hover:brightness-110 font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)]"
       >
         {submitting ? (
           <>

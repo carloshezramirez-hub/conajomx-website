@@ -16,7 +16,7 @@ export default function AsambleaGeneralPage() {
     <>
       <AsambleaHeroSection />
       <AsambleaGeneralSection />
-      <div className="bg-[#050B16] py-10 sm:py-16 border-t border-b border-[#C9A227]/40">
+      <div className="bg-[#000000] py-10 sm:py-16 border-t border-b border-[#C9A227]/40">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg sm:text-xl tracking-[0.2em] uppercase">
             {asambleaUi.bannerTitle}

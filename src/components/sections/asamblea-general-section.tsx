@@ -25,7 +25,7 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
 
 export function AsambleaGeneralSection() {
   return (
-    <div className="bg-[#050B16] relative">
+    <div className="bg-[#000000] relative">
       {/* subtle shared background texture */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(201,162,39,0.06),transparent_45%)]" />
 
@@ -69,7 +69,7 @@ export function AsambleaGeneralSection() {
             </h2>
           </div>
           <div className="max-w-3xl mx-auto relative">
-            <div className="absolute left-[92px] sm:left-[108px] top-2 bottom-2 w-px bg-gradient-to-b from-[#C9A227]/50 via-[#C9A227]/20 to-transparent hidden sm:block" />
+            <div className="absolute left-[92px] sm:left-[108px] top-2 bottom-2 w-px bg-gradient-to-b from-[#C9A227]/60 via-[#A51C30]/30 to-transparent hidden sm:block" />
             <div className="space-y-4">
               {asambleaPrograma.map((step, i) => (
                 <motion.div
@@ -81,7 +81,8 @@ export function AsambleaGeneralSection() {
                   className="flex gap-5 p-5 sm:p-6 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#C9A227]/40 transition-all relative"
                 >
                   <div className="shrink-0 w-20 sm:w-24 text-right">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E6C766]">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#E6C766]">
+                      <span className="w-1 h-1 rounded-full bg-[#A51C30]" />
                       {step.time}
                     </span>
                   </div>
@@ -129,7 +130,7 @@ export function AsambleaGeneralSection() {
                     />
                   </div>
                 ) : (
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#0A2D52] to-[#050B16] border-2 border-[#C9A227]/60 flex items-center justify-center mb-4">
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#2A0A12] to-[#000000] border-2 border-[#C9A227]/60 flex items-center justify-center mb-4">
                     <span className="text-[#E6C766] font-bold text-lg">{speaker.initials}</span>
                   </div>
                 )}
@@ -196,14 +197,14 @@ export function AsambleaGeneralSection() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <AnchorButton
                 href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Quiero ser sponsor — IX Asamblea General CONAJOMX")}`}
-                className="bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-[#050B16] hover:brightness-110 font-bold shadow-[0_0_28px_rgba(201,162,39,0.3)] px-8"
+                className="bg-gradient-to-r from-[#E6C766] to-[#C9A227] text-[#000000] hover:brightness-110 font-bold shadow-[0_0_28px_rgba(201,162,39,0.3)] px-8"
               >
                 <Mail className="mr-2 w-4 h-4" /> {asambleaSponsor.cta}
               </AnchorButton>
               <ButtonLink
                 href="/asamblea-general/registro"
                 variant="outline"
-                className="bg-transparent border-white/20 text-white hover:bg-white/5 hover:border-[#C9A227] font-semibold px-8"
+                className="bg-transparent border-[#A51C30]/40 text-white hover:bg-[#A51C30]/10 hover:border-[#A51C30] font-semibold px-8"
               >
                 Registrarme como asistente <ArrowRight className="ml-2 w-4 h-4" />
               </ButtonLink>
