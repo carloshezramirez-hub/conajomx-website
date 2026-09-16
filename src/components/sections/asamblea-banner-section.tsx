@@ -5,7 +5,6 @@ import Image from "next/image"
 import { ButtonLink } from "@/components/ui/button-link"
 import { EventCountdown } from "@/components/ui/event-countdown"
 import { ArrowRight, MapPin, CalendarDays } from "lucide-react"
-import { playfair } from "@/lib/fonts"
 import { gold3dStyle } from "@/lib/gold-text"
 import { asambleaUi } from "@/data/asamblea-general-content"
 
@@ -33,7 +32,7 @@ export function AsambleaBannerSection() {
               Próximo evento · Acceso exclusivo de Consejo
             </span>
             <h2
-              className={`${playfair.className} text-3xl sm:text-4xl font-black leading-tight mb-2`}
+              className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-2"
               style={gold3dStyle}
             >
               {asambleaUi.title}

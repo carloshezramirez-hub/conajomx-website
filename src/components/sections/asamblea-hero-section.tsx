@@ -6,7 +6,6 @@ import { ButtonLink } from "@/components/ui/button-link"
 import { AnchorButton } from "@/components/ui/button-link"
 import { EventCountdown } from "@/components/ui/event-countdown"
 import { ShaderAnimation } from "@/components/ui/shader-lines"
-import { playfair } from "@/lib/fonts"
 import { gold3dStyle } from "@/lib/gold-text"
 import { ArrowRight, MapPin, CalendarDays } from "lucide-react"
 import { asambleaUi } from "@/data/asamblea-general-content"
@@ -49,7 +48,7 @@ export function AsambleaHeroSection() {
           </span>
 
           <h1
-            className={`${playfair.className} text-5xl sm:text-7xl lg:text-8xl font-black mb-3 leading-[1.0] tracking-tight`}
+            className="text-5xl sm:text-7xl lg:text-8xl font-black uppercase mb-3 leading-[1.0] tracking-tight"
             style={gold3dStyle}
           >
             {asambleaUi.title}

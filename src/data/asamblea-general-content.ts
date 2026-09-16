@@ -9,9 +9,9 @@ export const asambleaUi = {
   eyebrow: "Convocatoria Oficial · Acceso Exclusivo de Consejo",
   kicker: "CONAJOMX presenta",
   title: "IX Asamblea General",
-  titleAccent: "La noche que define el próximo capítulo de CONAJOMX",
+  titleAccent: "El próximo capítulo de CONAJOMX",
   intro:
-    "El máximo órgano de encuentro entre el sector político y empresarial de CONAJOMX. Legisladores, Alcaldes, Síndicos, Regidores y Empresarios se reúnen para fortalecer la vinculación y consolidar proyectos.",
+    "El máximo órgano de encuentro entre el sector político y empresarial de México. Legisladores, Alcaldes, Síndicos, Regidores y Empresarios de todo el país se reúnen para fortalecer la vinculación de cara al 2027.",
   ctaRegister: "Quiero mi lugar",
   ctaSponsor: "Quiero ser sponsor",
   venue: "Ciudad de México",
