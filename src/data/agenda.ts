@@ -91,6 +91,15 @@ export const agenda2026: AgendaEvent[] = [
     type: "Clima",
   },
   {
+    country: "México",
+    countryCode: "MX",
+    dateLabel: "26 de noviembre",
+    month: "Noviembre",
+    monthNum: 11,
+    title: "IX Asamblea General CONAJOMX (Ciudad de México)",
+    type: "Asamblea General",
+  },
+  {
     country: "Estados Unidos",
     countryCode: "US",
     dateLabel: "14 y 15 de diciembre",

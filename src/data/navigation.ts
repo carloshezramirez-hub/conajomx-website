@@ -3,7 +3,7 @@ export const mainNav = [
   { label: "Nosotros", href: "/#nosotros" },
   { label: "Liderazgo", href: "/liderazgo" },
   { label: "Agenda 2026", href: "/agenda" },
-  { label: "Executive Forum", href: "/executive-forum" },
+  { label: "Asamblea General", href: "/asamblea-general" },
   { label: "CNEM", href: "/cnem" },
   { label: "España", href: "/espana" },
   { label: "Legisladores", href: "/legisladores-y-alcaldes" },
