@@ -15,12 +15,12 @@ export default function AsambleaGeneralPage() {
     <>
       <AsambleaHeroSection />
       <AsambleaGeneralSection />
-      <div className="bg-[#071D3A] py-8 sm:py-12">
+      <div className="bg-gradient-to-r from-[#050B1A] via-[#0A1830] to-[#050B1A] border-y border-[#C9A227]/20 py-8 sm:py-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg sm:text-xl tracking-[0.2em] uppercase">
             {asambleaUi.bannerTitle}
           </p>
-          <p className="text-[#1FE9E1] italic text-sm sm:text-base mt-3">
+          <p className="text-[#E8CE8A] italic text-sm sm:text-base mt-3">
             {asambleaUi.bannerSubtitle}
           </p>
         </div>

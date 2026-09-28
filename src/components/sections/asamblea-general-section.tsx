@@ -5,29 +5,29 @@ import { SafeImage } from "@/components/ui/safe-image"
 import { Badge } from "@/components/ui/badge"
 import { ButtonLink } from "@/components/ui/button-link"
 import { AnchorButton } from "@/components/ui/button-link"
-import { ArrowRight, Mail } from "lucide-react"
+import { ArrowRight, Mail, BadgeCheck } from "lucide-react"
 import { fraunces } from "@/lib/fonts"
 import { siteConfig } from "@/config/site"
 
 const badgeColors = [
-  "border-emerald-200 text-emerald-700 bg-emerald-50",
-  "border-yellow-200 text-yellow-700 bg-yellow-50",
-  "border-violet-200 text-violet-700 bg-violet-50",
-  "border-blue-200 text-blue-700 bg-blue-50",
-  "border-[#1FE9E1]/40 text-[#0A2D52] bg-[#D9FFFC]",
-  "border-orange-200 text-orange-700 bg-orange-50",
+  "border-[#C9A227]/40 text-[#E8CE8A] bg-[#C9A227]/[0.08]",
+  "border-[#C7CDD9]/30 text-[#C7CDD9] bg-white/[0.04]",
+  "border-[#C9A227]/40 text-[#E8CE8A] bg-[#C9A227]/[0.08]",
+  "border-[#C7CDD9]/30 text-[#C7CDD9] bg-white/[0.04]",
 ]
 import {
   asambleaHighlights,
   asambleaPrograma,
+  asambleaConfirmedGuests,
   asambleaSpeakers,
   asambleaGallery,
   asambleaSponsor,
+  asambleaSponsorLogos,
 } from "@/data/asamblea-general-content"
 
 function SectionKicker({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[#1FE9E1] text-xs font-bold uppercase tracking-[0.3em] mb-3">
+    <p className="text-[#C9A227] text-xs font-bold uppercase tracking-[0.3em] mb-3">
       {children}
     </p>
   )
@@ -35,7 +35,7 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className={`${fraunces.className} text-3xl sm:text-5xl font-semibold text-[#071D3A] leading-tight`}>
+    <h2 className={`${fraunces.className} text-3xl sm:text-5xl font-semibold text-white leading-tight`}>
       {children}
     </h2>
   )
@@ -43,9 +43,9 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 export function AsambleaGeneralSection() {
   return (
-    <div className="bg-white relative">
+    <div className="bg-[#050B1A] relative">
       {/* Highlights */}
-      <section className="py-10 sm:py-16 relative bg-[#F5FAFF]">
+      <section className="py-10 sm:py-16 relative bg-[#0A1830]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>En el marco de esta Asamblea</SectionKicker>
@@ -59,15 +59,15 @@ export function AsambleaGeneralSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07, duration: 0.4 }}
-                className="p-5 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all group flex flex-col"
+                className="p-5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#C9A227]/40 hover:shadow-[0_4px_24px_rgba(201,162,39,0.10)] transition-all group flex flex-col"
               >
                 <Badge variant="outline" className={`text-xs mb-3 w-fit ${badgeColors[i % badgeColors.length]}`}>
                   {item.emoji} {item.badge}
                 </Badge>
-                <h3 className="text-[#071D3A] font-semibold text-sm mb-2 leading-snug group-hover:text-[#0A2D52] transition-colors">
+                <h3 className="text-white font-semibold text-sm mb-2 leading-snug group-hover:text-[#E8CE8A] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-[#526173] text-xs leading-relaxed">{item.desc}</p>
+                <p className="text-[#9AA5B5] text-xs leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -75,7 +75,7 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Programa — floating rows, stacked */}
-      <section className="py-10 sm:py-16 relative bg-[#F5F1EA]">
+      <section className="py-10 sm:py-16 relative bg-[#050B1A]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Programa</SectionKicker>
@@ -98,16 +98,16 @@ export function AsambleaGeneralSection() {
                     ease: "easeInOut",
                     delay: i * 0.2,
                   }}
-                  className="flex items-center gap-5 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/50 hover:shadow-[0_8px_24px_rgba(10,45,82,0.08)] transition-all"
+                  className="flex items-center gap-5 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#C9A227]/40 hover:shadow-[0_8px_28px_rgba(201,162,39,0.10)] transition-all"
                 >
-                  <span className="shrink-0 min-w-[76px] sm:min-w-[96px] text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white bg-[#071D3A] rounded-full px-3 sm:px-4 py-1.5 text-center">
+                  <span className="shrink-0 min-w-[76px] sm:min-w-[96px] text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#050B1A] bg-gradient-to-r from-[#C9A227] to-[#E8CE8A] rounded-full px-3 sm:px-4 py-1.5 text-center">
                     {step.time}
                   </span>
                   <div className="min-w-0">
-                    <h3 className={`${fraunces.className} text-[#071D3A] font-semibold text-lg sm:text-xl leading-snug mb-1`}>
+                    <h3 className={`${fraunces.className} text-white font-semibold text-lg sm:text-xl leading-snug mb-1`}>
                       {step.title}
                     </h3>
-                    <p className="text-[#526173] text-sm leading-relaxed">{step.desc}</p>
+                    <p className="text-[#9AA5B5] text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -116,8 +116,48 @@ export function AsambleaGeneralSection() {
         </div>
       </section>
 
+      {/* Invitados confirmados */}
+      <section className="py-10 sm:py-16 relative bg-[#0A1830]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+            <SectionKicker>Sector Público · CONAJOMX</SectionKicker>
+            <SectionTitle>Invitados confirmados</SectionTitle>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+            {asambleaConfirmedGuests.map((guest, i) => (
+              <motion.div
+                key={guest.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+                className="relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#C9A227]/40 transition-all text-center flex flex-col items-center"
+              >
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-[#C9A227]/50 shadow-[0_4px_24px_rgba(201,162,39,0.15)] mb-4">
+                  <SafeImage
+                    src={guest.image}
+                    alt={`Foto de ${guest.name}`}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full object-top"
+                  />
+                </div>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#C9A227]/40 bg-[#C9A227]/[0.08] text-[#E8CE8A] text-[10px] font-bold uppercase tracking-[0.14em] mb-3">
+                  {guest.tag}
+                </span>
+                <p className="text-white font-semibold text-base leading-snug mb-1">{guest.name}</p>
+                <p className="text-[#9AA5B5] text-sm leading-snug mb-3">{guest.role}</p>
+                <span className="inline-flex items-center gap-1.5 text-[#4ADE80] text-xs font-bold uppercase tracking-wider">
+                  <BadgeCheck className="w-4 h-4" /> Confirmada
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Speakers */}
-      <section className="py-10 sm:py-16 relative">
+      <section className="py-10 sm:py-16 relative bg-[#050B1A]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Liderazgo CONAJOMX</SectionKicker>
@@ -134,7 +174,7 @@ export function AsambleaGeneralSection() {
                 className="flex flex-col items-center text-center"
               >
                 {speaker.image ? (
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#DCE8F2] shadow-[0_4px_20px_rgba(10,45,82,0.10)] mb-4">
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/15 shadow-[0_4px_20px_rgba(0,0,0,0.3)] mb-4">
                     <SafeImage
                       src={speaker.image}
                       alt={`Foto de ${speaker.name}`}
@@ -144,12 +184,12 @@ export function AsambleaGeneralSection() {
                     />
                   </div>
                 ) : (
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#071D3A] to-[#0A2D52] flex items-center justify-center mb-4 shadow-[0_4px_20px_rgba(10,45,82,0.10)]">
-                    <span className="text-[#1FE9E1] font-bold text-lg">{speaker.initials}</span>
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#0A1830] to-[#050B1A] border border-[#C9A227]/30 flex items-center justify-center mb-4 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+                    <span className="text-[#E8CE8A] font-bold text-lg">{speaker.initials}</span>
                   </div>
                 )}
-                <p className="text-[#071D3A] font-semibold text-sm leading-snug">{speaker.name}</p>
-                <p className="text-[#0A2D52] text-xs mt-1 leading-snug">{speaker.role}</p>
+                <p className="text-white font-semibold text-sm leading-snug">{speaker.name}</p>
+                <p className="text-[#9AA5B5] text-xs mt-1 leading-snug">{speaker.role}</p>
               </motion.div>
             ))}
           </div>
@@ -157,7 +197,7 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Galería */}
-      <section className="py-10 sm:py-16 relative bg-[#F5FAFF]">
+      <section className="py-10 sm:py-16 relative bg-[#0A1830]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
             <SectionKicker>Antecedentes</SectionKicker>
@@ -171,7 +211,7 @@ export function AsambleaGeneralSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04, duration: 0.35 }}
-                className="aspect-[4/3] rounded-xl overflow-hidden border border-[#DCE8F2] hover:border-[#1FE9E1]/50 transition-all relative"
+                className="aspect-[4/3] rounded-xl overflow-hidden border border-white/10 hover:border-[#C9A227]/40 transition-all relative"
               >
                 <SafeImage
                   src={src}
@@ -186,40 +226,67 @@ export function AsambleaGeneralSection() {
       </section>
 
       {/* Sponsors */}
-      <section id="sponsors" className="py-10 sm:py-16 relative">
+      <section id="sponsors" className="py-10 sm:py-16 relative bg-[#050B1A]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <SectionKicker>{asambleaSponsor.eyebrow}</SectionKicker>
             <div className="mb-5">
               <SectionTitle>{asambleaSponsor.title}</SectionTitle>
             </div>
-            <p className="text-[#526173] text-lg leading-relaxed mb-6">
+            <p className="text-[#9AA5B5] text-lg leading-relaxed mb-10">
               {asambleaSponsor.desc}
             </p>
+          </div>
+
+          {/* Sponsor logos */}
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 max-w-4xl mx-auto mb-12">
+            {asambleaSponsorLogos.map((sponsor, i) => (
+              <motion.div
+                key={sponsor.name}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06, duration: 0.4 }}
+                className={`flex items-center justify-center p-5 sm:p-6 rounded-xl bg-white border border-white/10 hover:border-[#C9A227]/50 hover:shadow-[0_8px_28px_rgba(201,162,39,0.15)] transition-all ${
+                  sponsor.wide ? "w-full sm:w-auto sm:min-w-[280px]" : "w-[200px]"
+                }`}
+              >
+                <SafeImage
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  width={sponsor.wide ? 260 : 160}
+                  height={60}
+                  className="object-contain w-full h-10 sm:h-12"
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto text-center">
             <div className="grid sm:grid-cols-3 gap-4 mb-8 text-left">
               {asambleaSponsor.benefits.map((b, i) => (
                 <div
                   key={b.badge}
-                  className="p-5 rounded-xl bg-white border border-[#DCE8F2] hover:border-[#1FE9E1]/40 hover:shadow-[0_4px_20px_rgba(10,45,82,0.07)] transition-all"
+                  className="p-5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#C9A227]/40 hover:shadow-[0_4px_20px_rgba(201,162,39,0.10)] transition-all"
                 >
                   <Badge variant="outline" className={`text-xs mb-3 w-fit ${badgeColors[i % badgeColors.length]}`}>
                     {b.badge}
                   </Badge>
-                  <p className="text-[#526173] text-sm leading-relaxed">{b.text}</p>
+                  <p className="text-[#9AA5B5] text-sm leading-relaxed">{b.text}</p>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <AnchorButton
                 href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Quiero ser sponsor — IX Asamblea General CONAJOMX")}`}
-                className="bg-[#071D3A] text-white hover:bg-[#0A2D52] font-semibold shadow-[0_4px_20px_rgba(7,29,58,0.20)] px-8"
+                className="bg-gradient-to-r from-[#C9A227] to-[#E8CE8A] text-[#050B1A] hover:brightness-110 font-semibold shadow-[0_4px_20px_rgba(201,162,39,0.25)] px-8"
               >
                 <Mail className="mr-2 w-4 h-4" /> {asambleaSponsor.cta}
               </AnchorButton>
               <ButtonLink
                 href="/asamblea-general/registro"
                 variant="outline"
-                className="bg-transparent border-[#DCE8F2] text-[#071D3A] hover:bg-[#F5FAFF] hover:border-[#1FE9E1]/50 font-semibold px-8"
+                className="bg-transparent border-white/15 text-white hover:bg-white/[0.05] hover:border-[#C9A227]/50 font-semibold px-8"
               >
                 Registrarme como asistente <ArrowRight className="ml-2 w-4 h-4" />
               </ButtonLink>

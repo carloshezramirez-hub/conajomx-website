@@ -5,6 +5,19 @@ export type AsambleaSpeaker = {
   image?: string
 }
 
+export type AsambleaConfirmedGuest = {
+  name: string
+  role: string
+  tag: string
+  image: string
+}
+
+export type AsambleaSponsor = {
+  name: string
+  image: string
+  wide?: boolean
+}
+
 export const asambleaUi = {
   eyebrow: "Convocatoria Oficial · Acceso Exclusivo de Consejo",
   kicker: "CONAJOMX presenta",
@@ -83,6 +96,21 @@ export const asambleaPrograma = [
   },
 ]
 
+export const asambleaConfirmedGuests: AsambleaConfirmedGuest[] = [
+  {
+    name: "Dip. Alejandra Navez Plancarte",
+    role: "Diputada del Congreso del Estado de Tabasco",
+    tag: "Sector Público",
+    image: "/assets/conajomx/people/alejandra-navez-plancarte.webp",
+  },
+  {
+    name: "Ronaldo Elías Águila",
+    role: "Presidente Fundador de CONAJOMX",
+    tag: "CONAJOMX",
+    image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
+  },
+]
+
 export const asambleaSpeakers: AsambleaSpeaker[] = [
   {
     name: "Ronaldo Elías Águila",
@@ -121,6 +149,13 @@ export const asambleaGallery = [
   "/assets/conajomx/asamblea-general/asamblea-08.webp",
   "/assets/conajomx/asamblea-general/asamblea-09.webp",
   "/assets/conajomx/asamblea-general/asamblea-10.webp",
+]
+
+export const asambleaSponsorLogos: AsambleaSponsor[] = [
+  { name: "CNEM — Consejo Nacional de Empresarios de México", image: "/assets/conajomx/sponsors/sponsor-cnem.webp", wide: true },
+  { name: "AIVA · Mayorazgo Wealth Management", image: "/assets/conajomx/sponsors/sponsor-aiva-mayorazgo.webp" },
+  { name: "Grupo CYSE — Consultoría y Servicios Empresariales", image: "/assets/conajomx/sponsors/sponsor-grupo-cyse.webp" },
+  { name: "CIEN Grupo Inmobiliario", image: "/assets/conajomx/sponsors/sponsor-cien.webp" },
 ]
 
 export const asambleaSponsor = {
