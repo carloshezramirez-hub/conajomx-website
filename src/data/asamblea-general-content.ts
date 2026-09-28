@@ -10,6 +10,7 @@ export type AsambleaConfirmedGuest = {
   role: string
   tag: string
   image: string
+  confirmedLabel: string
 }
 
 export type AsambleaSponsor = {
@@ -102,12 +103,14 @@ export const asambleaConfirmedGuests: AsambleaConfirmedGuest[] = [
     role: "Diputada del Congreso del Estado de Tabasco",
     tag: "Sector Público",
     image: "/assets/conajomx/people/alejandra-navez-plancarte.webp",
+    confirmedLabel: "Confirmada",
   },
   {
     name: "Ronaldo Elías Águila",
     role: "Presidente Fundador de CONAJOMX",
     tag: "CONAJOMX",
     image: "/assets/conajomx/people/ronaldo-elias-aguila.webp",
+    confirmedLabel: "Confirmado",
   },
 ]
 

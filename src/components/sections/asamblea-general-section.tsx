@@ -148,7 +148,7 @@ export function AsambleaGeneralSection() {
                 <p className="text-white font-semibold text-base leading-snug mb-1">{guest.name}</p>
                 <p className="text-[#9AA5B5] text-sm leading-snug mb-3">{guest.role}</p>
                 <span className="inline-flex items-center gap-1.5 text-[#4ADE80] text-xs font-bold uppercase tracking-wider">
-                  <BadgeCheck className="w-4 h-4" /> Confirmada
+                  <BadgeCheck className="w-4 h-4" /> {guest.confirmedLabel}
                 </span>
               </motion.div>
             ))}
